@@ -12,7 +12,7 @@ namespace AppointEase.Application.Contracts.Models
         [Key]
         public int PersonId { get; set; }
         public string? Name { get; set; }
-        public string? Mbiemri { get; set; }
-        public int Mosha { get; set; }
+        public string? Surname { get; set; }
+        public int Age { get; set; }
     }
 }
