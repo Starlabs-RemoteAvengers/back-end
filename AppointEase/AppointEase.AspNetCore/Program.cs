@@ -15,7 +15,8 @@ using AppointEase.AspNetCore.Validator;
 using AppointEase.Application.Mapper;
 using Microsoft.SqlServer;
 using AppointEase.Application.Filters;
-
+using AppointEase.Application;
+using AppointEase.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -31,23 +32,13 @@ builder.Services.AddControllers(options =>
 CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
 CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
 
-builder.Services.AddTransient<IValidator<PersonDto>, PersonDtoValidator>();
 
-builder.Services.AddScoped<DataContext>();
-builder.Services.AddScoped<IPersonRepository, PersonRepository>();
-builder.Services.AddScoped<IPersonService, PersonService>();
-
-builder.Services.AddAutoMapper(typeof(YourMappingProfile));
-
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")        
-    );
-});
+ApplicationInjection.AddApplicationServices(builder.Services);
+DataInjectionServices.AddDataServices(builder.Services,builder.Configuration);
 
 
-builder.Services.AddTransient<IValidator<PersonDto>, PersonDtoValidator>();
+
+//builder.Services.AddTransient<IValidator<PersonDto>, PersonDtoValidator>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

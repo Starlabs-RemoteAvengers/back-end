@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppointEase.Data.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97adb87ff8811f0a319d9eeadedb7a7bfa207624")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppointEase.Data.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppointEase.Data.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,15 @@
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.deps.json
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.AssemblyReference.cache
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfoInputs.cache
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfo.cs
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CopyComplete
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\refint\AppointEase.Data.Contracts.dll
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\ref\AppointEase.Data.Contracts.dll
