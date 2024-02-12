@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2biw37cOy4iIvXzTTGrSN325J+powYr+4E2e/ZXF2/ARkT3EcTbX+s8vJVn3TGsFWaogD0KKLwtvk2b4SSKinA==",
+  "dgSpecHash": "wS1nBuIIHT9Kk8wo8FiM5eq5JNvdxtdbvSJS9blVzCH/H1C6CLaOpu5/ci6x8JNLKzObqjgJjb/YGIQbaIkr8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\project\\back-end\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\CCC\\Downloads\\back-end-main\\back-end-main\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CCC\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1084,11 +1084,27 @@
       "AppointEase.Application.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FluentValidation": "11.9.0"
+        },
         "compile": {
           "bin/placeholder/AppointEase.Application.Contracts.dll": {}
         },
         "runtime": {
           "bin/placeholder/AppointEase.Application.Contracts.dll": {}
+        }
+      },
+      "AppointEase.Data.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AppointEase.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AppointEase.Data.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppointEase.Data.Contracts.dll": {}
         }
       }
     }
@@ -3404,11 +3420,17 @@
       "type": "project",
       "path": "../AppointEase.Application.Contracts/AppointEase.Application.Contracts.csproj",
       "msbuildProject": "../AppointEase.Application.Contracts/AppointEase.Application.Contracts.csproj"
+    },
+    "AppointEase.Data.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../AppointEase.Data.Contracts/AppointEase.Data.Contracts.csproj",
+      "msbuildProject": "../AppointEase.Data.Contracts/AppointEase.Data.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AppointEase.Application.Contracts >= 1.0.0",
+      "AppointEase.Data.Contracts >= 1.0.0",
       "AutoMapper >= 13.0.1",
       "FluentValidation >= 11.9.0",
       "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
@@ -3417,24 +3439,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\CCC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\project\\back-end\\AppointEase\\AppointEase.Application\\AppointEase.Application.csproj",
+      "projectUniqueName": "C:\\Users\\CCC\\Downloads\\back-end-main\\back-end-main\\AppointEase\\AppointEase.Application\\AppointEase.Application.csproj",
       "projectName": "AppointEase.Application",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\project\\back-end\\AppointEase\\AppointEase.Application\\AppointEase.Application.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\project\\back-end\\AppointEase\\AppointEase.Application\\obj\\",
+      "projectPath": "C:\\Users\\CCC\\Downloads\\back-end-main\\back-end-main\\AppointEase\\AppointEase.Application\\AppointEase.Application.csproj",
+      "packagesPath": "C:\\Users\\CCC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CCC\\Downloads\\back-end-main\\back-end-main\\AppointEase\\AppointEase.Application\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\CCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3442,15 +3459,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\project\\back-end\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\project\\back-end\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj"
+            "C:\\Users\\CCC\\Downloads\\back-end-main\\back-end-main\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj": {
+              "projectPath": "C:\\Users\\CCC\\Downloads\\back-end-main\\back-end-main\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj"
+            },
+            "C:\\Users\\CCC\\Downloads\\back-end-main\\back-end-main\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj": {
+              "projectPath": "C:\\Users\\CCC\\Downloads\\back-end-main\\back-end-main\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj"
             }
           }
         }
@@ -3459,6 +3478,9 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "default"
       }
     },
     "frameworks": {
