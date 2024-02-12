@@ -54,6 +54,7 @@ To get started with the platform as a doctor, follow these steps:
 + Blinera Zekaj 
 + Zamira Ahmeti
 
+
 Feel free to reach out to us for any questions, feedback, or support regarding the platform. Thank you for using AppointEase!
 
 
