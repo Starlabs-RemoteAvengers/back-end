@@ -1,0 +1,11 @@
+.vs/
+AppointEase/AppointEase.Application.Contracts/bin/
+AppointEase/AppointEase.Application.Contracts/obj/
+AppointEase/AppointEase.Application/bin/
+AppointEase/AppointEase.Application/obj/
+AppointEase/AppointEase.AspNetCore/bin/
+AppointEase/AppointEase.AspNetCore/obj/
+AppointEase/AppointEase.Data.Contracts/bin/
+AppointEase/AppointEase.Data.Contracts/obj/
+AppointEase/AppointEase.Data/bin/
+AppointEase/AppointEase.Data/obj/
