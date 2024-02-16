@@ -33,3 +33,16 @@ C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Appli
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\refint\AppointEase.Application.Contracts.dll
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.pdb
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\ref\AppointEase.Application.Contracts.dll
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.csproj.AssemblyReference.cache
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.AssemblyInfoInputs.cache
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.AssemblyInfo.cs
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.sourcelink.json
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.dll
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\refint\AppointEase.Application.Contracts.dll
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.pdb
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.deps.json
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+C:\Users\Zamira\Desktop\MentalHealthApp\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\ref\AppointEase.Application.Contracts.dll

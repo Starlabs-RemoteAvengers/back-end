@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppointEase.Application.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d7e37bbd7df8cf09c785ad4b7fcd497c72ca485")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppointEase.Application.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppointEase.Application.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

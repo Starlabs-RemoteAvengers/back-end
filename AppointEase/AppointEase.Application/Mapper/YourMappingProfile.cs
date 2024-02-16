@@ -1,4 +1,4 @@
-﻿using AppointEase.Application.Contracts.Models;
+﻿//using AppointEase.Application.Contracts.Models;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace AppointEase.Application.Mapper
     {
         public YourMappingProfile()
         {
-            CreateMap<Person, PersonDto>().ReverseMap();
+            //CreateMap<Person, PersonDto>().ReverseMap();
         }
     }
 }

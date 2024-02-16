@@ -1,6 +1,6 @@
-﻿using AppointEase.Application.Contracts.Interfaces;
+﻿//using AppointEase.Application.Contracts.Interfaces;
 using AppointEase.Data.Data;
-using AppointEase.Data.Repositories;
+//using AppointEase.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,15 +16,15 @@ namespace AppointEase.Data
     {
         public static void AddDataServices(this IServiceCollection serviceDescriptors, IConfiguration configuration)
         {
-            serviceDescriptors.AddDbContext<DataContext>(options =>
+            serviceDescriptors.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection")
                 );
             });
 
-            serviceDescriptors.AddScoped<DataContext>();
-            serviceDescriptors.AddScoped<IPersonRepository, PersonRepository>();
+            serviceDescriptors.AddScoped<ApplicationDbContext>();
+            //serviceDescriptors.AddScoped<IPersonRepository, PersonRepository>();
         }
     }
 }
