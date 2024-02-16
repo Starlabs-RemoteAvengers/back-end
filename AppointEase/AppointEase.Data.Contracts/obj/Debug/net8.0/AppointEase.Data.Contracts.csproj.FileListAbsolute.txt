@@ -13,3 +13,66 @@ C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\refint\AppointEase.Data.Contracts.dll
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.pdb
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\ref\AppointEase.Data.Contracts.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.deps.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.AssemblyReference.cache
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfoInputs.cache
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfo.cs
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.sourcelink.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\refint\AppointEase.Data.Contracts.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\ref\AppointEase.Data.Contracts.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CopyComplete
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\refint\AppointEase.Data.Contracts.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.deps.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.AssemblyReference.cache
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfoInputs.cache
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfo.cs
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.sourcelink.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\ref\AppointEase.Data.Contracts.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CopyComplete
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\refint\AppointEase.Data.Contracts.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.AssemblyReference.cache
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfoInputs.cache
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfo.cs
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CoreCompileInputs.cache
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.deps.json
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\ref\AppointEase.Data.Contracts.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CopyComplete
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.deps.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.AssemblyReference.cache
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfoInputs.cache
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfo.cs
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CoreCompileInputs.cache
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.sourcelink.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\refint\AppointEase.Data.Contracts.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\ref\AppointEase.Data.Contracts.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CopyComplete

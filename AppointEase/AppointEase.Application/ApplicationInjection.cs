@@ -10,16 +10,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AppointEase.AspNetCore.Validator;
+using AppointEase.Application.Contracts.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using AppointEase.Data.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.VisualBasic;
+using AppointEase.Application.Contracts.ModelsDto;
+using AppointEase.Application.Contracts.Validator;
+using AppointEase.Application.Contracts.Co;
 
 namespace AppointEase.Application
 {
     public static class ApplicationInjection
+
     {
         public static void AddApplicationServices(this IServiceCollection serviceDescriptors)
         {
-            serviceDescriptors.AddScoped<IPersonService, PersonService>();
+            //serviceDescriptors.AddScoped<IPersonService, PersonService>();
             serviceDescriptors.AddAutoMapper(typeof(YourMappingProfile));
-            serviceDescriptors.AddTransient<IValidator<PersonDto>,PersonDtoValidator>();
+            serviceDescriptors.AddTransient<IValidator<PatientRequest>, CreatePatientValidator>();
+            serviceDescriptors.AddScoped<ICommon, Common>();
+            serviceDescriptors.AddScoped<IPatientService, PatientService>();
+
+
+            serviceDescriptors.AddIdentity<ApplicationUser, IdentityRole>()
+                   .AddEntityFrameworkStores<AppointEaseContext>()
+                   .AddDefaultTokenProviders();
         }
     }
 }

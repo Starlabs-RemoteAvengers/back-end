@@ -256,3 +256,386 @@ C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.AspNe
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.pdb
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.genruntimeconfig.cache
 C:\Users\CCC\Downloads\back-end-main\back-end-main\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\ref\AppointEase.AspNetCore.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\refint\AppointEase.AspNetCore.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.AssemblyReference.cache
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.AssemblyInfoInputs.cache
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.AssemblyInfo.cs
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.CoreCompileInputs.cache
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.sourcelink.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.exe
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.deps.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.runtimeconfig.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\WebDriver.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.AppointEase.AspNetCore.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.build.AppointEase.AspNetCore.props
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AppointEase.AspNetCore.props
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AppointEase.AspNetCore.props
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\scopedcss\bundle\AppointEase.AspNetCore.styles.css
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.CopyComplete
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.genruntimeconfig.cache
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\ref\AppointEase.AspNetCore.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\AV Computer\OneDrive - University of Applied Sciences in Ferizaj\Desktop\GitCloneProject\back-end\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.AssemblyReference.cache
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.AssemblyInfoInputs.cache
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.AssemblyInfo.cs
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.CoreCompileInputs.cache
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.sourcelink.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\refint\AppointEase.AspNetCore.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.exe
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.deps.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.runtimeconfig.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\WebDriver.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.dll
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.AppointEase.AspNetCore.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.build.AppointEase.AspNetCore.props
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AppointEase.AspNetCore.props
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AppointEase.AspNetCore.props
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\scopedcss\bundle\AppointEase.AspNetCore.styles.css
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.CopyComplete
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.genruntimeconfig.cache
+C:\Users\CCC\Desktop\AppointEaseTry\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\ref\AppointEase.AspNetCore.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.AssemblyReference.cache
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.AssemblyInfoInputs.cache
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.AssemblyInfo.cs
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.CoreCompileInputs.cache
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.MvcApplicationPartsAssemblyInfo.cs
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.MvcApplicationPartsAssemblyInfo.cache
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\refint\AppointEase.AspNetCore.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.Development.json
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.json
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.exe
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.deps.json
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.runtimeconfig.json
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AutoMapper.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Core.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Identity.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\FluentValidation.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\WebDriver.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.dll
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.build.json
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.development.json
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.AppointEase.AspNetCore.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.build.AppointEase.AspNetCore.props
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AppointEase.AspNetCore.props
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AppointEase.AspNetCore.props
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\scopedcss\bundle\AppointEase.AspNetCore.styles.css
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.CopyComplete
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.genruntimeconfig.cache
+D:\Downloads\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\ref\AppointEase.AspNetCore.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.AssemblyReference.cache
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.AssemblyInfoInputs.cache
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.AssemblyInfo.cs
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.CoreCompileInputs.cache
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.MvcApplicationPartsAssemblyInfo.cs
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.MvcApplicationPartsAssemblyInfo.cache
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.sourcelink.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\refint\AppointEase.AspNetCore.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.Development.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.exe
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.deps.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.runtimeconfig.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AutoMapper.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Core.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Identity.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\FluentValidation.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\WebDriver.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.dll
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.build.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.development.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.AppointEase.AspNetCore.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.build.AppointEase.AspNetCore.props
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AppointEase.AspNetCore.props
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AppointEase.AspNetCore.props
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\scopedcss\bundle\AppointEase.AspNetCore.styles.css
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.csproj.CopyComplete
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.genruntimeconfig.cache
+D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\ref\AppointEase.AspNetCore.dll
