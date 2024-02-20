@@ -125,3 +125,28 @@ D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data\bin\Debug\net8.0\
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.genruntimeconfig.cache
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data\obj\Debug\net8.0\ref\AppointEase.Data.dll
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.csproj.CopyComplete
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.csproj.AssemblyReference.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.AssemblyInfoInputs.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.AssemblyInfo.cs
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.csproj.CoreCompileInputs.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.sourcelink.json
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.csproj.AssemblyReference.cache
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.AssemblyInfoInputs.cache
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.AssemblyInfo.cs
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.csproj.CoreCompileInputs.cache
+E:\Porjects\AppointEase\AppointEase.Data\bin\Debug\net8.0\AppointEase.Data.deps.json
+E:\Porjects\AppointEase\AppointEase.Data\bin\Debug\net8.0\AppointEase.Data.runtimeconfig.json
+E:\Porjects\AppointEase\AppointEase.Data\bin\Debug\net8.0\AppointEase.Data.dll
+E:\Porjects\AppointEase\AppointEase.Data\bin\Debug\net8.0\AppointEase.Data.pdb
+E:\Porjects\AppointEase\AppointEase.Data\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Data\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Data\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+E:\Porjects\AppointEase\AppointEase.Data\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.csproj.CopyComplete
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.dll
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\refint\AppointEase.Data.dll
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.pdb
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\AppointEase.Data.genruntimeconfig.cache
+E:\Porjects\AppointEase\AppointEase.Data\obj\Debug\net8.0\ref\AppointEase.Data.dll

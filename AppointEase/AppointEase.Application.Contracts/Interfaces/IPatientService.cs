@@ -1,20 +1,15 @@
 ﻿using AppointEase.Application.Contracts.Models.Operations;
-using AppointEase.Application.Contracts.ModelsDto;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AppointEase.Application.Contracts.Models.Request;
+using AppointEase.Application.Contracts.ModelsRespond;
 
 namespace AppointEase.Application.Contracts.Interfaces
 {
     public interface IPatientService
     {
-        Task <PatientRequest> GetPerson(int patientId);
-        Task <IEnumerable<PatientRequest>> GetAllPersons();
-        Task <OperationResult>CreatePersonAsync(PatientRequest personDto);
-        Task <OperationResult> UpdatePerson(int personId, PatientRequest personDto);
-        Task <OperationResult> DeletePerson(int personId);
+        Task <PatientResponse> GetPatitent(int patientId);
+        Task <IEnumerable<PatientResponse>> GetAllPatitents();
+        Task <OperationResult>CreatePatitentAsync(PatientRequest personDto);
+        Task <OperationResult> UpdatePatitent(int personId, PatientRequest personDto);
+        Task <OperationResult> DeletePatitent(int personId);
     }
 }

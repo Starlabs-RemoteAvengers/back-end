@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppointEase.Application.Contracts.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppointEase.Application.Contracts.Models.Operations
 {
-    public class OperationResult
+    public class OperationResult : IOperationResult
     {
         public bool Success { get; private set; }
         public string Message { get; private set; }
@@ -24,12 +25,12 @@ namespace AppointEase.Application.Contracts.Models.Operations
             Message = message;
         }
 
-        public static OperationResult SuccessResult(string message = "Operation completed successfully.")
+        public OperationResult SuccessResult(string message = "Operation completed successfully.")
         {
             return new OperationResult (true, message);
         }
 
-        public static OperationResult ErrorResult(string message, IEnumerable<string> errors)
+        public OperationResult ErrorResult(string message, IEnumerable<string> errors)
         {
             return new OperationResult(false, message, errors);
         }

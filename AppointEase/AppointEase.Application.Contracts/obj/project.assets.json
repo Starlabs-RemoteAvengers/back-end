@@ -5102,11 +5102,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CCC\\Desktop\\APP2.0\\AppointEase2.0\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
+      "projectUniqueName": "D:\\Porjects\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
       "projectName": "AppointEase.Application.Contracts",
-      "projectPath": "C:\\Users\\CCC\\Desktop\\APP2.0\\AppointEase2.0\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
+      "projectPath": "D:\\Porjects\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
       "packagesPath": "C:\\Users\\CCC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CCC\\Desktop\\APP2.0\\AppointEase2.0\\AppointEase\\AppointEase.Application.Contracts\\obj\\",
+      "outputPath": "D:\\Porjects\\AppointEase\\AppointEase.Application.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
