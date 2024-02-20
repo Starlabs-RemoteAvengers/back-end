@@ -1,12 +1,6 @@
 ﻿using AppointEase.Application.Contracts.Interfaces;
-using AppointEase.Application.Contracts.Models;
 using AppointEase.Data.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppointEase.Data.Repositories
 {

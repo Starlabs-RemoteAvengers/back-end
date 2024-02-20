@@ -92,3 +92,23 @@ D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Application.Contracts\
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.pdb
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.genruntimeconfig.cache
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\ref\AppointEase.Application.Contracts.dll
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.csproj.AssemblyReference.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.AssemblyInfoInputs.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.AssemblyInfo.cs
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.sourcelink.json
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.csproj.AssemblyReference.cache
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.AssemblyInfoInputs.cache
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.AssemblyInfo.cs
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.csproj.CoreCompileInputs.cache
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.deps.json
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.runtimeconfig.json
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\refint\AppointEase.Application.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.pdb
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.genruntimeconfig.cache
+E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\ref\AppointEase.Application.Contracts.dll

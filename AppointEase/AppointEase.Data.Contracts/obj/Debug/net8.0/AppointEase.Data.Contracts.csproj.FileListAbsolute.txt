@@ -76,3 +76,24 @@ D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Deb
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.pdb
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\ref\AppointEase.Data.Contracts.dll
 D:\Downloads\Clone\AppointEaseTry\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CopyComplete
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.AssemblyReference.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfoInputs.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfo.cs
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\CCC\Desktop\Clone 3,0\back-end\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.sourcelink.json
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.AssemblyReference.cache
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfoInputs.cache
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.AssemblyInfo.cs
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CoreCompileInputs.cache
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.deps.json
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.csproj.CopyComplete
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\refint\AppointEase.Data.Contracts.dll
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\AppointEase.Data.Contracts.pdb
+E:\Porjects\AppointEase\AppointEase.Data.Contracts\obj\Debug\net8.0\ref\AppointEase.Data.Contracts.dll

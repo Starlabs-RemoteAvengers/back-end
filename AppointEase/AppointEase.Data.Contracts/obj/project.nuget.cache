@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AEBifi7TbAGDa0Per0cXWbE5M6b21YWNQXf7E+WpSJY74miwJXST9Vwpsa3osF9lYzIWgLkqQJCfBiSkm3Y2Lw==",
+  "dgSpecHash": "J3UfibxwmKESH3+CmLfD7tIY16Pp/xMIMGFeILKa+itnzdkV+FRKvFY643Kzv26X4gBJ/ItbU1jxUIoQUcO8oA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CCC\\Desktop\\APP2.0\\AppointEase2.0\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj",
+  "projectFilePath": "D:\\Porjects\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CCC\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\CCC\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using AppointEase.Application.Contracts.Identity;
-using AppointEase.Application.Contracts.Models.DbModels;
+﻿using AppointEase.Data.Contracts.Identity;
+using AppointEase.Data.Contracts.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace AppointEase.Data.Data;
 
