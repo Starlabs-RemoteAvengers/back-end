@@ -1,4 +1,6 @@
 ﻿using AppointEase.Application.Contracts.Models;
+using AppointEase.Application.Contracts.Models.DbModels;
+using AppointEase.Application.Contracts.ModelsDto;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
@@ -13,7 +15,10 @@ namespace AppointEase.Application.Mapper
     {
         public YourMappingProfile()
         {
-            CreateMap<Person, PersonDto>().ReverseMap();
+            CreateMap<TblAdmin, AdminRequest>().ReverseMap();
+            CreateMap<TblClinic, ClinicRequest>().ReverseMap();
+            CreateMap<TblDoctor, DoctorRequest>().ReverseMap();
+
         }
     }
 }

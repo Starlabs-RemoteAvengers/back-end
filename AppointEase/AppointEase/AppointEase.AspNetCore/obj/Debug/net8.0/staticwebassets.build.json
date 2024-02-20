@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SvMuSuAgCF1B/os4Am31EUDz/QeCD5kZmnVnrlVFmW8=",
+  "Source": "AppointEase.AspNetCore",
+  "BasePath": "_content/AppointEase.AspNetCore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
