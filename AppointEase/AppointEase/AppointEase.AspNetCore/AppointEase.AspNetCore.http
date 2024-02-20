@@ -1,0 +1,6 @@
+@AppointEase.AspNetCore_HostAddress = http://localhost:5285
+
+GET {{AppointEase.AspNetCore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
