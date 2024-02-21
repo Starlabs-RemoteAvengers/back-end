@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppointEase.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5322189adff1848d0520b8aa895f578077b49709")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppointEase.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppointEase.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -22,7 +22,7 @@ namespace AppointEase.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AppointEase.Application.Contracts.Identity.ApplicationUser", b =>
+            modelBuilder.Entity("AppointEase.Data.Contracts.Identity.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -103,7 +103,7 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("AppointEase.Application.Contracts.Models.DbModels.TblAdmin", b =>
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblAdmin", b =>
                 {
                     b.Property<int>("AdminId")
                         .ValueGeneratedOnAdd()
@@ -128,7 +128,7 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("TblAdmins");
                 });
 
-            modelBuilder.Entity("AppointEase.Application.Contracts.Models.DbModels.TblClinic", b =>
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblClinic", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -153,7 +153,7 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("TblClinic");
                 });
 
-            modelBuilder.Entity("AppointEase.Application.Contracts.Models.DbModels.TblDoctor", b =>
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblDoctor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -194,7 +194,7 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("TblDoctor");
                 });
 
-            modelBuilder.Entity("AppointEase.Application.Contracts.Models.DbModels.TblPacient", b =>
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblPacient", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -214,7 +214,7 @@ namespace AppointEase.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Gander")
+                    b.Property<string>("Gender")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -268,28 +268,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7f22b5ef-6c80-4c98-8568-1d69f431110d",
+                            Id = "1b3d1623-aef8-4fa7-9a87-3cb7f30e6fc6",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "f70c16c2-2f1b-4830-816b-4d855401706d",
+                            Id = "216bd97d-af6b-4027-b81b-71cc246ed523",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "77ee7a9d-483c-4037-8337-0053956c2ea9",
+                            Id = "afbeb03f-a68c-4ec2-97ea-36832d6bc729",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "84cbe328-15e2-4441-befa-6a57312604c4",
+                            Id = "884cdf82-3a6b-46f9-aa15-57589d22bdbf",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"
@@ -402,9 +402,9 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("AppointEase.Application.Contracts.Models.DbModels.TblDoctor", b =>
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblDoctor", b =>
                 {
-                    b.HasOne("AppointEase.Application.Contracts.Models.DbModels.TblClinic", "ClinicNavigation")
+                    b.HasOne("AppointEase.Data.Contracts.Models.TblClinic", "ClinicNavigation")
                         .WithMany()
                         .HasForeignKey("ClinicNavigationId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -424,7 +424,7 @@ namespace AppointEase.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("AppointEase.Application.Contracts.Identity.ApplicationUser", null)
+                    b.HasOne("AppointEase.Data.Contracts.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -433,7 +433,7 @@ namespace AppointEase.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("AppointEase.Application.Contracts.Identity.ApplicationUser", null)
+                    b.HasOne("AppointEase.Data.Contracts.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -448,7 +448,7 @@ namespace AppointEase.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AppointEase.Application.Contracts.Identity.ApplicationUser", null)
+                    b.HasOne("AppointEase.Data.Contracts.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -457,7 +457,7 @@ namespace AppointEase.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("AppointEase.Application.Contracts.Identity.ApplicationUser", null)
+                    b.HasOne("AppointEase.Data.Contracts.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

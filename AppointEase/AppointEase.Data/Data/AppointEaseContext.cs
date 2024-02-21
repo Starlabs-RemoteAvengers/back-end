@@ -24,7 +24,7 @@ public class AppointEaseContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Data Source=(localdb)\\Local;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-EUO8BVU\\MSSQLSERVER01;Database=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
     }
     protected override void OnModelCreating(ModelBuilder builder)
     {

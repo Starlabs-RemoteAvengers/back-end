@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AppointEase.Application.Contracts\AppointEase.Application.Contracts.csproj" />
     <ProjectReference Include="..\AppointEase.Data.Contracts\AppointEase.Data.Contracts.csproj" />
+    <ProjectReference Include="..\AppointEase.Data\AppointEase.Data.csproj" />
   </ItemGroup>
 
 </Project>
