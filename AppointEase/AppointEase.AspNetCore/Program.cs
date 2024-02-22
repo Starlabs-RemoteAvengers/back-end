@@ -1,11 +1,17 @@
-using System.Globalization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using AppointEase.Application.Filters;
 using AppointEase.Application;
 using AppointEase.Data;
+using AppointEase.Data.Contracts.Identity;
+using AppointEase.Data.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
-// Add configuration
 builder.Configuration.AddJsonFile("appsettings.json");
 
 builder.Services.AddControllers(options =>
@@ -14,21 +20,53 @@ builder.Services.AddControllers(options =>
 });
 
 ApplicationInjection.AddApplicationServices(builder.Services);
-DataInjectionServices.AddDataServices(builder.Services,builder.Configuration);
+DataInjectionServices.AddDataServices(builder.Services, builder.Configuration);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// Add authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = configuration["Jwt:Issuer"],
+            ValidAudience = configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]))
+        };
+    });
+
+// Add ASP.NET Core Identity
+//builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+//    .AddEntityFrameworkStores<AppointEaseContext>()
+//    .AddDefaultTokenProviders();
+
+// Other service registrations (Application services, Data services, Swagger, etc.)
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
+});
+
 
 var app = builder.Build();
+
+
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name v1"));
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+
 app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();

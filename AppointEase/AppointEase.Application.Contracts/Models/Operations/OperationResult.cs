@@ -24,6 +24,10 @@ namespace AppointEase.Application.Contracts.Models.Operations
             Success = success;
             Message = message;
         }
+        public OperationResult()
+        {
+            
+        }
 
         public OperationResult SuccessResult(string message = "Operation completed successfully.")
         {

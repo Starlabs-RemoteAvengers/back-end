@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppointEase.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigrations : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -95,7 +95,7 @@ namespace AppointEase.Data.Migrations
                     PersonalNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Gander = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -242,10 +242,10 @@ namespace AppointEase.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "77ee7a9d-483c-4037-8337-0053956c2ea9", "3", "Doctor", "Doctor" },
-                    { "7f22b5ef-6c80-4c98-8568-1d69f431110d", "1", "Admin", "Admin" },
-                    { "84cbe328-15e2-4441-befa-6a57312604c4", "4", "Patient", "Patient" },
-                    { "f70c16c2-2f1b-4830-816b-4d855401706d", "2", "Clinic", "Clinic" }
+                    { "1b3d1623-aef8-4fa7-9a87-3cb7f30e6fc6", "1", "Admin", "Admin" },
+                    { "216bd97d-af6b-4027-b81b-71cc246ed523", "2", "Clinic", "Clinic" },
+                    { "884cdf82-3a6b-46f9-aa15-57589d22bdbf", "4", "Patient", "Patient" },
+                    { "afbeb03f-a68c-4ec2-97ea-36832d6bc729", "3", "Doctor", "Doctor" }
                 });
 
             migrationBuilder.CreateIndex(

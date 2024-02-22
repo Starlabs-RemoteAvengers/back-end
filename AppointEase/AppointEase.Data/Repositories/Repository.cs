@@ -1,4 +1,5 @@
 ﻿using AppointEase.Application.Contracts.Interfaces;
+using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Data.Data;
 using Microsoft.EntityFrameworkCore;
 

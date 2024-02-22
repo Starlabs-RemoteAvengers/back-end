@@ -7,6 +7,11 @@ using AppointEase.Application.Contracts.Validator;
 using AppointEase.Application.Contracts.Common;
 using AppointEase.Application.Contracts.Models.Request;
 using AppointEase.Application.Contracts.Models.Operations;
+using AppointEase.Data.Contracts.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using AppointEase.Data.Data;
+using Microsoft.Extensions.Configuration;
 
 namespace AppointEase.Application
 {
@@ -15,10 +20,12 @@ namespace AppointEase.Application
         public static void AddApplicationServices(this IServiceCollection serviceDescriptors)
         {
             serviceDescriptors.AddAutoMapper(typeof(MappingProfile));
+            serviceDescriptors.AddScoped<IUserService, UserService>();
             serviceDescriptors.AddTransient<IValidator<PatientRequest>, CreatePatientValidator>();
+
             serviceDescriptors.AddScoped<IApplicationExtensions, ApplicationExtensions>();
             serviceDescriptors.AddScoped<IPatientService, PatientService>();
-            serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();
+            serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();      
         }
     }
 }

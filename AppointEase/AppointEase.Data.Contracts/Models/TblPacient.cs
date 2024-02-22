@@ -9,6 +9,7 @@ public partial class TblPacient
     public int UserId { get; set; }
 
     public string PersonalNumber { get; set; } = null!;
+    public string Username { get; set; } 
 
     public string Name { get; set; } = null!;
 

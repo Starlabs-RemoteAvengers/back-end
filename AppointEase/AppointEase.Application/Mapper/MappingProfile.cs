@@ -16,7 +16,7 @@ namespace AppointEase.Application.Mapper
             CreateMap<TblPacient, PatientRequest>().ReverseMap();
             CreateMap<TblPacient, PatientResponse>();
             CreateMap<PatientRequest,ApplicationUser>();
-
+          //  CreateMap<ApplicationUserRequest, ApplicationUser>();
         }
     }
 }
