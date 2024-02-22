@@ -14,16 +14,13 @@ namespace AppointEase.AspNetCore.Controllers
     public class AccountController : Controller
     {
         private readonly IPatientService _patientService;
+        private readonly IUserService _userService;
         private readonly IValidator<PatientRequest> _patientValidator;
-        private readonly AppointEaseContext _dbContext; // Inject the AppointEaseContext here
-        private readonly UserManager<ApplicationUser> _userManager;
-
-        public AccountController(IPatientService patientService,IValidator<PatientRequest> patientValidator,AppointEaseContext dbContext,UserManager<ApplicationUser> userManager)
+        public AccountController(IPatientService patientService,IValidator<PatientRequest> patientValidator, IUserService userService)
         {
             this._patientService = patientService;
             this._patientValidator = patientValidator;
-            this._dbContext = dbContext;
-            this._userManager = userManager;
+            this._userService = userService;
         }
 
         [HttpPost("CreatePatient")]
@@ -35,36 +32,29 @@ namespace AppointEase.AspNetCore.Controllers
             return Ok(result);
         }
 
+        [HttpPut("UpdatePatient/{personId}")]
+        public async Task<IActionResult> UpdatePatient(int personId, [FromBody] PatientRequest patientRequest)
+        {
+            _patientValidator.ValidateAndThrow(patientRequest);
+
+            var result = await _patientService.UpdatePatitent(personId, patientRequest);
+
+            return Ok(result);
+        }
+
         [HttpPost("SignIn")]
         public async Task<IActionResult> SignIn([FromBody] LoginRequest loginRequest)
         {
             if (loginRequest == null || string.IsNullOrEmpty(loginRequest.Username) || string.IsNullOrEmpty(loginRequest.Password))
-            {
                 return BadRequest("Invalid login request");
-            }
 
-            // Use UserManager to find the user by username
-            var user = await _userManager.FindByNameAsync(loginRequest.Username);
+            var result = await _userService.LogInAsync(loginRequest.Username, loginRequest.Password);
 
-            if (user != null)
-            {
-                // Use UserManager to check the password
-                var isPasswordValid = await _userManager.CheckPasswordAsync(user, loginRequest.Password);
-
-                if (isPasswordValid)
-                {
-                    // User exists, password is correct
-                    // Retrieve the user's role
-                    var userRoles = await _userManager.GetRolesAsync(user);
-                    var userRole = userRoles.FirstOrDefault(); // Assuming a user has only one role
-
-                    // You can return additional information like Role, etc.
-                    return Ok(new { Role = userRole, Username = loginRequest.Username });
-                }
-            }
-
-            // Invalid username or password
+            if (result.Success)
+              return Ok();
+            
             return Unauthorized("Invalid username or password");
+            
         }
 
     }

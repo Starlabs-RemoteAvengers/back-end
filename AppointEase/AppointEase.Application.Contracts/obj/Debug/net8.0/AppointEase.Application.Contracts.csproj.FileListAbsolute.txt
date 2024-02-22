@@ -113,7 +113,6 @@ E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\Appoi
 E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.genruntimeconfig.cache
 E:\Porjects\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\ref\AppointEase.Application.Contracts.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.deps.json
-C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.runtimeconfig.json
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.csproj.AssemblyReference.cache
@@ -125,5 +124,4 @@ C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contract
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\refint\AppointEase.Application.Contracts.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.pdb
-C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\AppointEase.Application.Contracts.genruntimeconfig.cache
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application.Contracts\obj\Debug\net8.0\ref\AppointEase.Application.Contracts.dll

@@ -1,5 +1,6 @@
 ﻿using AppointEase.Application.Contracts.Interfaces;
 using AppointEase.Data.Contracts.Identity;
+using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Data.Contracts.Models;
 using AppointEase.Data.Data;
 using AppointEase.Data.Repositories;

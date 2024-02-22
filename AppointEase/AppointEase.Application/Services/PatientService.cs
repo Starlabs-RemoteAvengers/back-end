@@ -1,4 +1,5 @@
 ﻿using AppointEase.Application.Contracts.Interfaces;
+using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Application.Contracts.Models.Operations;
 using AppointEase.Application.Contracts.Models.Request;
 using AppointEase.Application.Contracts.ModelsRespond;

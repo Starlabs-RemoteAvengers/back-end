@@ -2794,7 +2794,6 @@
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
-          "Microsoft.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2"
         },
         "compile": {
@@ -7536,8 +7535,6 @@
       "AppointEase.Data >= 1.0.0",
       "AppointEase.Data.Contracts >= 1.0.0",
       "AutoMapper >= 13.0.1",
-      "FluentValidation >= 11.9.0",
-      "Microsoft.AspNetCore.Mvc.Abstractions >= 2.2.0",
       "Microsoft.AspNetCore.Mvc.Core >= 2.2.5",
       "Selenium.WebDriver >= 4.17.0"
     ]
@@ -7600,14 +7597,6 @@
           "AutoMapper": {
             "target": "Package",
             "version": "[13.0.1, )"
-          },
-          "FluentValidation": {
-            "target": "Package",
-            "version": "[11.9.0, )"
-          },
-          "Microsoft.AspNetCore.Mvc.Abstractions": {
-            "target": "Package",
-            "version": "[2.2.0, )"
           },
           "Microsoft.AspNetCore.Mvc.Core": {
             "target": "Package",

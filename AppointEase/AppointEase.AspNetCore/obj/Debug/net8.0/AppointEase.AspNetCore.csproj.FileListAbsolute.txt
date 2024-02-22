@@ -913,10 +913,10 @@ E:\Porjects\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspN
 E:\Porjects\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.genruntimeconfig.cache
 E:\Porjects\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\ref\AppointEase.AspNetCore.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.json
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
-C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\appsettings.json
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.exe
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.deps.json
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\AppointEase.AspNetCore.runtimeconfig.json
@@ -927,6 +927,7 @@ C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Humanizer.dll
+C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -951,6 +952,7 @@ C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
@@ -1186,5 +1188,3 @@ C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.pdb
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\AppointEase.AspNetCore.genruntimeconfig.cache
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\obj\Debug\net8.0\ref\AppointEase.AspNetCore.dll
-C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.AspNetCore\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

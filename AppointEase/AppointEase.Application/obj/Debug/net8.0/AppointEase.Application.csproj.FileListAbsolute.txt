@@ -174,8 +174,10 @@ C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debu
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Application.pdb
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Application.Contracts.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Data.Contracts.dll
+C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Data.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Application.Contracts.pdb
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Data.Contracts.pdb
+C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Data.pdb
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\obj\Debug\net8.0\AppointEase.Application.csproj.AssemblyReference.cache
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\obj\Debug\net8.0\AppointEase.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\obj\Debug\net8.0\AppointEase.Application.AssemblyInfoInputs.cache
@@ -187,5 +189,3 @@ C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\obj\Debu
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\obj\Debug\net8.0\refint\AppointEase.Application.dll
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\obj\Debug\net8.0\AppointEase.Application.pdb
 C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\obj\Debug\net8.0\ref\AppointEase.Application.dll
-C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Data.dll
-C:\Users\Zamira\Desktop\AppointEase\AppointEase\AppointEase.Application\bin\Debug\net8.0\AppointEase.Data.pdb

@@ -19,22 +19,13 @@ namespace AppointEase.Application
     {
         public static void AddApplicationServices(this IServiceCollection serviceDescriptors)
         {
-            // AutoMapper
             serviceDescriptors.AddAutoMapper(typeof(MappingProfile));
-
-            // FluentValidation
+            serviceDescriptors.AddScoped<IUserService, UserService>();
             serviceDescriptors.AddTransient<IValidator<PatientRequest>, CreatePatientValidator>();
 
-            // Application services
             serviceDescriptors.AddScoped<IApplicationExtensions, ApplicationExtensions>();
             serviceDescriptors.AddScoped<IPatientService, PatientService>();
-            serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();
-           
-            // Identity services
-            //serviceDescriptors.AddIdentity<ApplicationUser, IdentityRole>()
-            //    .AddEntityFrameworkStores<AppointEaseContext>()
-            //    .AddDefaultTokenProviders();
-
+            serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();      
         }
     }
 }
