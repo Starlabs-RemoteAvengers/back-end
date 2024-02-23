@@ -27,10 +27,10 @@ namespace AppointEase.Data
                  .AddDefaultTokenProviders();
 
             serviceDescriptors.AddScoped<AppointEaseContext>();
-            serviceDescriptors.AddScoped<IRepository<TblPacient>, UserRepository>();
-            serviceDescriptors.AddScoped<IRepository<TblAdmin>, AdminRepository>();
-            serviceDescriptors.AddScoped<IRepository<TblClinic>, ClinicRepository>();
-            serviceDescriptors.AddScoped<IRepository<TblDoctor>, DoctorReporsitory>();
+            serviceDescriptors.AddScoped<IRepository<Patient>, PatientRepository>();
+            serviceDescriptors.AddScoped<IRepository<Admin>, AdminRepository>();
+            serviceDescriptors.AddScoped<IRepository<Clinic>, ClinicRepository>();
+            serviceDescriptors.AddScoped<IRepository<Doctor>, DoctorReporsitory>();
 
         }
     }

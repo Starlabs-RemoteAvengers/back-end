@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj": {
+    "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
         "projectName": "AppointEase.Application.Contracts",
-        "projectPath": "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
-        "packagesPath": "C:\\Users\\Zamira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Application.Contracts\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Application.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Zamira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -86,20 +86,20 @@
         }
       }
     },
-    "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj": {
+    "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj",
         "projectName": "AppointEase.Data.Contracts",
-        "projectPath": "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj",
-        "packagesPath": "C:\\Users\\Zamira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Data.Contracts\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Data.Contracts\\AppointEase.Data.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Data.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Zamira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,8 +115,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj": {
-                "projectPath": "C:\\Users\\Zamira\\Desktop\\AppointEase\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj"
+              "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\2\\back-end\\AppointEase\\AppointEase.Application.Contracts\\AppointEase.Application.Contracts.csproj"
               }
             }
           }

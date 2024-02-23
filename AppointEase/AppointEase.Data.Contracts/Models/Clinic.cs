@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppointEase.Data.Contracts.Models
 {
-    public partial class TblClinic
+    public partial class Clinic
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

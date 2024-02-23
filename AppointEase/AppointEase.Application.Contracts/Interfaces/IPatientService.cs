@@ -9,7 +9,7 @@ namespace AppointEase.Application.Contracts.Interfaces
         Task <PatientResponse> GetPatitent(int patientId);
         Task <IEnumerable<PatientResponse>> GetAllPatitents();
         Task <OperationResult>CreatePatitentAsync(PatientRequest personDto);
-        Task <OperationResult> UpdatePatitent(int personId, PatientRequest personDto);
+        Task <OperationResult> UpdatePatitent(string personId, PatientRequest personDto);
         Task <OperationResult> DeletePatitent(int personId);
     }
 }

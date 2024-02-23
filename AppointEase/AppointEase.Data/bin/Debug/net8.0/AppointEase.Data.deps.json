@@ -15,8 +15,12 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.2",
+<<<<<<< HEAD
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
+=======
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
+>>>>>>> 151d9fa (chores: merged)
         },
         "runtime": {
           "AppointEase.Data.dll": {}
@@ -735,7 +739,10 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.2"
         }
       },
+<<<<<<< HEAD
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
+=======
+>>>>>>> 151d9fa (chores: merged)
       "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
@@ -1790,6 +1797,7 @@
       "path": "microsoft.entityframeworkcore.tools/8.0.2",
       "hashPath": "microsoft.entityframeworkcore.tools.8.0.2.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
       "serviceable": true,
@@ -1797,6 +1805,8 @@
       "path": "microsoft.extensions.apidescription.server/6.0.5",
       "hashPath": "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512"
     },
+=======
+>>>>>>> 151d9fa (chores: merged)
     "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
       "type": "package",
       "serviceable": true,

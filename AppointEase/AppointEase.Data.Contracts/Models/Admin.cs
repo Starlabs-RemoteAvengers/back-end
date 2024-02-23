@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppointEase.Data.Contracts.Models;
 
-public partial class TblAdmin
+public partial class Admin
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

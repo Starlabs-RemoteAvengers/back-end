@@ -101,9 +101,15 @@ namespace AppointEase.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.UseTptMappingStrategy();
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblAdmin", b =>
+=======
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.Admin", b =>
+>>>>>>> 151d9fa (chores: merged)
                 {
                     b.Property<int>("AdminId")
                         .ValueGeneratedOnAdd()
@@ -125,10 +131,14 @@ namespace AppointEase.Data.Migrations
 
                     b.HasKey("AdminId");
 
-                    b.ToTable("TblAdmins");
+                    b.ToTable("Admin");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblClinic", b =>
+=======
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.Clinic", b =>
+>>>>>>> 151d9fa (chores: merged)
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -150,10 +160,14 @@ namespace AppointEase.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TblClinic");
+                    b.ToTable("Clinic");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblDoctor", b =>
+=======
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.Doctor", b =>
+>>>>>>> 151d9fa (chores: merged)
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -191,6 +205,7 @@ namespace AppointEase.Data.Migrations
 
                     b.HasIndex("ClinicNavigationId");
 
+<<<<<<< HEAD
                     b.ToTable("TblDoctor");
                 });
 
@@ -241,6 +256,9 @@ namespace AppointEase.Data.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("TblUsers");
+=======
+                    b.ToTable("Doctor");
+>>>>>>> 151d9fa (chores: merged)
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -272,28 +290,44 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
+<<<<<<< HEAD
                             Id = "30d14f8e-9a56-4201-bd70-15682eb333eb",
+=======
+                            Id = "e57ab06c-6a29-4ab9-99b4-ff6976722fa3",
+>>>>>>> 151d9fa (chores: merged)
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "3052059a-bb2d-4edd-bdaf-f35030698fe7",
+=======
+                            Id = "252be9cb-8445-4a92-b89c-5979924fbe4a",
+>>>>>>> 151d9fa (chores: merged)
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "304669dd-b747-4f85-becf-95594d94414c",
+=======
+                            Id = "985deff3-abbc-4b83-8d3d-2c43e94313a4",
+>>>>>>> 151d9fa (chores: merged)
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "d3ec6ed6-6f76-4f7c-a34d-1123919f8fd8",
+=======
+                            Id = "de6b03ca-1b4f-4be4-a272-80ba82f79baa",
+>>>>>>> 151d9fa (chores: merged)
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"
@@ -406,9 +440,30 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblDoctor", b =>
                 {
                     b.HasOne("AppointEase.Data.Contracts.Models.TblClinic", "ClinicNavigation")
+=======
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.Patient", b =>
+                {
+                    b.HasBaseType("AppointEase.Data.Contracts.Identity.ApplicationUser");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("Patient", (string)null);
+                });
+
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.Doctor", b =>
+                {
+                    b.HasOne("AppointEase.Data.Contracts.Models.Clinic", "ClinicNavigation")
+>>>>>>> 151d9fa (chores: merged)
                         .WithMany()
                         .HasForeignKey("ClinicNavigationId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -464,6 +519,15 @@ namespace AppointEase.Data.Migrations
                     b.HasOne("AppointEase.Data.Contracts.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.Patient", b =>
+                {
+                    b.HasOne("AppointEase.Data.Contracts.Identity.ApplicationUser", null)
+                        .WithOne()
+                        .HasForeignKey("AppointEase.Data.Contracts.Models.Patient", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

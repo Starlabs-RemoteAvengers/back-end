@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppointEase.Application.Contracts.Models;
+using AppointEase.Application.Contracts.ModelsRespond;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +16,6 @@ namespace AppointEase.Data.Contracts.Interfaces
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);
+        Task UpdateAsync(PatientResponse patientToUpdate);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AppointEase.Application.Contracts.Interfaces;
+using AppointEase.Application.Contracts.ModelsRespond;
 using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Data.Data;
 using Microsoft.EntityFrameworkCore;
@@ -59,6 +60,11 @@ namespace AppointEase.Data.Repositories
             var entity = await GetByIdAsync(id);
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
+        }
+
+        public Task UpdateAsync(PatientResponse patientToUpdate)
+        {
+            throw new NotImplementedException();
         }
     }
 }

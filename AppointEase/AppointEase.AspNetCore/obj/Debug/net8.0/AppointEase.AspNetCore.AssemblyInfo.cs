@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppointEase.AspNetCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a6e0871bea2fc44e2cdccbc6da4801c34b0de2f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a1de832f010d5ce976e065f20a7e3c5598d229a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppointEase.AspNetCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppointEase.AspNetCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
