@@ -83,31 +83,7 @@ namespace AppointEase.Data.Migrations
                 },
                 constraints: table =>
                 {
-<<<<<<<< HEAD:AppointEase/AppointEase.Data/Migrations/20240221213021_InitialCreate.cs
-                    table.PrimaryKey("PK_TblClinic", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "TblUsers",
-                columns: table => new
-                {
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PersonalNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TblUsers", x => x.UserId);
-========
                     table.PrimaryKey("PK_Clinic", x => x.Id);
->>>>>>>> 151d9fa (chores: merged):AppointEase/AppointEase.Data/Migrations/20240223090258_InitialCreate.cs
                 });
 
             migrationBuilder.CreateTable(
@@ -265,17 +241,10 @@ namespace AppointEase.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-<<<<<<<< HEAD:AppointEase/AppointEase.Data/Migrations/20240221213021_InitialCreate.cs
-                    { "1b3d1623-aef8-4fa7-9a87-3cb7f30e6fc6", "1", "Admin", "Admin" },
-                    { "216bd97d-af6b-4027-b81b-71cc246ed523", "2", "Clinic", "Clinic" },
-                    { "884cdf82-3a6b-46f9-aa15-57589d22bdbf", "4", "Patient", "Patient" },
-                    { "afbeb03f-a68c-4ec2-97ea-36832d6bc729", "3", "Doctor", "Doctor" }
-========
-                    { "252be9cb-8445-4a92-b89c-5979924fbe4a", "2", "Clinic", "Clinic" },
-                    { "985deff3-abbc-4b83-8d3d-2c43e94313a4", "3", "Doctor", "Doctor" },
-                    { "de6b03ca-1b4f-4be4-a272-80ba82f79baa", "4", "Patient", "Patient" },
-                    { "e57ab06c-6a29-4ab9-99b4-ff6976722fa3", "1", "Admin", "Admin" }
->>>>>>>> 151d9fa (chores: merged):AppointEase/AppointEase.Data/Migrations/20240223090258_InitialCreate.cs
+                    { "41c95ddd-e1fd-4e87-9cf1-7044ad469a85", "2", "Clinic", "Clinic" },
+                    { "68c859b7-6db1-4556-9b90-6f22c1bf387f", "1", "Admin", "Admin" },
+                    { "eb55b0cf-79f3-4a06-9f79-bbf503dd5b6d", "4", "Patient", "Patient" },
+                    { "f766cf51-8cac-4603-8efc-023b01f125a1", "3", "Doctor", "Doctor" }
                 });
 
             migrationBuilder.CreateIndex(

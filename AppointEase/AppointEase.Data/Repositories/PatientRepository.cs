@@ -2,7 +2,7 @@
 using AppointEase.Data.Contracts.Models;
 using AppointEase.Data.Data;
 using Microsoft.EntityFrameworkCore;
-using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
+
 
 namespace AppointEase.Data.Repositories
 {

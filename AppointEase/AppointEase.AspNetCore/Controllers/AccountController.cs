@@ -32,15 +32,7 @@ namespace AppointEase.AspNetCore.Controllers
             return Ok(result);
         }
 
-        [HttpPut("UpdatePatient/{personId}")]
-        public async Task<IActionResult> UpdatePatient(int personId, [FromBody] PatientRequest patientRequest)
-        {
-            _patientValidator.ValidateAndThrow(patientRequest);
-
-            var result = await _patientService.UpdatePatitent(personId, patientRequest);
-
-            return Ok(result);
-        }
+        
 
         [HttpPut("UpdatePatient/{personId}")]
         public async Task<IActionResult> UpdatePatient(string personId, [FromBody] PatientRequest patientRequest)

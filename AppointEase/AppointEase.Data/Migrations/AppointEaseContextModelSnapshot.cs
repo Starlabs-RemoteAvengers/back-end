@@ -105,11 +105,7 @@ namespace AppointEase.Data.Migrations
                     b.UseTptMappingStrategy();
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblAdmin", b =>
-=======
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.Admin", b =>
->>>>>>> 151d9fa (chores: merged)
                 {
                     b.Property<int>("AdminId")
                         .ValueGeneratedOnAdd()
@@ -134,11 +130,7 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("Admin");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblClinic", b =>
-=======
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.Clinic", b =>
->>>>>>> 151d9fa (chores: merged)
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -163,11 +155,7 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("Clinic");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblDoctor", b =>
-=======
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.Doctor", b =>
->>>>>>> 151d9fa (chores: merged)
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -205,60 +193,7 @@ namespace AppointEase.Data.Migrations
 
                     b.HasIndex("ClinicNavigationId");
 
-<<<<<<< HEAD
-                    b.ToTable("TblDoctor");
-                });
-
-            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblPacient", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ContactNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PersonalNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserId");
-
-                    b.ToTable("TblUsers");
-=======
                     b.ToTable("Doctor");
->>>>>>> 151d9fa (chores: merged)
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -290,44 +225,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-<<<<<<< HEAD
-                            Id = "30d14f8e-9a56-4201-bd70-15682eb333eb",
-=======
-                            Id = "e57ab06c-6a29-4ab9-99b4-ff6976722fa3",
->>>>>>> 151d9fa (chores: merged)
+                            Id = "68c859b7-6db1-4556-9b90-6f22c1bf387f",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-<<<<<<< HEAD
-                            Id = "3052059a-bb2d-4edd-bdaf-f35030698fe7",
-=======
-                            Id = "252be9cb-8445-4a92-b89c-5979924fbe4a",
->>>>>>> 151d9fa (chores: merged)
+                            Id = "41c95ddd-e1fd-4e87-9cf1-7044ad469a85",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-<<<<<<< HEAD
-                            Id = "304669dd-b747-4f85-becf-95594d94414c",
-=======
-                            Id = "985deff3-abbc-4b83-8d3d-2c43e94313a4",
->>>>>>> 151d9fa (chores: merged)
+                            Id = "f766cf51-8cac-4603-8efc-023b01f125a1",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-<<<<<<< HEAD
-                            Id = "d3ec6ed6-6f76-4f7c-a34d-1123919f8fd8",
-=======
-                            Id = "de6b03ca-1b4f-4be4-a272-80ba82f79baa",
->>>>>>> 151d9fa (chores: merged)
+                            Id = "eb55b0cf-79f3-4a06-9f79-bbf503dd5b6d",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"
@@ -440,11 +359,6 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("AppointEase.Data.Contracts.Models.TblDoctor", b =>
-                {
-                    b.HasOne("AppointEase.Data.Contracts.Models.TblClinic", "ClinicNavigation")
-=======
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.Patient", b =>
                 {
                     b.HasBaseType("AppointEase.Data.Contracts.Identity.ApplicationUser");
@@ -463,7 +377,6 @@ namespace AppointEase.Data.Migrations
             modelBuilder.Entity("AppointEase.Data.Contracts.Models.Doctor", b =>
                 {
                     b.HasOne("AppointEase.Data.Contracts.Models.Clinic", "ClinicNavigation")
->>>>>>> 151d9fa (chores: merged)
                         .WithMany()
                         .HasForeignKey("ClinicNavigationId")
                         .OnDelete(DeleteBehavior.Cascade)
