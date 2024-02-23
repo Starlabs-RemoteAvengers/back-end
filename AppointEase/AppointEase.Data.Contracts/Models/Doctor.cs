@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppointEase.Data.Contracts.Models
 {
-    public partial class TblDoctor
+    public partial class Doctor
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -16,6 +16,6 @@ namespace AppointEase.Data.Contracts.Models
         public string Email { get; set; }
         public string Password { get; set; }
 
-        public virtual TblClinic ClinicNavigation { get; set; } = null!;
+        public virtual Clinic ClinicNavigation { get; set; } = null!;
     }
 }

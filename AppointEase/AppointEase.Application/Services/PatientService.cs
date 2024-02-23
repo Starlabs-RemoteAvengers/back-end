@@ -15,13 +15,13 @@ namespace AppointEase.Application.Services
 {
     public class PatientService : IPatientService
     {
-        private readonly IRepository<TblPacient> _uRepository;
+        private readonly IRepository<Patient> _uRepository;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IMapper _mapper;
         private readonly IApplicationExtensions _common;
         private readonly IOperationResult _operationResult;
 
-        public PatientService(IRepository<TblPacient> uRepository, UserManager<ApplicationUser> userManager, IMapper mapper, IApplicationExtensions common,IOperationResult operation)
+        public PatientService(IRepository<Patient> uRepository, UserManager<ApplicationUser> userManager, IMapper mapper, IApplicationExtensions common,IOperationResult operation)
         {
             _uRepository = uRepository;
             _userManager = userManager;
@@ -34,44 +34,47 @@ namespace AppointEase.Application.Services
         {
             try
             {
-
-                var patient = _mapper.Map<TblPacient>(patientRequest);
+                
                 var patients = await GetAllPatitents();
 
+                var patientExists = patients.FirstOrDefault(p =>
+                    p != null && (p.Email == patientRequest.Email || p.PersonalNumber == patientRequest.PersonalNumber));
 
-                var patientExcist = from pExcist in patients
-                                    where pExcist != null && (pExcist.Email == patientRequest.Email || pExcist.PersonalNumber == patientRequest.PersonalNumber)
-                                    select pExcist;
+                if (patientExists != null)
+                {
+                    return _operationResult.ErrorResult("Failed to create patient:", new[] { "This patient exists, please try again!" });
+                }
 
-                if (patientExcist?.Count() > 0)
-                      return _operationResult.ErrorResult("Failed to create patient:", new[] { "This patient exists, please try again!" });
-
-                var user = _mapper.Map<ApplicationUser>(patientRequest);
+                var user = _mapper.Map<Patient>(patientRequest);
 
                 var result = await _userManager.CreateAsync(user, patientRequest.Password);
 
                 if (!result.Succeeded)
+                {
                     return _operationResult.ErrorResult($"Failed to create user:", result.Errors.Select(e => e.Description));
+                }
 
                 await _userManager.AddToRoleAsync(user, user.Role);
-                await _uRepository.AddAsync(patient);
+
+                // Note: If you have already created the user, no need to add it again to the repository.
+                // If you want to store additional patient data in a separate repository, add it here.
 
                 _common.AddInformationMessage("Patient created successfully!");
 
                 return _operationResult.SuccessResult("Patient created successfully!");
-
             }
             catch (FluentValidation.ValidationException validationException)
             {
-                return  _operationResult.ErrorResult("Failed to create patient: Validation error", validationException.Errors.Select(e => e.ErrorMessage));
+                return _operationResult.ErrorResult("Failed to create patient: Validation error", validationException.Errors.Select(e => e.ErrorMessage));
             }
             catch (Exception ex)
             {
                 _common.AddErrorMessage($"Error creating patient: {ex.Message}");
-                return _operationResult.ErrorResult($"Failed to create user:" , new[] { ex.Message });
+                return _operationResult.ErrorResult($"Failed to create user:", new[] { ex.Message });
             }
         }
 
+       
         public async Task<OperationResult> DeletePatitent(int personId)
         {
             var person = await GetPatitent(personId);
@@ -99,35 +102,99 @@ namespace AppointEase.Application.Services
             return _mapper.Map<PatientResponse>(persons);
         }
 
-        public async Task<OperationResult> UpdatePatitent(int personId, PatientRequest patientRequest)
+        public async Task<OperationResult> UpdatePatitent(string userId, PatientRequest patientRequest)
         {
             try
             {
-                var existingPerson = await _uRepository.GetByIdAsync(personId);
-                if (existingPerson == null)
-                    return _operationResult.ErrorResult("Person not found", new[] { "Error1" });
+                // Retrieve the existing patient by userId
+                var existingPatient = await _userManager.FindByIdAsync(userId);
 
-                // Validate patientRequest using FluentValidation
-                //_personValidator.ValidateAndThrow(patientRequest);
-                var user = _mapper.Map<ApplicationUser>(patientRequest);
-               
-                await _userManager.UpdateAsync(user);
+                if (existingPatient == null)
+                {
+                    return _operationResult.ErrorResult("Failed to update patient:", new[] { "Patient not found!" });
+                }
 
-                _mapper.Map(patientRequest, existingPerson);
-                await _uRepository.UpdateAsync(existingPerson);
+                // Check if the email or personal number is already associated with another patient
+                var patients = await GetAllPatitents();
+                var patientExists = patients.FirstOrDefault(p =>
+                    p != null && p.Id != userId && (p.Email == patientRequest.Email || p.PersonalNumber == patientRequest.PersonalNumber));
 
-                return _operationResult.SuccessResult();
+                if (patientExists != null)
+                {
+                    return _operationResult.ErrorResult("Failed to update patient:", new[] { "This email or personal number is already associated with another patient!" });
+                }
+
+                // Update shared properties from ApplicationUser
+                existingPatient.UserName = patientRequest.UserName;
+                existingPatient.Email = patientRequest.Email;
+                existingPatient.Name = patientRequest.Name;
+                existingPatient.Surname = patientRequest.Surname;
+                existingPatient.Role = patientRequest.Role;
+                existingPatient.PersonalNumber = patientRequest.PersonalNumber;
+                existingPatient.PhoneNumber = patientRequest.PhoneNumber;
+
+                // Update Patient-specific properties
+                if (existingPatient is Patient patientToUpdate)
+                {
+                    patientToUpdate.Gender = patientRequest.Gender; // Add gender information if needed
+                    patientToUpdate.Description = patientRequest.Description; // Add description information if needed
+                }
+
+                // Update patient in the database
+                var result = await _userManager.UpdateAsync(existingPatient);
+
+                if (!result.Succeeded)
+                {
+                    return _operationResult.ErrorResult($"Failed to update patient:", result.Errors.Select(e => e.Description));
+                }
+
+                _common.AddInformationMessage("Patient updated successfully!");
+
+                return _operationResult.SuccessResult("Patient updated successfully!");
             }
             catch (FluentValidation.ValidationException validationException)
             {
-                return _operationResult.ErrorResult("Failed to update user: Validation error", validationException.Errors.Select(e => e.ErrorMessage));
+                return _operationResult.ErrorResult("Failed to update patient: Validation error", validationException.Errors.Select(e => e.ErrorMessage));
             }
             catch (Exception ex)
             {
                 _common.AddErrorMessage($"Error updating patient: {ex.Message}");
-                return _operationResult.ErrorResult($"Failed to create user:", new[] { ex.Message });
+                return _operationResult.ErrorResult($"Failed to update patient:", new[] { ex.Message });
             }
         }
-       
+
+
+
+
+        //public async Task<OperationResult> UpdatePatitent(int personId, PatientRequest patientRequest)
+        //{
+        //    try
+        //    {
+        //        var existingPerson = await _uRepository.GetByIdAsync(personId);
+        //        if (existingPerson == null)
+        //            return _operationResult.ErrorResult("Person not found", new[] { "Error1" });
+
+        //        // Validate patientRequest using FluentValidation
+        //        //_personValidator.ValidateAndThrow(patientRequest);
+        //        var user = _mapper.Map<ApplicationUser>(patientRequest);
+
+        //        await _userManager.UpdateAsync(user);
+
+        //        _mapper.Map(patientRequest, existingPerson);
+        //        await _uRepository.UpdateAsync(existingPerson);
+
+        //        return _operationResult.SuccessResult();
+        //    }
+        //    catch (FluentValidation.ValidationException validationException)
+        //    {
+        //        return _operationResult.ErrorResult("Failed to update user: Validation error", validationException.Errors.Select(e => e.ErrorMessage));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _common.AddErrorMessage($"Error updating patient: {ex.Message}");
+        //        return _operationResult.ErrorResult($"Failed to create user:", new[] { ex.Message });
+        //    }
+        //}
+
     }
 }

@@ -4,57 +4,50 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AppointEase.Data.Data;
-
-public class AppointEaseContext : IdentityDbContext<ApplicationUser>
+namespace AppointEase.Data.Data
 {
-    public AppointEaseContext()
+    public class AppointEaseContext : IdentityDbContext<ApplicationUser>
     {
-    }
+        public AppointEaseContext()
+        {
+        }
 
-    public AppointEaseContext(DbContextOptions<AppointEaseContext> options)
-        : base(options)
-    {
-    }
+        public AppointEaseContext(DbContextOptions<AppointEaseContext> options)
+            : base(options)
+        {
+        }
 
-    public virtual DbSet<TblAdmin> TblAdmins { get; set; }
-    public virtual DbSet<TblPacient> TblUsers { get; set; }
-    public virtual DbSet<TblClinic> TblClinic { get; set; }
-    public virtual DbSet<TblDoctor> TblDoctor { get; set; }
+        public virtual DbSet<Admin> Admin { get; set; }
+        public DbSet<Patient> Patient { get; set; }
+        public virtual DbSet<Clinic> Clinic { get; set; }
+        public virtual DbSet<Doctor> Doctor { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-EUO8BVU\\MSSQLSERVER01;Database=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
-    }
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-        base.OnModelCreating(builder);
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
+        }
 
-        builder.Entity<TblAdmin>()
-        .HasKey(e => e.AdminId);
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
 
-        builder.Entity<TblDoctor>()
-       .HasKey(e => e.Id);
+            builder.Entity<Admin>().HasKey(e => e.AdminId);
+            builder.Entity<Doctor>().HasKey(e => e.Id);
+            builder.Entity<Clinic>().HasKey(e => e.Id);
+            builder.Entity<Patient>().ToTable("Patient");
 
-        builder.Entity<TblClinic>()
-       .HasKey(e => e.Id);
+            // No need to configure the key for Patient if it inherits from ApplicationUser
 
-        builder.Entity<TblPacient>()
-       .HasKey(e => e.UserId);
+            SeedRoles(builder);
+        }
 
-        SeedRoles(builder);
-        // Customize the ASP.NET Identity model and override the defaults if needed.
-        // For example, you can rename the ASP.NET Identity table names and more.
-        // Add your customizations after calling base.OnModelCreating(builder);
-    }
-
-    private void SeedRoles(ModelBuilder builder)
-    {
-        builder.Entity<IdentityRole>().HasData(
-            new IdentityRole() { Name = "Admin", ConcurrencyStamp = "1", NormalizedName = "Admin" },
-            new IdentityRole() { Name = "Clinic", ConcurrencyStamp = "2", NormalizedName = "Clinic" },
-            new IdentityRole() { Name = "Doctor", ConcurrencyStamp = "3", NormalizedName = "Doctor" },
-            new IdentityRole() { Name = "Patient", ConcurrencyStamp = "4", NormalizedName = "Patient" });
-
+        private void SeedRoles(ModelBuilder builder)
+        {
+            builder.Entity<IdentityRole>().HasData(
+                new IdentityRole() { Name = "Admin", ConcurrencyStamp = "1", NormalizedName = "Admin" },
+                new IdentityRole() { Name = "Clinic", ConcurrencyStamp = "2", NormalizedName = "Clinic" },
+                new IdentityRole() { Name = "Doctor", ConcurrencyStamp = "3", NormalizedName = "Doctor" },
+                new IdentityRole() { Name = "Patient", ConcurrencyStamp = "4", NormalizedName = "Patient" });
+        }
     }
 }

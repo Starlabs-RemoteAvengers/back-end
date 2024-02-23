@@ -14,6 +14,21 @@ namespace AppointEase.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Admin",
+                columns: table => new
+                {
+                    AdminId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Admin", x => x.AdminId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -57,22 +72,7 @@ namespace AppointEase.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TblAdmins",
-                columns: table => new
-                {
-                    AdminId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TblAdmins", x => x.AdminId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "TblClinic",
+                name: "Clinic",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -83,27 +83,7 @@ namespace AppointEase.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TblClinic", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "TblUsers",
-                columns: table => new
-                {
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PersonalNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TblUsers", x => x.UserId);
+                    table.PrimaryKey("PK_Clinic", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -213,7 +193,26 @@ namespace AppointEase.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TblDoctor",
+                name: "Patient",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Patient", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Patient_AspNetUsers_Id",
+                        column: x => x.Id,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Doctor",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -228,11 +227,11 @@ namespace AppointEase.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TblDoctor", x => x.Id);
+                    table.PrimaryKey("PK_Doctor", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TblDoctor_TblClinic_ClinicNavigationId",
+                        name: "FK_Doctor_Clinic_ClinicNavigationId",
                         column: x => x.ClinicNavigationId,
-                        principalTable: "TblClinic",
+                        principalTable: "Clinic",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -242,10 +241,10 @@ namespace AppointEase.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "1b3d1623-aef8-4fa7-9a87-3cb7f30e6fc6", "1", "Admin", "Admin" },
-                    { "216bd97d-af6b-4027-b81b-71cc246ed523", "2", "Clinic", "Clinic" },
-                    { "884cdf82-3a6b-46f9-aa15-57589d22bdbf", "4", "Patient", "Patient" },
-                    { "afbeb03f-a68c-4ec2-97ea-36832d6bc729", "3", "Doctor", "Doctor" }
+                    { "41c95ddd-e1fd-4e87-9cf1-7044ad469a85", "2", "Clinic", "Clinic" },
+                    { "68c859b7-6db1-4556-9b90-6f22c1bf387f", "1", "Admin", "Admin" },
+                    { "eb55b0cf-79f3-4a06-9f79-bbf503dd5b6d", "4", "Patient", "Patient" },
+                    { "f766cf51-8cac-4603-8efc-023b01f125a1", "3", "Doctor", "Doctor" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -288,14 +287,17 @@ namespace AppointEase.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TblDoctor_ClinicNavigationId",
-                table: "TblDoctor",
+                name: "IX_Doctor_ClinicNavigationId",
+                table: "Doctor",
                 column: "ClinicNavigationId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Admin");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -312,22 +314,19 @@ namespace AppointEase.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "TblAdmins");
+                name: "Doctor");
 
             migrationBuilder.DropTable(
-                name: "TblDoctor");
-
-            migrationBuilder.DropTable(
-                name: "TblUsers");
+                name: "Patient");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Clinic");
 
             migrationBuilder.DropTable(
-                name: "TblClinic");
+                name: "AspNetUsers");
         }
     }
 }
