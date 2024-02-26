@@ -19,7 +19,7 @@ builder.Services.AddControllers(options =>
     options.Filters.Add<GlobalExceptionFilter>();
 });
 
-ApplicationInjection.AddApplicationServices(builder.Services);
+ApplicationInjection.AddApplicationServices(builder.Services, builder.Configuration);
 DataInjectionServices.AddDataServices(builder.Services, builder.Configuration);
 
 builder.Services.AddCors(options =>

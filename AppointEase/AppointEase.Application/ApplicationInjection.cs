@@ -7,17 +7,20 @@ using AppointEase.Application.Contracts.Validator;
 using AppointEase.Application.Contracts.Common;
 using AppointEase.Application.Contracts.Models.Request;
 using AppointEase.Application.Contracts.Models.Operations;
-using AppointEase.Data.Contracts.Identity;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using AppointEase.Data.Data;
 using Microsoft.Extensions.Configuration;
+using AppointEase.Application.Contracts.Models.EmailConfig;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 
 namespace AppointEase.Application
 {
     public static class ApplicationInjection
     {
-        public static void AddApplicationServices(this IServiceCollection serviceDescriptors)
+        public static void AddApplicationServices(this IServiceCollection serviceDescriptors, IConfiguration configuration)
         {
             serviceDescriptors.AddAutoMapper(typeof(MappingProfile));
             serviceDescriptors.AddScoped<IUserService, UserService>();
@@ -26,9 +29,29 @@ namespace AppointEase.Application
             serviceDescriptors.AddScoped<IApplicationExtensions, ApplicationExtensions>();
             serviceDescriptors.AddScoped<IPatientService, PatientService>();
             serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();
-            serviceDescriptors.AddScoped<IClinicService, ClinicService>();
-            serviceDescriptors.AddScoped<IDoctorService, DoctorService>();
-            serviceDescriptors.AddTransient<IValidator<ClinicRequest>, CreateClinicValidator>();
+
+            serviceDescriptors.AddScoped<IEmailSerivces, EmailService>();
+
+
+            serviceDescriptors.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            serviceDescriptors.AddScoped<IUrlHelper>(serviceProvider =>
+            {
+                var actionContext = serviceProvider.GetRequiredService<IActionContextAccessor>().ActionContext;
+                return new UrlHelper(actionContext);
+            });
+
+
+
+            serviceDescriptors.AddHttpContextAccessor();
+            serviceDescriptors.Configure<IdentityOptions>(
+                opt => opt.SignIn.RequireConfirmedEmail = true);
+
+
+            serviceDescriptors.AddScoped<IEmailSerivces, EmailService>();
+
+
+            var emailConfig = configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+            serviceDescriptors.AddSingleton(emailConfig);
         }
     }
 }

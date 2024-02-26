@@ -1,5 +1,6 @@
 ﻿using AppointEase.Application.Contracts.Interfaces;
 using AppointEase.Application.Contracts.Models.Request;
+using AppointEase.Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +12,12 @@ namespace AppointEase.AspNetCore.Controllers
     public class AuthenticationController : ControllerBase
     {
         private readonly IUserService _userService;
-        public AuthenticationController(IUserService userService) 
+        private readonly IPatientService _patientService;
+
+        public AuthenticationController(IUserService userService, IPatientService patientService) 
         {
             _userService = userService;
+            _patientService = patientService;
         }
 
         [HttpPost("SignIn")]
@@ -29,6 +33,19 @@ namespace AppointEase.AspNetCore.Controllers
 
             return Unauthorized("Invalid username or password");
 
+        }
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail(string token, string email)
+        {
+            try
+            {
+                var result = await _patientService.ConfirmEmail(token, email);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
