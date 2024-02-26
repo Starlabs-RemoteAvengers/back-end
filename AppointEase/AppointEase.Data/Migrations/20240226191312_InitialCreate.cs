@@ -82,9 +82,8 @@ namespace AppointEase.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Test = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PersonalNumber = table.Column<int>(type: "int", nullable: false),
-                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DateOfBirth = table.Column<DateOnly>(type: "date", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -187,9 +186,9 @@ namespace AppointEase.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ClinicName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateOnly>(type: "date", nullable: true)
+                    CreatedDate = table.Column<DateOnly>(type: "date", nullable: true),
+                    OtherDetails = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -209,8 +208,7 @@ namespace AppointEase.Data.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PersonalNumber = table.Column<int>(type: "int", nullable: false),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DateOfBirth = table.Column<DateOnly>(type: "date", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -256,10 +254,10 @@ namespace AppointEase.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "097192e7-2b76-4e44-bd7d-4093294c9a76", "4", "Patient", "Patient" },
-                    { "320113bf-cad5-4989-9e8b-2b63600b5409", "3", "Doctor", "Doctor" },
-                    { "f3e47b32-2c46-4443-8e8a-068c74275600", "1", "Admin", "Admin" },
-                    { "fe926240-f358-4d88-8326-373a79890c86", "2", "Clinic", "Clinic" }
+                    { "0d12e481-9c00-41c5-b07e-e79d71a0a601", "2", "Clinic", "Clinic" },
+                    { "3ad6f7f4-a946-40ef-9bff-dc8e8b21b41f", "4", "Patient", "Patient" },
+                    { "e3995b35-f8cf-488a-8925-5abc79ec662b", "3", "Doctor", "Doctor" },
+                    { "ed90d0e5-e02f-461c-8664-e6046d16324f", "1", "Admin", "Admin" }
                 });
 
             migrationBuilder.CreateIndex(
