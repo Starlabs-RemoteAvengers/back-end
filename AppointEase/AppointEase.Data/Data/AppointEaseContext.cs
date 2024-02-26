@@ -17,26 +17,27 @@ namespace AppointEase.Data.Data
         {
         }
 
-        public virtual DbSet<Admin> Admin { get; set; }
+        public DbSet<Admin> Admin { get; set; }
         public DbSet<Patient> Patient { get; set; }
-        public virtual DbSet<Clinic> Clinic { get; set; }
-        public virtual DbSet<Doctor> Doctor { get; set; }
+        public DbSet<Clinic> Clinic { get; set; }
+        public DbSet<Doctor> Doctor { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-EUO8BVU\\MSSQLSERVER01;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<Admin>().HasKey(e => e.AdminId);
-            builder.Entity<Doctor>().HasKey(e => e.Id);
-            builder.Entity<Clinic>().HasKey(e => e.Id);
+            builder.Entity<Admin>().ToTable("Admin");
+            builder.Entity<Doctor>().ToTable("Doctor");
+            builder.Entity<Clinic>().ToTable("Clinic");
             builder.Entity<Patient>().ToTable("Patient");
 
-            // No need to configure the key for Patient if it inherits from ApplicationUser
+            // Adjust cascade behaviors for other relationships
+           
 
             SeedRoles(builder);
         }
@@ -50,4 +51,5 @@ namespace AppointEase.Data.Data
                 new IdentityRole() { Name = "Patient", ConcurrencyStamp = "4", NormalizedName = "Patient" });
         }
     }
+
 }

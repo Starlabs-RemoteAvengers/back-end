@@ -1,21 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using AppointEase.Data.Contracts.Identity;
 
 
 namespace AppointEase.Data.Contracts.Models
 {
-    public partial class Doctor
+    public partial class Doctor : ApplicationUser
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-        public int IdClinci { get; set; }
-        public string PersonalNumber { get; set; }
-        public string DoctorName { get; set; }
-        public string Specializations { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-
-        public virtual Clinic ClinicNavigation { get; set; } = null!;
+        public int PersonalNumber { get; set; }
+        public string? Specialisation { get; set; }
+        public DateOnly DateOfBirth { get; set; }
+        public string Gender { get; set; }
+        public string ClinicId { get; set; }
+        public virtual Clinic Clinic { get; set; }
     }
 }

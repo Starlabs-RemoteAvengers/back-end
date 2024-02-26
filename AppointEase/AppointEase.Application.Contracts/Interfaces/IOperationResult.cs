@@ -1,4 +1,5 @@
 ﻿using AppointEase.Application.Contracts.Models.Operations;
+using AppointEase.Application.Contracts.Models.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace AppointEase.Application.Contracts.Interfaces
     {
         OperationResult SuccessResult(string message = "Operation completed successfully.");
         OperationResult ErrorResult(string message, IEnumerable<string> errors);
+        
     }
 }

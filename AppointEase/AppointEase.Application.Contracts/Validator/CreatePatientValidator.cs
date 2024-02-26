@@ -7,15 +7,21 @@ namespace AppointEase.Application.Contracts.Validator
     {
         public CreatePatientValidator()
         {
-            RuleFor(person => person.PersonalNumber).NotEmpty().WithMessage("Personal Number is required.");
-            RuleFor(person => person.Name).NotEmpty().WithMessage("Name is required.");
-            RuleFor(person => person.Surname).NotEmpty().WithMessage("Surname is required.");
-            //RuleFor(person => person.Gender).NotEmpty().WithMessage("Must select your Gander.");
-            //RuleFor(person => person.Address).NotEmpty().WithMessage("Your Address is required.");
-            //RuleFor(person => person.ContactNumber).NotEmpty().WithMessage("Please write your phone number");
-            RuleFor(person => person.Email).EmailAddress().NotEmpty().WithMessage("Email address is required.");
-            RuleFor(person => person.Password).MinimumLength(8).WithMessage("Password must have 8 charcters or more!");
-            RuleFor(person => person.Role).NotEmpty().WithMessage("You need to specify Role!");
+            RuleFor(x => x.UserName).NotEmpty().WithMessage("Username is required.");
+            RuleFor(x => x.Name).NotEmpty().WithMessage("Name is required.");
+            RuleFor(x => x.Surname).NotEmpty().WithMessage("Surname is required.");
+            RuleFor(x => x.Role).NotEmpty().WithMessage("Role is required.");
+            RuleFor(x => x.PersonalNumber).NotEmpty().WithMessage("PersonalNumber is required.");
+            RuleFor(x => x.Email).NotEmpty().WithMessage("Email is required.").EmailAddress().WithMessage("Invalid email format.");
+            RuleFor(x => x.Password)
+            .NotEmpty().WithMessage("Password is required.")
+            .MinimumLength(8).WithMessage("Password must have 8 characters or more.")
+            .Matches("[A-Z]").WithMessage("Password must contain at least one uppercase letter.")
+            .Matches("[a-z]").WithMessage("Password must contain at least one lowercase letter.")
+            .Matches("[0-9]").WithMessage("Password must contain at least one digit.")
+            .Matches("[^a-zA-Z0-9]").WithMessage("Password must contain at least one special character.");
+            RuleFor(x => x.PhoneNumber).NotEmpty().WithMessage("PhoneNumber is required.");
+            RuleFor(x => x.Gender).NotEmpty().WithMessage("Gender is required.");
         }
 
     }
