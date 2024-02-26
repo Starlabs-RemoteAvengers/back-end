@@ -187,5 +187,21 @@ namespace AppointEase.Application.Services
                 _mapper.Map(patientRequest, patientToUpdate);
             }
         }
+        public async Task<OperationResult> ConfirmEmail(string token, string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+                throw new Exception("User with this email doesn't excist!");
+
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+
+            if (result.Succeeded)
+            {
+                return _operationResult.SuccessResult("Email verified successfully!");
+
+            }
+
+            return _operationResult.ErrorResult($"Failed to verified user:", new[] { "" });
+        }
     }
 }

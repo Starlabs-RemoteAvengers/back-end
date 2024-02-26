@@ -16,7 +16,7 @@ namespace AppointEase.AspNetCore.Controllers
     {
         private readonly IPatientService _patientService;
         private readonly IValidator<PatientRequest> _patientValidator;
-        public PatientController(IPatientService patientService,IValidator<PatientRequest> patientValidator, IUserService userService)
+        public PatientController(IPatientService patientService, IValidator<PatientRequest> patientValidator, IUserService userService)
         {
             _patientService = patientService;
             _patientValidator = patientValidator;
@@ -30,8 +30,6 @@ namespace AppointEase.AspNetCore.Controllers
             var result = await _patientService.CreatePatientAsync(patientRequest);
             return Ok(result);
         }
-
-        
 
         [HttpPut("UpdatePatient/{personId}")]
         public async Task<IActionResult> UpdatePatient(string personId, [FromBody] PatientRequest patientRequest)
@@ -66,4 +64,3 @@ namespace AppointEase.AspNetCore.Controllers
         }
     }
 }
-
