@@ -22,10 +22,13 @@ namespace AppointEase.Application
             serviceDescriptors.AddAutoMapper(typeof(MappingProfile));
             serviceDescriptors.AddScoped<IUserService, UserService>();
             serviceDescriptors.AddTransient<IValidator<PatientRequest>, CreatePatientValidator>();
-
+            serviceDescriptors.AddTransient<IValidator<DoctorRequest>, CreateDoctorValidator>(); // Add this line
             serviceDescriptors.AddScoped<IApplicationExtensions, ApplicationExtensions>();
             serviceDescriptors.AddScoped<IPatientService, PatientService>();
-            serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();      
+            serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();
+            serviceDescriptors.AddScoped<IClinicService, ClinicService>();
+            serviceDescriptors.AddScoped<IDoctorService, DoctorService>();
+            serviceDescriptors.AddTransient<IValidator<ClinicRequest>, CreateClinicValidator>();
         }
     }
 }
