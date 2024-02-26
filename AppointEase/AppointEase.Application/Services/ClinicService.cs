@@ -149,7 +149,14 @@ namespace AppointEase.Application.Services
                     return _operationResult.ErrorResult("Failed to update clinic:", new[] { "This email or personal number is already associated with another clinic!" });
                 }
 
-                UpdatePatientProperties(existingClinic, clinicRequest);
+                if (!string.IsNullOrEmpty(clinicRequest.Password))
+                {
+                    var passwordHasher = new PasswordHasher<ApplicationUser>();
+                    var hashedPassword = passwordHasher.HashPassword(patientExists, clinicRequest.Password);
+                    patientExists.PasswordHash = hashedPassword;
+                }
+
+                UpdateClinicProperties(existingClinic, clinicRequest);
 
                 var result = await _userManager.UpdateAsync(existingClinic);
 
@@ -173,22 +180,13 @@ namespace AppointEase.Application.Services
             }
         }
 
-        private void UpdatePatientProperties(ApplicationUser existingClinic, ClinicRequest clinicRequest)
+        private void UpdateClinicProperties(ApplicationUser existingPatient, ClinicRequest clinicRequest)
         {
-            existingClinic.UserName = clinicRequest.UserName;
-            existingClinic.Email = clinicRequest.Email;
-            existingClinic.Name = clinicRequest.Name;
-            existingClinic.Surname = clinicRequest.Surname;
-            existingClinic.Role = clinicRequest.Role;
-            existingClinic.PhoneNumber = clinicRequest.PhoneNumber;
-            existingClinic.Address= clinicRequest.Address;
+            _mapper.Map(clinicRequest, existingPatient);
 
-            if (existingClinic is Clinic clinicToUpdate)
+            if (existingPatient is Clinic patientToUpdate)
             {
-                clinicToUpdate.ClinicName = clinicRequest.ClinicName;
-                clinicToUpdate.Location = clinicRequest.Location;
-                clinicToUpdate.CreatedDate = clinicRequest.CreatedDate;
-                clinicToUpdate.Doctors = _mapper.Map<List<Doctor>>(clinicRequest.Doctors);
+                _mapper.Map(clinicRequest, patientToUpdate);
             }
         }
     }

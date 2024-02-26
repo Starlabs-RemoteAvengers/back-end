@@ -134,28 +134,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f3e47b32-2c46-4443-8e8a-068c74275600",
+                            Id = "ed90d0e5-e02f-461c-8664-e6046d16324f",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "fe926240-f358-4d88-8326-373a79890c86",
+                            Id = "0d12e481-9c00-41c5-b07e-e79d71a0a601",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "320113bf-cad5-4989-9e8b-2b63600b5409",
+                            Id = "e3995b35-f8cf-488a-8925-5abc79ec662b",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "097192e7-2b76-4e44-bd7d-4093294c9a76",
+                            Id = "3ad6f7f4-a946-40ef-9bff-dc8e8b21b41f",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"
@@ -272,14 +272,11 @@ namespace AppointEase.Data.Migrations
                 {
                     b.HasBaseType("AppointEase.Data.Contracts.Identity.ApplicationUser");
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("DateOfBirth")
+                        .HasColumnType("date");
 
                     b.Property<int>("PersonalNumber")
                         .HasColumnType("int");
-
-                    b.Property<string>("Test")
-                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Admin", (string)null);
                 });
@@ -288,13 +285,13 @@ namespace AppointEase.Data.Migrations
                 {
                     b.HasBaseType("AppointEase.Data.Contracts.Identity.ApplicationUser");
 
-                    b.Property<string>("ClinicName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateOnly?>("CreatedDate")
                         .HasColumnType("date");
 
                     b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OtherDetails")
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Clinic", (string)null);
@@ -330,12 +327,8 @@ namespace AppointEase.Data.Migrations
                 {
                     b.HasBaseType("AppointEase.Data.Contracts.Identity.ApplicationUser");
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateOnly>("DateOfBirth")
+                        .HasColumnType("date");
 
                     b.Property<string>("Gender")
                         .IsRequired()

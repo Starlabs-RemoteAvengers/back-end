@@ -112,13 +112,11 @@ namespace AppointEase.Application.Services
                 return _operationResult.ErrorResult($"Failed to delete patient:", new[] { ex.Message });
             }
         }
-
         public async Task<IEnumerable<PatientRequest>> GetAllPatients()
         {
             var patients = await _patientRepository.GetAllAsync();
             return _mapper.Map<IEnumerable<PatientRequest>>(patients);
         }
-
         public async Task<PatientRequest> GetPatient(string patientId)
         {
             var patient = await _userManager.FindByIdAsync(patientId);
@@ -130,7 +128,6 @@ namespace AppointEase.Application.Services
 
             return _mapper.Map<PatientRequest>(patient);
         }
-
         public async Task<OperationResult> UpdatePatient(string userId, PatientRequest patientRequest)
         {
             try
@@ -147,6 +144,13 @@ namespace AppointEase.Application.Services
                 if (patientExists != null && patientExists.UserName != userId)
                 {
                     return _operationResult.ErrorResult("Failed to update patient:", new[] { "This email or personal number is already associated with another patient!" });
+                }
+
+                if (!string.IsNullOrEmpty(patientRequest.Password))
+                {
+                    var passwordHasher = new PasswordHasher<ApplicationUser>();
+                    var hashedPassword = passwordHasher.HashPassword(existingPatient, patientRequest.Password);
+                    existingPatient.PasswordHash = hashedPassword;
                 }
 
                 UpdatePatientProperties(existingPatient, patientRequest);
@@ -172,22 +176,15 @@ namespace AppointEase.Application.Services
                 return _operationResult.ErrorResult($"Failed to update patient:", new[] { ex.Message });
             }
         }
-
         private void UpdatePatientProperties(ApplicationUser existingPatient, PatientRequest patientRequest)
         {
-            existingPatient.UserName = patientRequest.UserName;
-            existingPatient.Email = patientRequest.Email;
-            existingPatient.Name = patientRequest.Name;
-            existingPatient.Surname = patientRequest.Surname;
-            existingPatient.Role = patientRequest.Role;
-            existingPatient.Address = patientRequest.Address;
-            existingPatient.PhoneNumber = patientRequest.PhoneNumber;
+            // Use AutoMapper to map properties from PatientRequest to ApplicationUser
+            _mapper.Map(patientRequest, existingPatient);
 
             if (existingPatient is Patient patientToUpdate)
             {
-                patientToUpdate.PersonalNumber = patientRequest.PersonalNumber;
-                patientToUpdate.Gender = patientRequest.Gender;
-                patientToUpdate.Description = patientRequest.Description;
+                // Additional mapping for properties specific to the Patient class
+                _mapper.Map(patientRequest, patientToUpdate);
             }
         }
     }
