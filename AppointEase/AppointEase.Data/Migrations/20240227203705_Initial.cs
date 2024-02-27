@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppointEase.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigraions : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -254,10 +254,10 @@ namespace AppointEase.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "aa99b0ee-e04b-4a81-b7d8-a18cc443c1b4", "2", "Clinic", "Clinic" },
-                    { "ad8b0280-78d5-44d6-a2d9-808814be4545", "1", "Admin", "Admin" },
-                    { "b050e7a2-1ab6-48b3-912e-d49da5bfd10b", "3", "Doctor", "Doctor" },
-                    { "cf38949f-4036-4870-b44f-bc6ddee69468", "4", "Patient", "Patient" }
+                    { "4240997f-cd0c-4e83-b8b9-ff5553c218f7", "3", "Doctor", "Doctor" },
+                    { "7a010773-4c5f-47cd-ae41-22c3c3f83a9d", "4", "Patient", "Patient" },
+                    { "a7807a28-0b41-4bc4-82f5-e35df6993e55", "1", "Admin", "Admin" },
+                    { "ea779de0-b5f6-4ca2-8360-bbf5aac6c5ac", "2", "Clinic", "Clinic" }
                 });
 
             migrationBuilder.CreateIndex(
