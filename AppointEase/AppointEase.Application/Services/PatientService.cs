@@ -12,6 +12,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using static Azure.Core.HttpHeader;
+using AppointEase.Application.Contracts.Models.EmailConfig;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json.Linq;
 
 namespace AppointEase.Application.Services
 {
@@ -22,14 +26,17 @@ namespace AppointEase.Application.Services
         private readonly IMapper _mapper;
         private readonly IApplicationExtensions _common;
         private readonly IOperationResult _operationResult;
-
-        public PatientService(IRepository<Patient> patientRepository, UserManager<ApplicationUser> userManager, IMapper mapper, IApplicationExtensions common, IOperationResult operationResult)
+        private readonly IEmailServices _email;
+        private readonly IConfiguration _configuration;
+        public PatientService( IConfiguration _configuration, IEmailServices _email,IRepository<Patient> patientRepository, UserManager<ApplicationUser> userManager, IMapper mapper, IApplicationExtensions common, IOperationResult operationResult)
         {
             _patientRepository = patientRepository;
             _userManager = userManager;
             _mapper = mapper;
             _common = common;
             _operationResult = operationResult;
+            this._configuration = _configuration;
+            this._email = _email;
         }
 
         public async Task<OperationResult> CreatePatientAsync(PatientRequest patientRequest)
@@ -54,7 +61,8 @@ namespace AppointEase.Application.Services
                 }
 
                 await _userManager.AddToRoleAsync(user, user.Role);
-
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                _common.SendEmailConfirmation(token, user.Email);
                 _common.AddInformationMessage("Patient created successfully!");
 
                 return _operationResult.SuccessResult("Patient created successfully!");
@@ -69,6 +77,8 @@ namespace AppointEase.Application.Services
                 return _operationResult.ErrorResult($"Failed to create user:", new[] { ex.Message });
             }
         }
+
+
         private async Task<Patient> CheckIfPatientExists(string email, int personalNumber, string currentUserId)
         {
             var patients = await GetAllPatients();

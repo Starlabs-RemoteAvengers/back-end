@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppointEase.Application.Contracts.Interfaces
 {
-    public interface IEmailSerivces
+    public interface IEmailServices
     {
         Task SendEmail(Messages messages);
     }
