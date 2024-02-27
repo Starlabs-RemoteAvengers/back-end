@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppointEase.Data.Migrations
 {
     [DbContext(typeof(AppointEaseContext))]
-    [Migration("20240227115656_InitialMigraions")]
-    partial class InitialMigraions
+    [Migration("20240227203705_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -137,28 +137,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ad8b0280-78d5-44d6-a2d9-808814be4545",
+                            Id = "a7807a28-0b41-4bc4-82f5-e35df6993e55",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "aa99b0ee-e04b-4a81-b7d8-a18cc443c1b4",
+                            Id = "ea779de0-b5f6-4ca2-8360-bbf5aac6c5ac",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "b050e7a2-1ab6-48b3-912e-d49da5bfd10b",
+                            Id = "4240997f-cd0c-4e83-b8b9-ff5553c218f7",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "cf38949f-4036-4870-b44f-bc6ddee69468",
+                            Id = "7a010773-4c5f-47cd-ae41-22c3c3f83a9d",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"

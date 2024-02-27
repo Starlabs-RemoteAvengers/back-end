@@ -34,6 +34,12 @@ namespace AppointEase.Application
             serviceDescriptors.AddScoped<IClinicService, ClinicService>();
             serviceDescriptors.AddTransient<IValidator<ClinicRequest>, CreateClinicValidator>();
             serviceDescriptors.AddSingleton<IConfiguration>(configuration);
+            serviceDescriptors.AddScoped<IAdminService, AdminService>();
+            serviceDescriptors.AddTransient<IValidator<AdminRequest>, CreateAdminValidator>();
+
+            
+
+
             serviceDescriptors.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             serviceDescriptors.AddScoped<IUrlHelper>(serviceProvider =>
             {
