@@ -254,10 +254,10 @@ namespace AppointEase.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "435b2b38-ae3b-414d-8c88-b027c9c480e2", "3", "Doctor", "Doctor" },
-                    { "87c4a86f-da6b-49ee-8241-d1fb75257599", "2", "Clinic", "Clinic" },
-                    { "8813883b-b683-4181-b0bb-a4afce388c4f", "1", "Admin", "Admin" },
-                    { "e0a2f9e8-04fe-425b-b81b-082bacf39de4", "4", "Patient", "Patient" }
+                    { "105360e5-9ac7-407f-b23a-350341562eda", "3", "Doctor", "Doctor" },
+                    { "8ce2b402-a4ba-443d-8199-d9c632a1c7f0", "4", "Patient", "Patient" },
+                    { "b7a014ff-999e-479f-ab15-aaf7f78c83c4", "2", "Clinic", "Clinic" },
+                    { "c317f98f-46ed-4b61-a887-9a64d3fd0155", "1", "Admin", "Admin" }
                 });
 
             migrationBuilder.CreateIndex(

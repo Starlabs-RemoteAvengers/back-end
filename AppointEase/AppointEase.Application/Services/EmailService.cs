@@ -2,10 +2,13 @@
 using AppointEase.Application.Contracts.Models.EmailConfig;
 using MailKit.Net.Smtp;
 using MimeKit;
+using System.Net.Mail;
+using System.Net;
+using SmtpClient = MailKit.Net.Smtp.SmtpClient;
 
 namespace AppointEase.Application.Services
 {
-    public class EmailService : IEmailSerivces
+    public class EmailService : IEmailServices
     {
         private readonly EmailConfiguration _emailConfiguration;
 
@@ -36,12 +39,17 @@ namespace AppointEase.Application.Services
 
             try
             {
-                client.Connect(_emailConfiguration.SmtpServer,_emailConfiguration.Port,true);
+                client.Connect(_emailConfiguration.SmtpServer, _emailConfiguration.Port, MailKit.Security.SecureSocketOptions.StartTls);
+               
                 client.AuthenticationMechanisms.Remove("XOAUTH2");
+
                 client.Authenticate(_emailConfiguration.Username, _emailConfiguration.Password);
 
-
+                
                 client.Send(message);
+
+
+               
             }
             catch (Exception ex)
             {
@@ -49,8 +57,10 @@ namespace AppointEase.Application.Services
             }
             finally
             {
+               
                 client.Disconnect(true);
                 client.Dispose();
+                
             }
 
         }

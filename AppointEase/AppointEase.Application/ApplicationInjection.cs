@@ -28,11 +28,12 @@ namespace AppointEase.Application
             serviceDescriptors.AddTransient<IValidator<DoctorRequest>, CreateDoctorValidator>(); 
             serviceDescriptors.AddScoped<IApplicationExtensions, ApplicationExtensions>();
             serviceDescriptors.AddScoped<IPatientService, PatientService>();
+            serviceDescriptors.AddScoped<IApplicationExtensions, ApplicationExtensions>();
             serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();
-
-            serviceDescriptors.AddScoped<IEmailSerivces, EmailService>();
-
-
+            serviceDescriptors.AddScoped<IEmailServices, EmailService>();
+            serviceDescriptors.AddScoped<IClinicService, ClinicService>();
+            serviceDescriptors.AddTransient<IValidator<ClinicRequest>, CreateClinicValidator>();
+            serviceDescriptors.AddSingleton<IConfiguration>(configuration);
             serviceDescriptors.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             serviceDescriptors.AddScoped<IUrlHelper>(serviceProvider =>
             {
@@ -47,7 +48,7 @@ namespace AppointEase.Application
                 opt => opt.SignIn.RequireConfirmedEmail = true);
 
 
-            serviceDescriptors.AddScoped<IEmailSerivces, EmailService>();
+            serviceDescriptors.AddScoped<IEmailServices, EmailService>();
 
 
             var emailConfig = configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();

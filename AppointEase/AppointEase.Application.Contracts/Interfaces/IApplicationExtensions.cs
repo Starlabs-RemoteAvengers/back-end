@@ -11,5 +11,6 @@ namespace AppointEase.Application.Contracts.Interfaces
     {
         void AddInformationMessage(string message);
         void AddErrorMessage(string message);
+        Task SendEmailConfirmation(string token, string email);
     }
 }
