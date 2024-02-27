@@ -2,11 +2,6 @@
 using AppointEase.Application.Contracts.Models.Operations;
 using AppointEase.Data.Contracts.Identity;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppointEase.Application.Services
 {
@@ -14,13 +9,16 @@ namespace AppointEase.Application.Services
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IOperationResult _operationResult;
-        public UserService(UserManager<ApplicationUser> userManager, IOperationResult operationResult)
+        private readonly IApplicationExtensions _applicationExtensions;
+
+        public UserService(UserManager<ApplicationUser> userManager, IOperationResult operationResult, IApplicationExtensions applicationExtensions)
         {
             _userManager = userManager;
             _operationResult = operationResult;
+            _applicationExtensions = applicationExtensions;
         }
 
-        public async Task<OperationResult> LogInAsync(string username, string password)
+        public async Task<Object> LogInAsync(string username, string password)
         {
             var user = await _userManager.FindByNameAsync(username);
 
@@ -32,11 +30,17 @@ namespace AppointEase.Application.Services
                 {
                     var userRoles = await _userManager.GetRolesAsync(user);
                     var userRole = userRoles.FirstOrDefault();
+                    var userId = user.Id;
 
-                    return _operationResult.SuccessResult("User created successfully!");
+                    var token = await _applicationExtensions.GenerateJwtTokenAsync(userId,username, userRole,new Dictionary<string, string>()
+                    {
+                         { "EmailConfirmation", user.EmailConfirmed.ToString() }
+                    });
+
+                    return token;
                 }
             }
-            return _operationResult.ErrorResult($"Failed to create user:", new[] { "test" });
+            return _operationResult.ErrorResult($"Failed to sign in:", new[] { "User not Found!" });
         }
     }
 }

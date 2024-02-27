@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppointEase.Data.Migrations
 {
     [DbContext(typeof(AppointEaseContext))]
-    [Migration("20240227085210_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240227115656_InitialMigraions")]
+    partial class InitialMigraions
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -137,28 +137,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c317f98f-46ed-4b61-a887-9a64d3fd0155",
+                            Id = "ad8b0280-78d5-44d6-a2d9-808814be4545",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "b7a014ff-999e-479f-ab15-aaf7f78c83c4",
+                            Id = "aa99b0ee-e04b-4a81-b7d8-a18cc443c1b4",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "105360e5-9ac7-407f-b23a-350341562eda",
+                            Id = "b050e7a2-1ab6-48b3-912e-d49da5bfd10b",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "8ce2b402-a4ba-443d-8199-d9c632a1c7f0",
+                            Id = "cf38949f-4036-4870-b44f-bc6ddee69468",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"

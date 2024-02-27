@@ -10,6 +10,6 @@ namespace AppointEase.Application.Contracts.Interfaces
 {
     public interface IUserService
     {
-        Task<OperationResult> LogInAsync(string username, string password);  
+        Task<Object> LogInAsync(string username, string password);  
     }
 }

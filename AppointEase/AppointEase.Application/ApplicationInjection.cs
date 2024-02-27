@@ -42,6 +42,9 @@ namespace AppointEase.Application
             });
 
 
+            serviceDescriptors.Configure<IdentityOptions>(
+                opt => opt.SignIn.RequireConfirmedEmail = true);
+
 
             serviceDescriptors.AddHttpContextAccessor();
             serviceDescriptors.Configure<IdentityOptions>(

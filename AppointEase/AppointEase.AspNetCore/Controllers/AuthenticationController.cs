@@ -28,8 +28,10 @@ namespace AppointEase.AspNetCore.Controllers
 
             var result = await _userService.LogInAsync(loginRequest.Username, loginRequest.Password);
 
-            if (result.Success)
-                return Ok();
+            //if (result.Success)
+            //    return Ok();
+
+            return Ok(result);
 
             return Unauthorized("Invalid username or password");
 
