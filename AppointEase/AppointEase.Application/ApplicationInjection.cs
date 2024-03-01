@@ -27,6 +27,7 @@ namespace AppointEase.Application
             serviceDescriptors.AddTransient<IValidator<PatientRequest>, CreatePatientValidator>();
             serviceDescriptors.AddTransient<IValidator<DoctorRequest>, CreateDoctorValidator>(); 
             serviceDescriptors.AddScoped<IApplicationExtensions, ApplicationExtensions>();
+            serviceDescriptors.AddScoped< IDoctorService, DoctorService>();
             serviceDescriptors.AddScoped<IPatientService, PatientService>();
             serviceDescriptors.AddScoped<IApplicationExtensions, ApplicationExtensions>();
             serviceDescriptors.AddSingleton<IOperationResult, OperationResult>();
@@ -36,6 +37,7 @@ namespace AppointEase.Application
             serviceDescriptors.AddSingleton<IConfiguration>(configuration);
             serviceDescriptors.AddScoped<IAdminService, AdminService>();
             serviceDescriptors.AddTransient<IValidator<AdminRequest>, CreateAdminValidator>();
+            serviceDescriptors.AddTransient<IValidator<ClinicRequest>, UpdateClinicValidator>();
 
             
 
