@@ -134,28 +134,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a7807a28-0b41-4bc4-82f5-e35df6993e55",
+                            Id = "d01a39c8-fc78-4c92-af10-e280e5f4c5f9",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "ea779de0-b5f6-4ca2-8360-bbf5aac6c5ac",
+                            Id = "9d721cd5-6745-461a-b491-fd37e00392d4",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "4240997f-cd0c-4e83-b8b9-ff5553c218f7",
+                            Id = "1a78bdc4-30e3-40ff-8097-a7d239c3b071",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "7a010773-4c5f-47cd-ae41-22c3c3f83a9d",
+                            Id = "00c7e116-28c4-4a0e-8796-b60afbc70cec",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"

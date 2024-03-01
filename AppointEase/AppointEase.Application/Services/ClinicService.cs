@@ -142,21 +142,23 @@ namespace AppointEase.Application.Services
                     return _operationResult.ErrorResult("Failed to update clinic:", new[] { "Clinic not found!" });
                 }
 
-                var patientExists = await CheckIfClinicExists(clinicRequest.Email, userId);
+                var clinicExists = await CheckIfClinicExists(clinicRequest.Email, userId);
 
-                if (patientExists != null && patientExists.UserName != userId)
+                if (clinicExists != null && clinicExists.Id != userId)
                 {
-                    return _operationResult.ErrorResult("Failed to update clinic:", new[] { "This email or personal number is already associated with another clinic!" });
+                    return _operationResult.ErrorResult("Failed to update clinic:", new[] { "This email is already associated with another clinic!" });
                 }
+
+                // Update other properties
+                UpdateClinicProperties(existingClinic, clinicRequest);
 
                 if (!string.IsNullOrEmpty(clinicRequest.Password))
                 {
+                    // Update password only if provided
                     var passwordHasher = new PasswordHasher<ApplicationUser>();
-                    var hashedPassword = passwordHasher.HashPassword(patientExists, clinicRequest.Password);
-                    patientExists.PasswordHash = hashedPassword;
+                    var hashedPassword = passwordHasher.HashPassword(existingClinic, clinicRequest.Password);
+                    existingClinic.PasswordHash = hashedPassword;
                 }
-
-                UpdateClinicProperties(existingClinic, clinicRequest);
 
                 var result = await _userManager.UpdateAsync(existingClinic);
 
@@ -179,6 +181,11 @@ namespace AppointEase.Application.Services
                 return _operationResult.ErrorResult($"Failed to update clinic:", new[] { ex.Message });
             }
         }
+
+
+
+
+
 
         private void UpdateClinicProperties(ApplicationUser existingPatient, ClinicRequest clinicRequest)
         {
