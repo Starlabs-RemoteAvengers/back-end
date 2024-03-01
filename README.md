@@ -40,19 +40,18 @@ To get started with the platform as a doctor, follow these steps:
 ## Technologies Used
 + Frontend: [React]
 + Backend: [ASP.NETCore]
-+ Database: [PostgreSQL]
++ Database: [MSSQL]
 + Hosting: [...]
 ## Contributors
 **Team Leader:** Elior Pacarada
 + Dita Simnica
 + Arbër Ejupi
 + Jon Salihu
-+ Anisa Tahiri
++ Zamira Ahmeti
 + Valdrin Hasallari
 + Agon Koca
 + Amar Zhuri   
-+ Blinera Zekaj 
-+ Zamira Ahmeti
+
 
 
 Feel free to reach out to us for any questions, feedback, or support regarding the platform. Thank you for using AppointEase!
