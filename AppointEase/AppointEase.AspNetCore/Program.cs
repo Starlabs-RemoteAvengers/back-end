@@ -47,10 +47,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// Add ASP.NET Core Identity
-//builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-//    .AddEntityFrameworkStores<AppointEaseContext>()
-//    .AddDefaultTokenProviders();
 
 // Other service registrations (Application services, Data services, Swagger, etc.)
 builder.Services.AddSwaggerGen(c =>

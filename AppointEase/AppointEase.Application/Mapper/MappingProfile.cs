@@ -10,8 +10,8 @@ namespace AppointEase.Application.Mapper
         public MappingProfile()
         {
             CreateMap<Patient, PatientRequest>().ReverseMap().ForMember(dest => dest.Id, opt => opt.Ignore());
-            CreateMap<Admin, AdminRequest>().ReverseMap().ForMember(dest => dest.Id, opt => opt.Ignore());
-            CreateMap<Doctor, DoctorRequest>().ReverseMap().ReverseMap().ForMember(dest => dest.Id, opt => opt.Ignore());
+            CreateMap<Admin, AdminRequest>().ReverseMap();
+            CreateMap<Doctor, DoctorRequest>().ReverseMap().ForMember(dest => dest.Id, opt => opt.Ignore());
             CreateMap<ApplicationUser, PatientRequest>().ReverseMap();
             CreateMap<Clinic, ApplicationUser>();
             CreateMap<DoctorRequest, ApplicationUser>().ReverseMap();
