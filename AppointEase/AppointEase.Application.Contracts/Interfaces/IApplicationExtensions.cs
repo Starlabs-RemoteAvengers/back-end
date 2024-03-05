@@ -12,6 +12,8 @@ namespace AppointEase.Application.Contracts.Interfaces
         void AddInformationMessage(string message);
         void AddErrorMessage(string message);
         Task SendEmailConfirmation(string token, string email);
+        Task SendEmail(string token, string email,string Url);
         Task<string> GenerateJwtTokenAsync(string userId, string username, string userRole, Dictionary<string, string> OtherClaims = null);
+        Task<string> GenerateJwtTokenAsync(Dictionary<string, string> OtherClaims = null);
     }
 }
