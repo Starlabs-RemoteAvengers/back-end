@@ -6,11 +6,6 @@ using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Data.Contracts.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppointEase.Application.Services
 {
@@ -53,6 +48,8 @@ namespace AppointEase.Application.Services
                 }
 
                 await _userManager.AddToRoleAsync(user, user.Role);
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                _common.SendEmailConfirmation(token, user.Email);
 
                 _common.AddInformationMessage("Doctor created successfully!");
 
@@ -187,5 +184,22 @@ namespace AppointEase.Application.Services
             }
         }
 
+        public async Task<IEnumerable<object>> FilterDoctors(Func<IQueryable<DoctorRequest>, IQueryable<object>> query)
+        {
+            
+            var allDoctors = await _doctorRepository.GetAllAsync();
+            var mappedDoctors = allDoctors.Select(d => _mapper.Map<DoctorRequest>(d));
+            var filteredDoctors = query(mappedDoctors.AsQueryable());
+
+            if (filteredDoctors != null && filteredDoctors.Any())
+            {
+                return filteredDoctors.ToList();
+            }
+            else
+            {
+                return new List<object>();
+            }
+
+        }
     }
 }

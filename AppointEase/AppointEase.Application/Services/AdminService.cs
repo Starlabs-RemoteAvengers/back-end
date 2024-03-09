@@ -54,6 +54,8 @@ namespace AppointEase.Application.Services
                 }
 
                 await _userManager.AddToRoleAsync(user, user.Role);
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                _common.SendEmailConfirmation(token, user.Email);
 
                 _common.AddInformationMessage("Admin created successfully!");
 

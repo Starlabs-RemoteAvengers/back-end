@@ -1,5 +1,6 @@
 ﻿using AppointEase.Application.Contracts.Models.Operations;
 using AppointEase.Application.Contracts.Models.Request;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace AppointEase.Application.Contracts.Interfaces
         Task<OperationResult> CreateDoctorAsync(DoctorRequest personDto);
         Task<OperationResult> UpdateDoctor(string personId, DoctorRequest personDto);
         Task<OperationResult> DeleteDoctor(string personId);
+        Task<IEnumerable<object>> FilterDoctors(Func<IQueryable<DoctorRequest>, IQueryable<object>> query);
     }
 }
