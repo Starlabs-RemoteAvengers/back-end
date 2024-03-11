@@ -15,6 +15,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using AppointEase.Data.Contracts.Interfaces;
+using AppointEase.Data.Contracts.Models;
+using AppointEase.Data.Repositories;
 
 namespace AppointEase.Application
 {
@@ -38,13 +41,11 @@ namespace AppointEase.Application
             serviceDescriptors.AddScoped<IAdminService, AdminService>();
             serviceDescriptors.AddTransient<IValidator<AdminRequest>, CreateAdminValidator>();
             serviceDescriptors.AddTransient<IValidator<ClinicRequest>, UpdateClinicValidator>();
-
-            
-
-
+            serviceDescriptors.AddScoped<IAppointmentSlotService, AppointmentSlotService>();
+            serviceDescriptors.AddTransient<IValidator<AppointmentSlotRequest>, CreateAppointmentSlotValidator>();
+            serviceDescriptors.AddScoped<IRepository<AppointmentSlot>, AppointmentSlotRepository>();
             serviceDescriptors.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             serviceDescriptors.AddTransient<IValidator<PasswordRequest>, ValidatorPasswordRequest>();
-
             serviceDescriptors.AddScoped<IUrlHelper>(serviceProvider =>
             {
                 var actionContext = serviceProvider.GetRequiredService<IActionContextAccessor>().ActionContext;

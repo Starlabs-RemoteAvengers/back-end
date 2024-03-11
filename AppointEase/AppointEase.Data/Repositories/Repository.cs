@@ -1,7 +1,10 @@
 ﻿using AppointEase.Application.Contracts.Interfaces;
+using AppointEase.Application.Contracts.Models.Operations;
 using AppointEase.Application.Contracts.Models.Request;
 using AppointEase.Data.Contracts.Interfaces;
+using AppointEase.Data.Contracts.Models;
 using AppointEase.Data.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppointEase.Data.Repositories
@@ -43,23 +46,28 @@ namespace AppointEase.Data.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task AddAsync(T entity)
+        public async Task<OperationResult> AddAsync(T entity)
         {
             _context.Set<T>().Add(entity);
             await _context.SaveChangesAsync();
+
+            return new OperationResult(true, "Added Successfully");
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task<OperationResult> UpdateAsync(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+            return new OperationResult(true, "Updated Successfully");
         }
 
-        public async Task DeleteAsync(string id)
+        public async Task<OperationResult> DeleteAsync(string id)
         {
             var entity = await GetByIdAsync(id);
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
+
+           return new OperationResult(true, "Entity deleted successfully");
         }
     }
 }
