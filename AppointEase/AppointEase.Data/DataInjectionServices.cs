@@ -25,7 +25,6 @@ namespace AppointEase.Data
             serviceDescriptors.AddIdentity<ApplicationUser, IdentityRole>()
                  .AddEntityFrameworkStores<AppointEaseContext>()
                  .AddDefaultTokenProviders();
-
             serviceDescriptors.AddScoped<AppointEaseContext>();
             serviceDescriptors.AddScoped<IRepository<Patient>, PatientRepository>();
             serviceDescriptors.AddScoped<IRepository<Admin>, AdminRepository>();

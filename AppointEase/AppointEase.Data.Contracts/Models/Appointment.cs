@@ -13,9 +13,8 @@ namespace AppointEase.Data.Contracts.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AppointmentId { get; set; }
-
         public string DoctorId { get; set; }
-        public string PatientId { get; set; }
+        public string ClinicId { get; set; }
         public DateTime DateTime { get; set; }
         public string Comments { get; set; }
         public string Location { get; set; }

@@ -12,6 +12,6 @@ namespace AppointEase.Application.Contracts.Interfaces
     {
         OperationResult SuccessResult(string message = "Operation completed successfully.");
         OperationResult ErrorResult(string message, IEnumerable<string> errors);
-        
+        OperationResult ErrorResult(string v, object value);
     }
 }

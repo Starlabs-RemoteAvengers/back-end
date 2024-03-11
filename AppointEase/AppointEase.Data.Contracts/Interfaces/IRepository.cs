@@ -1,5 +1,7 @@
 ﻿using AppointEase.Application.Contracts.Models;
+using AppointEase.Application.Contracts.Models.Operations;
 using AppointEase.Application.Contracts.Models.Request;
+using AppointEase.Data.Contracts.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +15,8 @@ namespace AppointEase.Data.Contracts.Interfaces
         Task<string> GetIdByEmailAndPasswordAsync(string email, string password);
         Task<T> GetByIdAsync(string id);
         Task<IEnumerable<T>> GetAllAsync();
-        Task AddAsync(T entity);
-        Task UpdateAsync(T entity);
-        Task DeleteAsync(string id);  
+        Task<OperationResult> AddAsync(T entity);
+        Task<OperationResult> UpdateAsync(T entity);
+        Task<OperationResult> DeleteAsync(string id);
     }
 }
