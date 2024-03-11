@@ -11,5 +11,6 @@ namespace AppointEase.Application.Contracts.Interfaces
         Task<OperationResult> UpdatePatient(string personId, PatientRequest personDto);
         Task<OperationResult> DeletePatient(string personId);
         Task<OperationResult> ConfirmEmail(string token, string email);
+
     }
 }

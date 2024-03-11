@@ -15,11 +15,13 @@ namespace AppointEase.AspNetCore.Controllers
     public class PatientController : Controller
     {
         private readonly IPatientService _patientService;
+        private readonly ISearchService _searchServices;
         private readonly IValidator<PatientRequest> _patientValidator;
-        public PatientController(IPatientService patientService, IValidator<PatientRequest> patientValidator, IUserService userService)
+        public PatientController(IPatientService patientService, IValidator<PatientRequest> patientValidator, IUserService userService, ISearchService searchServices)
         {
             _patientService = patientService;
             _patientValidator = patientValidator;
+            _searchServices = searchServices;
         }
 
         [HttpPost("CreatePatient")]
@@ -62,5 +64,13 @@ namespace AppointEase.AspNetCore.Controllers
             var result = await _patientService.DeletePatient(patientId);
             return Ok(result);
         }
+
+
+        //[HttpGet("Search")]
+        //public async Task<object> Search(SearchRequest searchRequest)
+        //{
+        //    var result = await _searchServices.GetSerach(searchRequest);
+        //    return Ok(result);
+        //}
     }
 }
