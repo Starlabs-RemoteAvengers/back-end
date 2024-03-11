@@ -17,24 +17,38 @@ namespace AppointEase.Application.Services
     public class BookAppointmentService : IBookAppointmentService
     {
         private readonly IRepository<BookAppointment> _bookappointmentRepository;
+        private readonly IRepository<AppointmentSlot> _appointmentSlotRepository;
         private readonly IMapper _mapper;
         private readonly IApplicationExtensions _common;
         private readonly IOperationResult _operationResult;
-        public BookAppointmentService(IMapper mapper, IApplicationExtensions common, IOperationResult operationResult, IRepository<BookAppointment> bookappointmentReposiotry)
+        public BookAppointmentService(IMapper mapper, IApplicationExtensions common, IOperationResult operationResult, IRepository<BookAppointment> bookappointmentReposiotry, IRepository<AppointmentSlot> appointmentSlotRepository)
         {
             _mapper = mapper;
             _common = common;
             _operationResult = operationResult;
             _bookappointmentRepository = bookappointmentReposiotry;
+            _appointmentSlotRepository = appointmentSlotRepository;
         }
         public async Task<OperationResult> CreateBookAppointment(BookAppointmentRequest bookappointment)
         {
             try
             {
+                var appointmentSlot = await _appointmentSlotRepository.GetByIdAsync(bookappointment.AppointmentSlotId);
+                if (appointmentSlot == null)
+                {
+                    return _operationResult.ErrorResult($"Failed to book appointment: Appointment slot with ID {bookappointment.AppointmentSlotId} not found.", new[] { "Appointment slot not found." });
+                }
+                else if (appointmentSlot.IsBooked)
+                {
+                    return _operationResult.ErrorResult($"Failed to book appointment: Appointment slot is already booked.", new[] { "Appointment slot is already booked." });
+                }
+
                 var appointments = _mapper.Map<BookAppointment>(bookappointment);
                 await _bookappointmentRepository.AddAsync(appointments);
 
-                // Additional logic after creating the appointment slot (if any)
+                // Mark the corresponding appointment slot as booked
+                appointmentSlot.IsBooked = true;
+                await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
 
                 return _operationResult.SuccessResult("Appointment Created Successfully!");
             }
@@ -91,14 +105,33 @@ namespace AppointEase.Application.Services
 
                 if (existingBookAppointment != null)
                 {
+                    // Retrieve the existing and new appointment slot IDs
+                    var existingAppointmentSlotId = existingBookAppointment.AppointmentSlotId;
+                    var newAppointmentSlotId = bookappointmentRequest.AppointmentSlotId;
+
+                    // Retrieve the existing and new appointment slots
+                    var existingAppointmentSlot = await _appointmentSlotRepository.GetByIdAsync(existingAppointmentSlotId);
+                    var newAppointmentSlot = await _appointmentSlotRepository.GetByIdAsync(newAppointmentSlotId);
+
+                    // Ensure the new appointment slot exists
+                    if (newAppointmentSlot == null)
+                    {
+                        return _operationResult.ErrorResult($"Failed to update Appointment: Appointment slot with ID {newAppointmentSlotId} not found.", new[] { "Appointment slot not found." });
+                    }
+
+                    // Update IsBooked status in the appointment slots
+                    existingAppointmentSlot.IsBooked = false;
+                    newAppointmentSlot.IsBooked = true;
+
+                    // Update appointment slot statuses in the database
+                    await _appointmentSlotRepository.UpdateAsync(existingAppointmentSlot);
+                    await _appointmentSlotRepository.UpdateAsync(newAppointmentSlot);
+
                     // Update properties based on the request
                     _mapper.Map(bookappointmentRequest, existingBookAppointment);
 
-                    // Your additional update logic here, if needed
-
+                    // Update the booked appointment
                     await _bookappointmentRepository.UpdateAsync(existingBookAppointment);
-
-                    // Your additional logic (if any) after updating the appointment slot
 
                     return _operationResult.SuccessResult("Appointment Updated Successfully!");
                 }
@@ -117,7 +150,6 @@ namespace AppointEase.Application.Services
                 return _operationResult.ErrorResult($"Failed to update Appointment:", new[] { exception.Message });
             }
         }
-
 
         public async Task<OperationResult> DeleteBookAppointment(string id)
         {
