@@ -244,6 +244,43 @@ namespace AppointEase.Data.Migrations
                     b.ToTable("AppointmentSlot", (string)null);
                 });
 
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.BookAppointment", b =>
+                {
+                    b.Property<string>("BookAppointmentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AppointmentSlotId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsAccepted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MeetingReason")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MeetingRequestDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PatientId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("ResponseDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("BookAppointmentId");
+
+                    b.HasIndex("AppointmentSlotId");
+
+                    b.HasIndex("PatientId");
+
+                    b.ToTable("BookAppointment", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -273,28 +310,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "570b42b8-a01e-482a-9ddd-f075af4a787d",
+                            Id = "4b0d0113-18af-4d48-8177-9092ac885077",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "aac46d12-430d-4ce4-b481-6144267f4337",
+                            Id = "21b2e296-f4d5-4b88-8ba0-65edb7e38c3e",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "102ceda6-dd25-4a8a-82a3-a3af2448c2ac",
+                            Id = "ed38a260-bdc0-4af2-beb4-508d18664039",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "89a58392-b70d-4e42-8900-f884ccbd8f63",
+                            Id = "6359e4f9-dffe-4d07-94ef-9dd9e0436c12",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"
@@ -534,6 +571,25 @@ namespace AppointEase.Data.Migrations
                     b.Navigation("Clinic");
 
                     b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("AppointEase.Data.Contracts.Models.BookAppointment", b =>
+                {
+                    b.HasOne("AppointEase.Data.Contracts.Models.AppointmentSlot", "AppointmentSlot")
+                        .WithMany()
+                        .HasForeignKey("AppointmentSlotId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AppointEase.Data.Contracts.Models.Patient", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppointmentSlot");
 
                     b.Navigation("Patient");
                 });

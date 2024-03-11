@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppointEase.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -348,15 +348,44 @@ namespace AppointEase.Data.Migrations
                         principalColumn: "Id");
                 });
 
+            migrationBuilder.CreateTable(
+                name: "BookAppointment",
+                columns: table => new
+                {
+                    BookAppointmentId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    AppointmentSlotId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    MeetingReason = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MeetingRequestDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsAccepted = table.Column<bool>(type: "bit", nullable: false),
+                    ResponseDateTime = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BookAppointment", x => x.BookAppointmentId);
+                    table.ForeignKey(
+                        name: "FK_BookAppointment_AppointmentSlot_AppointmentSlotId",
+                        column: x => x.AppointmentSlotId,
+                        principalTable: "AppointmentSlot",
+                        principalColumn: "AppointmentSlotId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BookAppointment_Patient_PatientId",
+                        column: x => x.PatientId,
+                        principalTable: "Patient",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "102ceda6-dd25-4a8a-82a3-a3af2448c2ac", "3", "Doctor", "Doctor" },
-                    { "570b42b8-a01e-482a-9ddd-f075af4a787d", "1", "Admin", "Admin" },
-                    { "89a58392-b70d-4e42-8900-f884ccbd8f63", "4", "Patient", "Patient" },
-                    { "aac46d12-430d-4ce4-b481-6144267f4337", "2", "Clinic", "Clinic" }
+                    { "21b2e296-f4d5-4b88-8ba0-65edb7e38c3e", "2", "Clinic", "Clinic" },
+                    { "4b0d0113-18af-4d48-8177-9092ac885077", "1", "Admin", "Admin" },
+                    { "6359e4f9-dffe-4d07-94ef-9dd9e0436c12", "4", "Patient", "Patient" },
+                    { "ed38a260-bdc0-4af2-beb4-508d18664039", "3", "Doctor", "Doctor" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -434,6 +463,16 @@ namespace AppointEase.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BookAppointment_AppointmentSlotId",
+                table: "BookAppointment",
+                column: "AppointmentSlotId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookAppointment_PatientId",
+                table: "BookAppointment",
+                column: "PatientId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Doctor_ClinicId",
                 table: "Doctor",
                 column: "ClinicId");
@@ -452,9 +491,6 @@ namespace AppointEase.Data.Migrations
                 name: "Appointments");
 
             migrationBuilder.DropTable(
-                name: "AppointmentSlot");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
             migrationBuilder.DropTable(
@@ -470,13 +506,19 @@ namespace AppointEase.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "BookAppointment");
+
+            migrationBuilder.DropTable(
+                name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "AppointmentSlot");
+
+            migrationBuilder.DropTable(
                 name: "Doctor");
 
             migrationBuilder.DropTable(
                 name: "Patient");
-
-            migrationBuilder.DropTable(
-                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Clinic");
