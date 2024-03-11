@@ -1,4 +1,4 @@
-# AppointEase
+# AppointEase test
 
 ## Description
 This platform is designed to enable mental health patients to schedule, manage, and receive reminders for their medical appointments. Patients can create an account with their name, surname, phone number, and personal identification number. They also have the option to provide additional information in their profile, such as allergies, general health conditions, and more.
