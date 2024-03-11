@@ -44,7 +44,7 @@ namespace AppointEase.Application.Services
             try
             {
 
-                var patientExists = await CheckIfPatientExists(patientRequest.Email, patientRequest.PersonalNumber, null);
+                var patientExists = await CheckIfPatientExists(patientRequest.UserName,patientRequest.Email, patientRequest.PersonalNumber, null);
 
                 if (patientExists != null)
                 {
@@ -79,12 +79,11 @@ namespace AppointEase.Application.Services
         }
 
 
-        private async Task<Patient> CheckIfPatientExists(string email, int personalNumber, string currentUserId)
+        private async Task<Patient> CheckIfPatientExists(string username, string email, int personalNumber, string currentUserId)
         {
             var patients = await GetAllPatients();
-
             var patientRequest = patients.FirstOrDefault(p =>
-                p != null && (p.Email == email || p.PersonalNumber == personalNumber) && p.Id != currentUserId);
+                p != null && (p.UserName == username|| p.Email == email || p.PersonalNumber == personalNumber) && p.Id != currentUserId);
 
             if (patientRequest != null)
             {
@@ -149,11 +148,11 @@ namespace AppointEase.Application.Services
                     return _operationResult.ErrorResult("Failed to update patient:", new[] { "Patient not found!" });
                 }
 
-                var patientExists = await CheckIfPatientExists(patientRequest.Email, patientRequest.PersonalNumber, userId);
+                var patientExists = await CheckIfPatientExists(patientRequest.UserName,patientRequest.Email, patientRequest.PersonalNumber, userId);
 
-                if (patientExists != null && patientExists.UserName != userId)
+                if (patientExists != null)
                 {
-                    return _operationResult.ErrorResult("Failed to update patient:", new[] { "This email or personal number is already associated with another patient!" });
+                    return _operationResult.ErrorResult("Failed to update patient:", new[] { "This email or personal number or UserName is already associated with another patient!" });
                 }
 
                 if (!string.IsNullOrEmpty(patientRequest.Password))

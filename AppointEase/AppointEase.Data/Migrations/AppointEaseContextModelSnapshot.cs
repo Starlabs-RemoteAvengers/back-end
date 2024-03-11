@@ -72,6 +72,12 @@ namespace AppointEase.Data.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("PhotoData")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoFormat")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -273,28 +279,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "570b42b8-a01e-482a-9ddd-f075af4a787d",
+                            Id = "795caf0c-edc2-402f-92d7-3b3b9fa09a0d",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "aac46d12-430d-4ce4-b481-6144267f4337",
+                            Id = "a1745d11-5c70-46b8-8784-ec1f13f5346e",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "102ceda6-dd25-4a8a-82a3-a3af2448c2ac",
+                            Id = "d9f01249-885d-4f63-af09-b3e390ac4a6f",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "89a58392-b70d-4e42-8900-f884ccbd8f63",
+                            Id = "61c4a973-3087-4586-b6f7-7d09aaf55557",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"
