@@ -31,5 +31,6 @@ namespace AppointEase.Application.Contracts.Models.Request
         //Picture
         public string? PhotoData { get; set; }  
         public string? PhotoFormat { get; set; }
+        public string? Description { get; set; }
     }
 }

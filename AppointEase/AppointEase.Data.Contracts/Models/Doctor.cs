@@ -11,6 +11,7 @@ namespace AppointEase.Data.Contracts.Models
         public string? Specialisation { get; set; }
         public DateOnly DateOfBirth { get; set; }
         public string Gender { get; set; }
+        public string? Description { get; set; }
         public string ClinicId { get; set; }
         public virtual Clinic Clinic { get; set; }
     }

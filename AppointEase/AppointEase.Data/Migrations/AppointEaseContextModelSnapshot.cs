@@ -279,28 +279,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "795caf0c-edc2-402f-92d7-3b3b9fa09a0d",
+                            Id = "cf0069fb-57dc-46d3-a9dc-8d5d88f5e037",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "a1745d11-5c70-46b8-8784-ec1f13f5346e",
+                            Id = "ed798579-1e8d-40bf-a71e-2a42c4b961a4",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "d9f01249-885d-4f63-af09-b3e390ac4a6f",
+                            Id = "416cf7f3-d89e-4cb5-84bf-4ce59f8857ab",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "61c4a973-3087-4586-b6f7-7d09aaf55557",
+                            Id = "220d6f5c-6315-4d7f-84da-9110f72018f9",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"
@@ -452,6 +452,10 @@ namespace AppointEase.Data.Migrations
 
                     b.Property<DateOnly>("DateOfBirth")
                         .HasColumnType("date");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
                         .IsRequired()
