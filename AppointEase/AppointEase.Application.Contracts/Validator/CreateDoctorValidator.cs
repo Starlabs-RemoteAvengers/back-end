@@ -21,6 +21,7 @@ namespace AppointEase.Application.Contracts.Validator
             RuleFor(x => x.PhoneNumber).NotEmpty().WithMessage("PhoneNumber is required.");
             //RuleFor(x => x.DoctorName).NotEmpty().WithMessage("DoctorName is required.");
             RuleFor(x => x.Specialisation).NotEmpty().WithMessage("Specialisation is required.");
+            RuleFor(x => x.Description).NotEmpty().WithMessage("Description is required.");
             RuleFor(x => x.DateOfBirth).NotEmpty().WithMessage("DateOfBirth is required.")
           .Must(date => date != default(DateOnly)).WithMessage("Invalid DateOfBirth.");
 
