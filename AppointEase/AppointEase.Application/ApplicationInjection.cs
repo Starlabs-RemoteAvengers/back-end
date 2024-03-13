@@ -12,8 +12,6 @@ using AppointEase.Application.Contracts.Models.EmailConfig;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Data.Contracts.Models;

@@ -77,5 +77,18 @@ namespace AppointEase.AspNetCore.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpPost("ChangePassword")]
+        public async Task<IActionResult> ChangePassword([FromBody] PasswordRequest passwordRequest)
+        {
+            try
+            {
+                var result = await _userService.UserChangePassword(passwordRequest);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

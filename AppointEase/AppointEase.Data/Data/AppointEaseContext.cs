@@ -28,7 +28,8 @@ namespace AppointEase.Data.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-7F5UBH1;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-9L8GSME\\SQLEXPRESS;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
+
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -41,8 +42,6 @@ namespace AppointEase.Data.Data
             builder.Entity<Patient>().ToTable("Patient");
             builder.Entity<AppointmentSlot>().ToTable("AppointmentSlot");
             builder.Entity<BookAppointment>().ToTable("BookAppointment");
-            // Adjust cascade behaviors for other relationships
-
 
             SeedRoles(builder);
         }

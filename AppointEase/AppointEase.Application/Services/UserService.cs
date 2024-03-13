@@ -51,6 +51,41 @@ namespace AppointEase.Application.Services
             return _operationResult.ErrorResult($"Failed to sign in:", new[] { "User not Found!" });
         }
 
+        public async Task<OperationResult> UserChangePassword(PasswordRequest passwordRequest)
+        {
+            try
+            {
+                _pValidator.ValidateAndThrow(passwordRequest);
+
+                var user = await _userManager.FindByIdAsync(passwordRequest.UserId);
+
+                if (user == null)
+                {
+                    return _operationResult.ErrorResult("Failed:", new[] { $"User with ID {passwordRequest.UserId} not found." });
+                }
+
+                var isCorrectPassword = await _userManager.CheckPasswordAsync(user, passwordRequest.OldPassword);
+                if (!isCorrectPassword)
+                {
+                    return _operationResult.ErrorResult("Failed:", new[] { $"The provided password is incorrect." });
+                }
+                var changePasswordResult = await _userManager.ChangePasswordAsync(user, passwordRequest.OldPassword, passwordRequest.NewPassword);
+
+                if (!changePasswordResult.Succeeded)
+                {
+                    return _operationResult.ErrorResult("Failed to change password:", changePasswordResult.Errors.Select(e => e.Description));
+                }
+
+
+                return _operationResult.SuccessResult("Password changed successfully.");
+            }
+            catch (Exception ex)
+            {
+                return _operationResult.ErrorResult($"Failed: ", new[] { ex.Message });
+            }
+
+        }
+
         public async Task<OperationResult> UserForgotPassword(string email)
         {
             try
