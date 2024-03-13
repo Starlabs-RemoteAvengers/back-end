@@ -72,6 +72,12 @@ namespace AppointEase.Data.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("PhotoData")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoFormat")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -214,8 +220,8 @@ namespace AppointEase.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("DayOfWeek")
-                        .HasColumnType("int");
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
 
                     b.Property<string>("DoctorId")
                         .IsRequired()
@@ -310,28 +316,28 @@ namespace AppointEase.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "dca6d0cc-b1b0-4e7f-8ff1-cb8c1cae1447",
+                            Id = "2b273f91-c44d-44bf-a589-aedff2e280ef",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "7df98448-a6a2-4f30-a670-35d7bd5a6be2",
+                            Id = "8e1454b4-1a23-4db3-a06a-5b6995177f4c",
                             ConcurrencyStamp = "2",
                             Name = "Clinic",
                             NormalizedName = "Clinic"
                         },
                         new
                         {
-                            Id = "56a48a95-2cd8-4469-95e6-0ea8add30c3d",
+                            Id = "c07863f7-e130-4112-adce-e9f3671d7b1a",
                             ConcurrencyStamp = "3",
                             Name = "Doctor",
                             NormalizedName = "Doctor"
                         },
                         new
                         {
-                            Id = "e875590e-9efd-4b69-8382-756ba8a6b487",
+                            Id = "7cee34cd-22ca-4475-8182-0ccb57042115",
                             ConcurrencyStamp = "4",
                             Name = "Patient",
                             NormalizedName = "Patient"
@@ -483,6 +489,9 @@ namespace AppointEase.Data.Migrations
 
                     b.Property<DateOnly>("DateOfBirth")
                         .HasColumnType("date");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
                         .IsRequired()
