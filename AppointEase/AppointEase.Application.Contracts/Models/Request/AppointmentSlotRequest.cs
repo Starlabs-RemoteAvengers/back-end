@@ -18,10 +18,10 @@ namespace AppointEase.Application.Contracts.Models.Request
         public string AppointmentSlotId { get; private set; }
         public string DoctorId { get; set; }
         public string ClinicId { get; set; }
-        public DayOfWeek DayOfWeek { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public bool IsBooked { get; set; }
+        public DateOnly Date { get; set; }
         public string? PatientId { get; set; }
     }
 }

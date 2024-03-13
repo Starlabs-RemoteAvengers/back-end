@@ -1,8 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-using System.ComponentModel.DataAnnotations;
-
 namespace AppointEase.Application.Contracts.Models.Request
 {
     public class DoctorRequest

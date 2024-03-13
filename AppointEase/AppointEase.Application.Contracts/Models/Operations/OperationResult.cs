@@ -50,5 +50,10 @@ namespace AppointEase.Application.Contracts.Models.Operations
 
             return new OperationResult(false, message, errorList);
         }
+
+        public OperationResult ErrorResult(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
