@@ -15,10 +15,10 @@ namespace AppointEase.Data.Contracts.Models
         public string AppointmentSlotId { get; set; } = Guid.NewGuid().ToString();
         public string DoctorId { get; set; }
         public string ClinicId { get; set; }
-        public DayOfWeek DayOfWeek { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public bool IsBooked { get; set; }
+        public DateOnly Date { get; set; }
         public string? PatientId { get; set; }
         public virtual Patient Patient { get; set; }
         public virtual Doctor Doctor { get; set; }

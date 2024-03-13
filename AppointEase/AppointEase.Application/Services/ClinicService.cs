@@ -185,11 +185,6 @@ namespace AppointEase.Application.Services
             }
         }
 
-
-
-
-
-
         private void UpdateClinicProperties(ApplicationUser existingPatient, ClinicRequest clinicRequest)
         {
             _mapper.Map(clinicRequest, existingPatient);

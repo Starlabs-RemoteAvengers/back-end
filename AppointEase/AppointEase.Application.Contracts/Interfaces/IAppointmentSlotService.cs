@@ -13,6 +13,7 @@ namespace AppointEase.Application.Contracts.Interfaces
         Task<AppointmentSlotRequest> GetAppointmentById(string id);
         Task<IEnumerable<AppointmentSlotRequest>> GetAllAppointmentSlots();
         Task<OperationResult> CreateAppointmentSlot(AppointmentSlotRequest appointmentSlot);
+        Task<OperationResult> CreateAppointmentSlotByWeeks(AppointmentSlotRequest appointmentSlot, int numberOfWeeks);
         Task<OperationResult> UpdateAppointmentSlot(string id, AppointmentSlotRequest appointmentSlot);
         Task<OperationResult> DeleteAsync(string id);
     }

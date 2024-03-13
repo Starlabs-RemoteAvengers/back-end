@@ -36,10 +36,10 @@ namespace AppointEase.Application.Services
         {
             try
             {
-                var overlappingSlot = await CheckIfAppointmentSlotExists(appointmentSlot.AppointmentSlotId, appointmentSlot.DoctorId, appointmentSlot.DayOfWeek, appointmentSlot.StartTime, appointmentSlot.EndTime);
+                var overlappingSlot = await CheckIfAppointmentSlotExists(appointmentSlot.AppointmentSlotId, appointmentSlot.DoctorId, appointmentSlot.Date, appointmentSlot.StartTime, appointmentSlot.EndTime);
                 if (overlappingSlot != null)
                 {
-                    string errorMessage = $"This Appointment Slot already exists for the specified doctor and time: {overlappingSlot.StartTime} to {overlappingSlot.EndTime}, please choose another time!";
+                    string errorMessage = $"This Appointment Slot already exists for the specified doctor date and time:{overlappingSlot.Date} {overlappingSlot.StartTime} to {overlappingSlot.EndTime}, please choose another time!";
                     return _operationResult.ErrorResult("Failed to create Appointment Slot:", new[] { errorMessage });
                 }
 
@@ -61,10 +61,70 @@ namespace AppointEase.Application.Services
             }
         }
 
-        private async Task<AppointmentSlot> CheckIfAppointmentSlotExists(string id, string doctorId, DayOfWeek dayOfWeek, TimeSpan newStartTime, TimeSpan newEndTime)
+        public async Task<OperationResult> CreateAppointmentSlotByWeeks(AppointmentSlotRequest appointmentSlot, int numberOfWeeks)
         {
-            // Get all existing appointment slots for the specified doctor and day of the week
-            var existingAppointmentSlots = await GetAllAppointmentSlotsForDoctorAndDay(doctorId, dayOfWeek);
+            try
+            {
+                List<OperationResult> results = new List<OperationResult>();
+
+                for (int week = 0; week < numberOfWeeks; week++)
+                {
+                    DateOnly newDate = appointmentSlot.Date.AddDays(7 * week);
+
+                    var overlappingSlot = await CheckIfAppointmentSlotExists(appointmentSlot.AppointmentSlotId, appointmentSlot.DoctorId, newDate, appointmentSlot.StartTime, appointmentSlot.EndTime);
+
+                    if (overlappingSlot != null)
+                    {
+                        string errorMessage = $"This Appointment Slot already exists for the specified doctor and time: {overlappingSlot.StartTime} to {overlappingSlot.EndTime}, please choose another time!";
+                        results.Add(_operationResult.ErrorResult($"Failed to create Appointment Slot for {newDate.ToShortDateString()}:", new[] { errorMessage }));
+                    }
+                    else
+                    {
+                        var newAppointmentSlot = _mapper.Map<AppointmentSlot>(appointmentSlot);
+                        newAppointmentSlot.Date = newDate;
+
+                        var result = await _appointmentSlotRepository.AddAsync(newAppointmentSlot);
+
+                        if (!result.Succeeded)
+                        {
+                            results.Add(_operationResult.ErrorResult($"Failed to create Appointment Slot for {newDate.ToShortDateString()}: {result.Errors}"));
+                        }
+                        else
+                        {
+                            _common.AddInformationMessage($"Appointment Slot Created Successfully for {newDate.ToShortDateString()}!");
+                            results.Add(_operationResult.SuccessResult($"Appointment Slot Created Successfully for {newDate.ToShortDateString()}!"));
+                        }
+                    }
+                }
+                return CombineResults(results);
+            }
+            catch (Exception exception)
+            {
+                _common.AddErrorMessage($"Error creating AppointmentSlots: {exception.Message}");
+                return _operationResult.ErrorResult($"Failed to create Appointment Slots", new[] { exception.Message });
+            }
+        }
+
+
+        private OperationResult CombineResults(List<OperationResult> results)
+        {
+            bool allSuccess = results.All(result => result.Succeeded);
+            //string[] errorMessages = results.SelectMany((OperationResult result) => result.Errors).ToArray();
+
+            if (allSuccess)
+            {
+                return _operationResult.SuccessResult("All Appointment Slots Created Successfully!");
+            }
+            else
+            {
+                return _operationResult.ErrorResult("Failed to create some Appointment Slots:");
+            }
+        }
+
+        private async Task<AppointmentSlot> CheckIfAppointmentSlotExists(string id, string doctorId, DateOnly newDate, TimeSpan newStartTime, TimeSpan newEndTime)
+            {
+            // Get all existing appointment slots for the specified doctor and day
+            var existingAppointmentSlots = await GetAllAppointmentSlotsForDoctorAndDay(doctorId, newDate);
 
             // Check if there is an overlapping time slot
             var overlappingSlot = existingAppointmentSlots.FirstOrDefault(slot =>
@@ -74,16 +134,16 @@ namespace AppointEase.Application.Services
             return overlappingSlot;
         }
 
-        private async Task<IEnumerable<AppointmentSlot>> GetAllAppointmentSlotsForDoctorAndDay(string doctorId, DayOfWeek dayOfWeek)
+        private async Task<IEnumerable<AppointmentSlot>> GetAllAppointmentSlotsForDoctorAndDay(string doctorId, DateOnly date)
         {
             // Get all existing appointment slots
             var allAppointmentSlots = await _appointmentSlotRepository.GetAllAsync();
 
-            // Filter appointment slots for the specified doctor and day of the week
+            // Filter appointment slots for the specified doctor and day
             var filteredSlots = allAppointmentSlots
                 .Where(slot =>
                     slot.DoctorId == doctorId &&
-                    slot.DayOfWeek == dayOfWeek &&
+                    slot.Date == date &&
                     IsTimeSlotOverlap(slot.StartTime, slot.EndTime, slot.StartTime, slot.EndTime)) // Assuming you want appointments between 11:00 AM and 12:00 PM
                 .ToList();
 
@@ -96,6 +156,7 @@ namespace AppointEase.Application.Services
             // Check if the new time slot overlaps with the existing one
             return newStartTime < existingEndTime && existingStartTime < newEndTime;
         }
+
 
         public async Task<IEnumerable<AppointmentSlotRequest>> GetAllAppointmentSlots()
         {
@@ -129,19 +190,28 @@ namespace AppointEase.Application.Services
         {
             try
             {
-                // Check if there is an overlapping time slot for the updated appointment
-                var overlappingSlot = await CheckIfAppointmentSlotExists(appointmentSlotRequest.AppointmentSlotId, appointmentSlotRequest.DoctorId, appointmentSlotRequest.DayOfWeek, appointmentSlotRequest.StartTime, appointmentSlotRequest.EndTime);
-
-                if (overlappingSlot != null)
-                {
-                    string errorMessage = $"This Appointment Slot already exists for the specified doctor and time: {overlappingSlot.StartTime} to {overlappingSlot.EndTime}, please choose another time!";
-                    return _operationResult.ErrorResult("Failed to update Appointment Slot:", new[] { errorMessage });
-                }
-
                 var existingAppointmentSlot = await _appointmentSlotRepository.GetByIdAsync(id);
 
                 if (existingAppointmentSlot != null)
                 {
+                    // Check if the relevant properties are being modified
+                    bool isTimeModified = existingAppointmentSlot.Date != appointmentSlotRequest.Date ||
+                                         existingAppointmentSlot.StartTime != appointmentSlotRequest.StartTime ||
+                                         existingAppointmentSlot.EndTime != appointmentSlotRequest.EndTime;
+
+                    // If time-related properties are modified, check for overlapping slots
+                    if (isTimeModified)
+                    {
+                        var overlappingSlot = await CheckIfAppointmentSlotExists(appointmentSlotRequest.AppointmentSlotId, appointmentSlotRequest.DoctorId, appointmentSlotRequest.Date, appointmentSlotRequest.StartTime, appointmentSlotRequest.EndTime);
+
+                        if (overlappingSlot != null)
+                        {
+                            string errorMessage = $"This Appointment Slot already exists for the specified doctor and time: {overlappingSlot.StartTime} to {overlappingSlot.EndTime}, please choose another time!";
+                            return _operationResult.ErrorResult("Failed to update Appointment Slot:", new[] { errorMessage });
+                        }
+                    }
+
+                    // Update other attributes without checking for overlap
                     _mapper.Map(appointmentSlotRequest, existingAppointmentSlot);
                     var result = await _appointmentSlotRepository.UpdateAsync(existingAppointmentSlot);
 
@@ -164,6 +234,7 @@ namespace AppointEase.Application.Services
                 return _operationResult.ErrorResult("Failed to update Appointment Slot", new[] { exception.Message });
             }
         }
+
 
         public async Task<OperationResult> DeleteAsync(string id)
         {

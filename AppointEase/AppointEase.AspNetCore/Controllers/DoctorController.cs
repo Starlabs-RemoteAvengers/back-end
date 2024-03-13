@@ -53,6 +53,19 @@ namespace AppointEase.AspNetCore.Controllers
 
             return Ok(result);
         }
+        [HttpGet("clinic/{clinicId}")]
+        public async Task<IActionResult> GetDoctorsByClinicId(string clinicId)
+        {
+            try
+            {
+                var doctors = await _doctorService.GetAllDoctorsByClinicId(clinicId);
+                return Ok(doctors);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
 
         [HttpDelete("DeleteDoctor")]
         public async Task<IActionResult> DeleteClinc(string doctorId)

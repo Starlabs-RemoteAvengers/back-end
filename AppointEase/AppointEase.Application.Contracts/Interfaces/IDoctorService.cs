@@ -13,6 +13,7 @@ namespace AppointEase.Application.Contracts.Interfaces
     {
         Task<DoctorRequest> GetDoctor(string doctorId);
         Task<IEnumerable<DoctorRequest>> GetAllDoctors();
+        Task<IEnumerable<DoctorRequest>> GetAllDoctorsByClinicId(string clinicId);
         Task<OperationResult> CreateDoctorAsync(DoctorRequest personDto);
         Task<OperationResult> UpdateDoctor(string personId, DoctorRequest personDto);
         Task<OperationResult> DeleteDoctor(string personId);
