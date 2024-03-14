@@ -172,6 +172,19 @@ namespace AppointEase.Application.Services
             }
         }
 
+        public async Task<IEnumerable<AppointmentSlotRequest>> GetAppointmentSlotsByDoctorId(string doctorId)
+        {
+            try {
+                var appointmentSlotsByDoctorId = await _appointmentSlotRepository.GetAppointmentSlotsByDoctorId(doctorId);
+                return _mapper.Map<IEnumerable<AppointmentSlotRequest>>(appointmentSlotsByDoctorId);
+            } 
+            catch(Exception exception) 
+            {
+                _common.AddErrorMessage($"Error retrieving all AppointmentSlots: {exception.Message}");
+                throw;
+            }
+        }
+
         public async Task<AppointmentSlotRequest> GetAppointmentById(string id)
         {
             try
