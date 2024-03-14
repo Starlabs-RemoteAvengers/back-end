@@ -19,5 +19,6 @@ namespace AppointEase.Data.Contracts.Interfaces
         Task<OperationResult> UpdateAsync(T entity);
         Task<OperationResult> DeleteAsync(string id);
         Task<IEnumerable<T>> GetDoctorsByClinicId(string clinicId);
+        Task<IEnumerable<AppointmentSlot>>GetAppointmentSlotsByDoctorId(string doctorId);
     }
 }

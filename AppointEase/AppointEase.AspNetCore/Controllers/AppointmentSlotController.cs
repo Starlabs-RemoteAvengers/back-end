@@ -41,6 +41,12 @@ namespace AppointEase.AspNetCore.Controllers
             var appointmentSlots = await _appointmentSlotService.GetAllAppointmentSlots();
             return Ok(appointmentSlots);
         }
+        [HttpGet("ByDoctorId")]
+        public async Task<IActionResult> GetAllAppointmentSlotsByDoctorId(string doctorId)
+        {
+            var appointmentSlotsByDoctorId = await _appointmentSlotService.GetAppointmentSlotsByDoctorId(doctorId);
+            return Ok(appointmentSlotsByDoctorId);
+        }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAppointmentSlotById(string id)

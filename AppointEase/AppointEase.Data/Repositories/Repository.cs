@@ -71,8 +71,12 @@ namespace AppointEase.Data.Repositories
         }
         public async Task<IEnumerable<T>> GetDoctorsByClinicId(string clinicId)
         {
-            // Assuming you have a DbSet<Doctor> named Doctors in your DbContext
             return (IEnumerable<T>)await Task.FromResult(_context.Doctor.Where(d => d.ClinicId == clinicId).ToList());
+        }
+
+        public async Task<IEnumerable<AppointmentSlot>>GetAppointmentSlotsByDoctorId(string doctorId)
+        {
+            return await Task.FromResult(_context.AppointmentSlot.Where(a=>a.DoctorId== doctorId).ToList());
         }
     }
 }
