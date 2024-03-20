@@ -48,6 +48,7 @@ namespace AppointEase.Application.Services
 
                 // Mark the corresponding appointment slot as booked
                 appointmentSlot.IsBooked = true;
+                appointmentSlot.PatientId = bookappointment.PatientId;
                 await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
 
                 return _operationResult.SuccessResult("Appointment Created Successfully!");
@@ -155,9 +156,28 @@ namespace AppointEase.Application.Services
         {
             try
             {
-                await _bookappointmentRepository.DeleteAsync(id);
+                var appointment = await _bookappointmentRepository.GetByIdAsync(id);
 
-                // Your additional logic (if any) after deleting the appointment slot
+                if (appointment == null)
+                {
+                    return _operationResult.ErrorResult($"Failed to delete Appointment: Appointment with ID {id} not found.", new[] { "Appointment not found." });
+                }
+
+                var appointmentSlot = await _appointmentSlotRepository.GetByIdAsync(appointment.AppointmentSlotId);
+
+                if (appointmentSlot == null)
+                {
+                    return _operationResult.ErrorResult($"Failed to delete Appointment: Appointment slot with ID {appointment.AppointmentSlotId} not found.", new[] { "Appointment slot not found." });
+                }
+
+                // Update appointment slot properties
+                appointmentSlot.IsBooked = false;
+                appointmentSlot.PatientId = null;
+
+                await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
+
+                // Delete the appointment
+                await _bookappointmentRepository.DeleteAsync(id);
 
                 return _operationResult.SuccessResult("Appointment Deleted Successfully!");
             }
@@ -167,5 +187,39 @@ namespace AppointEase.Application.Services
                 return _operationResult.ErrorResult($"Failed to delete Appointment:", new[] { exception.Message });
             }
         }
+        public async Task<OperationResult> AcceptBookAppointment(string id)
+        {
+            try
+            {
+                var appointment = await _bookappointmentRepository.GetByIdAsync(id);
+
+                if (appointment == null)
+                {
+                    return _operationResult.ErrorResult($"Failed to accept Appointment: Appointment with ID {id} not found.", new[] { "Appointment not found." });
+                }
+
+                // Update isAccepted to "Yes"
+                appointment.IsAccepted = true;
+
+                // Update the appointment
+                await _bookappointmentRepository.UpdateAsync(appointment);
+
+                // Update the corresponding appointment slot
+                var appointmentSlot = await _appointmentSlotRepository.GetByIdAsync(appointment.AppointmentSlotId);
+                if (appointmentSlot != null)
+                {
+                    appointmentSlot.IsAccepted = true;
+                    await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
+                }
+
+                return _operationResult.SuccessResult("Appointment Accepted Successfully!");
+            }
+            catch (Exception exception)
+            {
+                _common.AddErrorMessage($"Error accepting Appointment: {exception.Message}");
+                return _operationResult.ErrorResult($"Failed to accept Appointment:", new[] { exception.Message });
+            }
+        }
+
     }
 }

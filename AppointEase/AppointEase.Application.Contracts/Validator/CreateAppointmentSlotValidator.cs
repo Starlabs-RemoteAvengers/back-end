@@ -32,9 +32,9 @@ namespace AppointEase.Application.Contracts.Validator
             RuleFor(appointmentSlot => appointmentSlot.Date)
                 .NotEmpty().WithMessage("Date is required.");
 
-            RuleFor(appointmentSlot => appointmentSlot.PatientId)
-                .NotEmpty().When(appointmentSlot => appointmentSlot.IsBooked)
-                .WithMessage("PatientId is required when appointment is booked.");
+            //RuleFor(appointmentSlot => appointmentSlot.PatientId)
+            //    .NotEmpty().When(appointmentSlot => appointmentSlot.IsBooked)
+            //    .WithMessage("PatientId is required when appointment is booked.");
         }
     }
 }

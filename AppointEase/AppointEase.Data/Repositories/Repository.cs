@@ -78,5 +78,10 @@ namespace AppointEase.Data.Repositories
         {
             return await Task.FromResult(_context.AppointmentSlot.Where(a=>a.DoctorId== doctorId).ToList());
         }
+
+        public async Task<IEnumerable<AppointmentSlot>> GetMyDoctorsAppointmentSlots(string clinicId)
+        {
+            return await Task.FromResult(_context.AppointmentSlot.Where(c=>c.ClinicId== clinicId).ToList());
+        }
     }
 }

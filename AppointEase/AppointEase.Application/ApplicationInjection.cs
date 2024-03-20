@@ -42,10 +42,8 @@ namespace AppointEase.Application
             serviceDescriptors.AddTransient<IValidator<ClinicRequest>, UpdateClinicValidator>();
             serviceDescriptors.AddScoped<IAppointmentSlotService, AppointmentSlotService>();
             serviceDescriptors.AddTransient<IValidator<AppointmentSlotRequest>, CreateAppointmentSlotValidator>();
-            serviceDescriptors.AddScoped<IRepository<AppointmentSlot>, AppointmentSlotRepository>();
             serviceDescriptors.AddScoped<IBookAppointmentService, BookAppointmentService>();
             serviceDescriptors.AddScoped<IValidator<BookAppointmentRequest>, CreateBookAppointmentValidator>();
-            serviceDescriptors.AddScoped<IRepository<BookAppointment>, BookAppointmentRepository>();
             serviceDescriptors.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             serviceDescriptors.AddTransient<IValidator<PasswordRequest>, ValidatorPasswordRequest>();
             serviceDescriptors.AddScoped<IUrlHelper>(serviceProvider =>

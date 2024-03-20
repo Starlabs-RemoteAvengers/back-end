@@ -20,5 +20,6 @@ namespace AppointEase.Data.Contracts.Interfaces
         Task<OperationResult> DeleteAsync(string id);
         Task<IEnumerable<T>> GetDoctorsByClinicId(string clinicId);
         Task<IEnumerable<AppointmentSlot>>GetAppointmentSlotsByDoctorId(string doctorId);
+        Task<IEnumerable<AppointmentSlot>> GetMyDoctorsAppointmentSlots(string clinicId);
     }
 }
