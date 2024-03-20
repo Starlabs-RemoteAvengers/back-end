@@ -15,5 +15,6 @@ namespace AppointEase.Application.Contracts.Interfaces
         Task<OperationResult> CreateBookAppointment(BookAppointmentRequest bookAppointment);
         Task<OperationResult> UpdateBookAppointment(string id, BookAppointmentRequest bookAppointment);
         Task<OperationResult> DeleteBookAppointment(string id);
+        Task<OperationResult> AcceptBookAppointment(string id);
     }
 }
