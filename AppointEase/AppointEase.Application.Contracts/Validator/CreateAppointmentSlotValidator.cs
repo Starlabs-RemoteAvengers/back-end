@@ -30,7 +30,9 @@ namespace AppointEase.Application.Contracts.Validator
                 .NotNull().WithMessage("IsBooked is required.");
 
             RuleFor(appointmentSlot => appointmentSlot.Date)
-                .NotEmpty().WithMessage("Date is required.");
+             .NotEmpty().WithMessage("Date is required.")
+             .Must(date => date >= DateOnly.FromDateTime(DateTime.Today))
+             .WithMessage("Date must be in the present or future.");
 
             //RuleFor(appointmentSlot => appointmentSlot.PatientId)
             //    .NotEmpty().When(appointmentSlot => appointmentSlot.IsBooked)

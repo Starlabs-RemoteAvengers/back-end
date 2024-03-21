@@ -14,7 +14,7 @@ namespace AppointEase.AspNetCore.Controllers
         private readonly IUserService _userService;
         private readonly IPatientService _patientService;
 
-        public AuthenticationController(IUserService userService, IPatientService patientService) 
+        public AuthenticationController(IUserService userService, IPatientService patientService)
         {
             _userService = userService;
             _patientService = patientService;
@@ -29,13 +29,13 @@ namespace AppointEase.AspNetCore.Controllers
             var result = await _userService.LogInAsync(loginRequest.Username, loginRequest.Password);
 
             if (result != null && result is string token)
-              {
-                  return Ok(new { token });
-              }
-              else
-              {
-                  return Unauthorized("Invalid username or password");
-              }
+            {
+                return Ok(new { token });
+            }
+            else
+            {
+                return Unauthorized("Invalid username or password");
+            }
 
         }
         [HttpGet("ConfirmEmail")]
@@ -65,7 +65,7 @@ namespace AppointEase.AspNetCore.Controllers
             }
         }
         [HttpPost("ResetPassword")]
-        public async Task<IActionResult> ResetPassword([FromBody]PasswordRequest passwordRequest)
+        public async Task<IActionResult> ResetPassword([FromBody] PasswordRequest passwordRequest)
         {
             try
             {
@@ -89,6 +89,19 @@ namespace AppointEase.AspNetCore.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ApplicationUserRequest>>> GetUsers()
+        {
+            var users = await _userService.GetUsers();
+            return Ok(users);
+        }
+        [HttpGet("userId")]
+        public async Task<IActionResult> GetUser(string id)
+        {
+            var user = await _userService.GetUser(id);
+            return Ok(user);
         }
     }
 }

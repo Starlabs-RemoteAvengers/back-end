@@ -32,6 +32,7 @@ namespace AppointEase.Data
             serviceDescriptors.AddScoped<IRepository<Doctor>, DoctorReporsitory>();
             serviceDescriptors.AddScoped<IRepository<AppointmentSlot>, AppointmentSlotRepository>();
             serviceDescriptors.AddScoped<IRepository<BookAppointment>, BookAppointmentRepository>();
+            serviceDescriptors.AddScoped<IRepository<ApplicationUser>, UsersRepository>();
 
         }
     }

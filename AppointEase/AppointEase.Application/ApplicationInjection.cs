@@ -46,6 +46,7 @@ namespace AppointEase.Application
             serviceDescriptors.AddScoped<IValidator<BookAppointmentRequest>, CreateBookAppointmentValidator>();
             serviceDescriptors.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             serviceDescriptors.AddTransient<IValidator<PasswordRequest>, ValidatorPasswordRequest>();
+            serviceDescriptors.AddScoped<IUserService, UserService>();
             serviceDescriptors.AddScoped<IUrlHelper>(serviceProvider =>
             {
                 var actionContext = serviceProvider.GetRequiredService<IActionContextAccessor>().ActionContext;
