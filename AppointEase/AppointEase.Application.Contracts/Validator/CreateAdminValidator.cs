@@ -17,7 +17,9 @@ namespace AppointEase.Application.Contracts.Validator
             RuleFor(x => x.Surname).NotEmpty().WithMessage("Surname is required.");
             RuleFor(x => x.Role).NotEmpty().WithMessage("Role is required.");
             RuleFor(x => x.PersonalNumber).NotEmpty().WithMessage("PersonalNumber is required.");
-            RuleFor(x => x.Email).NotEmpty().WithMessage("Email is required.").EmailAddress().WithMessage("Invalid email format.");
+            RuleFor(x => x.Email)
+           .NotEmpty().WithMessage("Email is required.")
+           .Matches(@"^[^\s@]+@[^\s@]+\.[^\s@]+(\.[^\s@]+)*$").WithMessage("Invalid email format.");
             RuleFor(x => x.Password)
             .NotEmpty().WithMessage("Password is required.")
             .MinimumLength(8).WithMessage("Password must have 8 characters or more.")

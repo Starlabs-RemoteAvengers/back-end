@@ -2,6 +2,9 @@
 using AppointEase.Application.Contracts.Models.Operations;
 using AppointEase.Application.Contracts.Models.Request;
 using AppointEase.Data.Contracts.Identity;
+using AppointEase.Data.Contracts.Interfaces;
+using AppointEase.Data.Repositories;
+using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
@@ -15,15 +18,19 @@ namespace AppointEase.Application.Services
         private readonly IApplicationExtensions _applicationExtensions;
         private readonly IEmailServices emailServices;
         private readonly IValidator<PasswordRequest> _pValidator;
+        private readonly IRepository<ApplicationUser> _usersRepository;
+        private readonly IMapper _mapper;
 
 
-        public UserService(UserManager<ApplicationUser> userManager, IOperationResult operationResult, IApplicationExtensions applicationExtensions, IEmailServices emailServices, IValidator<PasswordRequest> validator)
+        public UserService(UserManager<ApplicationUser> userManager, IOperationResult operationResult, IApplicationExtensions applicationExtensions, IEmailServices emailServices, IValidator<PasswordRequest> validator, IRepository<ApplicationUser> usersRepository, IMapper mapper)
         {
             _userManager = userManager;
             _operationResult = operationResult;
             _applicationExtensions = applicationExtensions;
             this.emailServices = emailServices;
             this._pValidator = validator;
+            _usersRepository= usersRepository;
+            _mapper = mapper;
         }
 
         public async Task<Object> LogInAsync(string username, string password)
@@ -145,7 +152,21 @@ namespace AppointEase.Application.Services
             {
                 return _operationResult.ErrorResult($"Failed: ", new[] { ex.Message });
             }
-           
+        }
+        public async Task<IEnumerable<ApplicationUserRequest>> GetUsers()
+        {
+            var users= await _usersRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<ApplicationUserRequest>>(users);
+        }
+
+        public async Task<ApplicationUserRequest> GetUser(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (userId == null)
+            {
+                return null;
+            }
+            return _mapper.Map<ApplicationUserRequest>(user);
         }
     }
 }
