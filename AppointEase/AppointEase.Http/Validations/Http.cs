@@ -11,11 +11,11 @@ using AppointEase.Http.Services;
 
 namespace AppointEase.Http.Contracts
 {
-    public class StripeInjection
+    public class Http
     {
-        public static void AddApplicationServices( IServiceCollection serviceDescriptors, IConfiguration configuration)
+        public static void AddHttpModule(IServiceCollection serviceDescriptors, IConfiguration configuration)
         {
-            serviceDescriptors.AddScoped<IStripeService, StripeService>();
+            serviceDescriptors.AddScoped<IStripeApi, StripeService>();
 
         }
     }

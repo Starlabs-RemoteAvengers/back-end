@@ -42,7 +42,9 @@ namespace AppointEase.Application.Services
 
                     var token = await _applicationExtensions.GenerateJwtTokenAsync(userId,username, userRole,new Dictionary<string, string>()
                     {
-                         { "EmailConfirmation", user.EmailConfirmed.ToString() }
+                         { "EmailConfirmation", user.EmailConfirmed.ToString() },
+                         { "Name", user.Name },
+                         { "Surname", user.Surname }
                     });
 
                     return token;

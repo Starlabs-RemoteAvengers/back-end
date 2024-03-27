@@ -5,14 +5,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AppointEase.AspNetCore.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class StripeController : ControllerBase
     {
-        private readonly IStripeService _stripeService;
+        private readonly IStripeApi _stripeService;
 
-        public StripeController(IStripeService stripeService)
+        public StripeController(IStripeApi stripeService)
         {
             _stripeService = stripeService;
         }
+
 
         [HttpPost("charge")]
         public async Task<IActionResult> Charge([FromBody] PaymentRequest paymentRequest)

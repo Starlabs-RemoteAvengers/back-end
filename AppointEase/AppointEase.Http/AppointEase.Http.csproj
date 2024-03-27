@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="Refit" Version="7.0.0" />
+    <PackageReference Include="Stripe.net" Version="43.20.0" />
   </ItemGroup>
 
   <ItemGroup>

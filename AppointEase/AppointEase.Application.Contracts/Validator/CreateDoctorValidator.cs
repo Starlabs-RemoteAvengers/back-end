@@ -22,10 +22,8 @@ namespace AppointEase.Application.Contracts.Validator
             //RuleFor(x => x.DoctorName).NotEmpty().WithMessage("DoctorName is required.");
             RuleFor(x => x.Specialisation).NotEmpty().WithMessage("Specialisation is required.");
             RuleFor(x => x.Description).NotEmpty().WithMessage("Description is required.");
-            RuleFor(x => x.DateOfBirth).NotEmpty().WithMessage("DateOfBirth is required.")
-          .Must(date => date != default(DateOnly)).WithMessage("Invalid DateOfBirth.");
-
-            //RuleForEach(x => x.Doctors).SetValidator(CreateDoctorValidator()); // Assuming you have a validator for DoctorRequest
+            RuleFor(x => x.DateOfBirth).Must(dateOfBirth => (DateTime.Now.Date - new DateTime(dateOfBirth.Year, dateOfBirth.Month, dateOfBirth.Day)).TotalDays / 365 >= 25).WithMessage("Doctor must be at least 25 years old.");
         }
+
     }
 }

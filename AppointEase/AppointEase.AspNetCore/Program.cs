@@ -1,17 +1,18 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using AppointEase.Application.Filters;
 using AppointEase.Application;
 using AppointEase.Data;
-using AppointEase.Data.Contracts.Identity;
-using AppointEase.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Stripe;
+using AppointEase.Http.Contracts;
+using AppointEase.Http.Services;
+using Refit;
 
 var builder = WebApplication.CreateBuilder(args);
-ConfigurationManager configuration = builder.Configuration;
+
 builder.Configuration.AddJsonFile("appsettings.json");
 
 builder.Services.AddControllers(options =>
@@ -25,9 +26,16 @@ builder.Services.AddLogging(builder =>
     builder.AddConsole();
 });
 
+//builder.Services
+//    .AddRefitClient<ITmdbApi>(refitSettings)
+//    .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://api.themoviedb.org/3"));
 
-ApplicationInjection.AddApplicationServices(builder.Services, builder.Configuration);
+Http.AddHttpModule(builder.Services, builder.Configuration);
 DataInjectionServices.AddDataServices(builder.Services, builder.Configuration);
+ApplicationInjection.AddApplicationServices(builder.Services, builder.Configuration);
+
+
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
 builder.Services.AddCors(options =>
 {
@@ -38,7 +46,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -48,36 +55,32 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = configuration["Jwt:Issuer"],
-            ValidAudience = configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]))
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
         };
     });
 
-
-// Other service registrations (Application services, Data services, Swagger, etc.)
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
 });
 
-
 var app = builder.Build();
-
-
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name v1"));
 }
-
+ 
 app.UseHttpsRedirection();
 
 app.UseCors("CorsPolicy");
 
-app.UseAuthentication();
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

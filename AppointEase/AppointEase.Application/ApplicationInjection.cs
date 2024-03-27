@@ -16,6 +16,8 @@ using Microsoft.AspNetCore.Identity;
 using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Data.Contracts.Models;
 using AppointEase.Data.Repositories;
+using AppointEase.Http.Contracts.Interfaces;
+using AppointEase.Http.Services;
 
 namespace AppointEase.Application
 {
@@ -37,6 +39,7 @@ namespace AppointEase.Application
             serviceDescriptors.AddTransient<IValidator<ClinicRequest>, CreateClinicValidator>();
             serviceDescriptors.AddSingleton<IConfiguration>(configuration);
             serviceDescriptors.AddScoped<IAdminService, AdminService>();
+            serviceDescriptors.AddScoped<IStripeApi, StripeService>();
             serviceDescriptors.AddScoped<ISearchService, SearchService>();
             serviceDescriptors.AddTransient<IValidator<AdminRequest>, CreateAdminValidator>();
             serviceDescriptors.AddTransient<IValidator<ClinicRequest>, UpdateClinicValidator>();
