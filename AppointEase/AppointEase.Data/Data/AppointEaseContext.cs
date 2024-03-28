@@ -1,5 +1,6 @@
 ﻿using AppointEase.Data.Contracts.Identity;
 using AppointEase.Data.Contracts.Models;
+using AppointEase.Http.Contracts.Requests;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +26,9 @@ namespace AppointEase.Data.Data
         public DbSet<AppointmentRequest> AppointmentRequests { get; set; }
         public DbSet<AppointmentSlot> AppointmentSlot { get; set; }
         public DbSet<BookAppointment> BookAppointment { get; set; }
+        public DbSet<PaymentIntentRequest> PaymentIntentRequests { get; set; }
+        public DbSet<RefundRequest> RefundRequests { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AppointEase.Http.Contracts;
 using AppointEase.Http.Services;
+using Refit;
 
 namespace AppointEase.Http.Contracts
 {
@@ -16,7 +17,7 @@ namespace AppointEase.Http.Contracts
         public static void AddHttpModule(IServiceCollection serviceDescriptors, IConfiguration configuration)
         {
             serviceDescriptors.AddScoped<IStripeApi, StripeService>();
-
+            serviceDescriptors.AddRefitClient<IStripeApi>().ConfigureHttpClient(c => c.BaseAddress = new Uri("https://api.stripe.com/api"));
         }
     }
 }

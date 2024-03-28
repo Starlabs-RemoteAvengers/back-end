@@ -26,10 +26,6 @@ builder.Services.AddLogging(builder =>
     builder.AddConsole();
 });
 
-//builder.Services
-//    .AddRefitClient<ITmdbApi>(refitSettings)
-//    .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://api.themoviedb.org/3"));
-
 Http.AddHttpModule(builder.Services, builder.Configuration);
 DataInjectionServices.AddDataServices(builder.Services, builder.Configuration);
 ApplicationInjection.AddApplicationServices(builder.Services, builder.Configuration);

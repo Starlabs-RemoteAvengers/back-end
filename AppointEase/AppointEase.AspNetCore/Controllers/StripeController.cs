@@ -1,7 +1,7 @@
 ﻿using AppointEase.Http.Contracts.Interfaces;
 using AppointEase.Http.Contracts.Requests;
-using AppointEase.Http.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace AppointEase.AspNetCore.Controllers
 {
@@ -16,19 +16,18 @@ namespace AppointEase.AspNetCore.Controllers
             _stripeService = stripeService;
         }
 
-
-        [HttpPost("charge")]
-        public async Task<IActionResult> Charge([FromBody] PaymentRequest paymentRequest)
+        [HttpPost("create-payment-intent")]
+        public async Task<IActionResult> CreatePaymentIntent([FromBody] PaymentIntentRequest paymentIntentRequest)
         {
-            var clientSecret = await _stripeService.Charge(paymentRequest);
+            var clientSecret = await _stripeService.CreatePaymentIntent(paymentIntentRequest);
             return Ok(clientSecret);
         }
 
         [HttpPost("refund")]
         public async Task<IActionResult> Refund([FromBody] RefundRequest refundRequest)
         {
-            var refund = await _stripeService.Refund(refundRequest);
-            return Ok(refund);
+            var refundId = await _stripeService.RefundPayment(refundRequest);
+            return Ok(refundId);
         }
     }
 }
