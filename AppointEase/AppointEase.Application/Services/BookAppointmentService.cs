@@ -3,7 +3,6 @@ using AppointEase.Application.Contracts.Models.Operations;
 using AppointEase.Application.Contracts.Models.Request;
 using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Data.Contracts.Models;
-using AppointEase.Data.Repositories;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using System;

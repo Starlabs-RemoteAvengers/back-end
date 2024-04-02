@@ -5,7 +5,6 @@ using AppointEase.Data.Contracts.Identity;
 using AppointEase.Data.Contracts.Interfaces;
 using AppointEase.Data.Contracts.Models;
 using AutoMapper;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 
 namespace AppointEase.Application.Services
