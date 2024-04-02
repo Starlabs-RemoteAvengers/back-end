@@ -13,6 +13,7 @@ namespace AppointEase.Application.Contracts.Models.Operations
         public string Message { get; private set; }
         public IEnumerable<string> Errors { get; private set; }
 
+
         private OperationResult(bool success, string message, IEnumerable<string> errors)
         {
             Succeeded = success;

@@ -1,17 +1,14 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using AppointEase.Application.Filters;
 using AppointEase.Application;
 using AppointEase.Data;
-using AppointEase.Data.Contracts.Identity;
-using AppointEase.Data.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using AppointEase.Http;
 using Stripe;
 using AppointEase.Http.Contracts;
+using AppointEase.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -40,8 +37,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policy =>
     {
-        policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
-        policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3001");
+        policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000", "http://localhost:3001").AllowCredentials();
     });
 });
 
@@ -83,7 +79,14 @@ StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey"
 
 app.UseAuthentication();
 
+app.UseRouting();
+
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<ChatHub>("/chatHub");
+});
 
 app.MapControllers();
 

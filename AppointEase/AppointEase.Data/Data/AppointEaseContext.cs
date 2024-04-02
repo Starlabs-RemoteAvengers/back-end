@@ -24,11 +24,14 @@ namespace AppointEase.Data.Data
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<AppointmentSlot> AppointmentSlot { get; set; }
         public DbSet<BookAppointment> BookAppointment { get; set; }
+        public DbSet<ChatMessages> Messages { get; set; }
+        public DbSet<ConnectionRequests> ConnectionRequests { get; set; }
+        public DbSet<Connections> Connections { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-EUO8BVU\\MSSQLSERVER01;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
-
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-9L8GSME\\SQLEXPRESS;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

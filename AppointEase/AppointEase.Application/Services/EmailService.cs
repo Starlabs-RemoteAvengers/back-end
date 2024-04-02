@@ -25,10 +25,13 @@ namespace AppointEase.Application.Services
         private MimeMessage CreateEmailMessage(Messages messages)
         {
             var mimeMessage = new MimeMessage();
-            mimeMessage.From.Add(new MailboxAddress("email",_emailConfiguration.From));
+            mimeMessage.From.Add(new MailboxAddress("AppointEase System",_emailConfiguration.From));
             mimeMessage.To.AddRange(messages.To);
             mimeMessage.Subject = messages.Subject;
-            mimeMessage.Body = new TextPart(MimeKit.Text.TextFormat.Text) { Text = messages.Content };
+            var bodyBuilder = new BodyBuilder();
+            bodyBuilder.HtmlBody = messages.Content;
+
+            mimeMessage.Body = bodyBuilder.ToMessageBody();
 
             return mimeMessage;
 

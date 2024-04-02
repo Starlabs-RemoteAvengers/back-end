@@ -14,6 +14,7 @@ namespace AppointEase.Application.Services
             _doctorService = doctorService;
             _clinicService = clinicService;
         }
+
         public async Task<IEnumerable<object>> GetAllDoctors()
         {
             try

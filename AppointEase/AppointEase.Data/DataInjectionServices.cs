@@ -22,16 +22,25 @@ namespace AppointEase.Data
                 );
             });
 
+            
             serviceDescriptors.AddIdentity<ApplicationUser, IdentityRole>()
-                 .AddEntityFrameworkStores<AppointEaseContext>()
-                 .AddDefaultTokenProviders();
+                .AddEntityFrameworkStores<AppointEaseContext>()
+                .AddDefaultTokenProviders();
+
+
             serviceDescriptors.AddScoped<AppointEaseContext>();
+
+
             serviceDescriptors.AddScoped<IRepository<Patient>, PatientRepository>();
             serviceDescriptors.AddScoped<IRepository<Admin>, AdminRepository>();
             serviceDescriptors.AddScoped<IRepository<Clinic>, ClinicRepository>();
             serviceDescriptors.AddScoped<IRepository<Doctor>, DoctorReporsitory>();
+            serviceDescriptors.AddScoped<IRepository<ChatMessages>, ChatMessagesRepository>();
             serviceDescriptors.AddScoped<IRepository<AppointmentSlot>, AppointmentSlotRepository>();
             serviceDescriptors.AddScoped<IRepository<BookAppointment>, BookAppointmentRepository>();
+            serviceDescriptors.AddScoped<IRepository<ConnectionRequests>, ConnectionRequestsRepository>();
+            serviceDescriptors.AddScoped<IRepository<Connections>, ConnectionRepository>();
+            serviceDescriptors.AddScoped<IChatMessagesRepository, ChatMessagesRepository>();
             serviceDescriptors.AddScoped<IRepository<ApplicationUser>, UsersRepository>();
             serviceDescriptors.AddScoped<IRepository<Appointment>, AppointmentRepository>();
 
