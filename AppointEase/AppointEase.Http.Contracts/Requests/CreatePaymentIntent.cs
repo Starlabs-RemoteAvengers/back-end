@@ -15,5 +15,6 @@ namespace AppointEase.Http.Contracts.Requests
         public List<string> PaymentMethodTypes { get; set; }
         public string PaymentMethod{ get; set; }
         public string UserId { get; set; }
+        
     }
 }

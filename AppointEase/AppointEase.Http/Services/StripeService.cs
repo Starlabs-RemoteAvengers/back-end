@@ -19,13 +19,15 @@ namespace AppointEase.Http.Services
 
         public async Task<string> CreatePaymentIntent(PaymentIntentRequest paymentIntentRequest)
         {
+          
             var options = new PaymentIntentCreateOptions
             {
                 Amount = paymentIntentRequest.Amount,
                 Currency = paymentIntentRequest.Currency,
                 PaymentMethodTypes = paymentIntentRequest.PaymentMethodTypes,
                 Customer = paymentIntentRequest.UserId,
-                PaymentMethod = paymentIntentRequest.PaymentMethod 
+                PaymentMethod = paymentIntentRequest.PaymentMethod
+
             };
 
             var paymentIntent = await _paymentIntentService.CreateAsync(options);
