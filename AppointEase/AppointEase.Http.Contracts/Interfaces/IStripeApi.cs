@@ -11,10 +11,10 @@ namespace AppointEase.Http.Contracts.Interfaces
 {
     public interface IStripeApi
     {
-        [Post("/v1/charges")]
-        Task<string> Charge([Body] PaymentRequest paymentRequest);
+        [Post("/stripe/create-payment-intent")]
+        Task<string> CreatePaymentIntent([Body] PaymentIntentRequest paymentIntentRequest);
 
-        [Post("/v1/refund")]
-        Task<string> Refund([Body] RefundRequest refundRequest);
+        [Post("/stripe/refund")]
+        Task<string> RefundPayment([Body] RefundRequest refundRequest);
     }
 }

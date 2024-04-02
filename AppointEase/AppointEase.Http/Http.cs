@@ -2,6 +2,7 @@
 using AppointEase.Http.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Refit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,9 @@ namespace AppointEase.Http
     {
         public static void AddHttpModule(IServiceCollection serviceDescriptors, IConfiguration configuration)
         {
-           serviceDescriptors.AddScoped<ITwilioService, TwilioService>();
-           serviceDescriptors.AddScoped<IStripeApi, StripeService>();
+            serviceDescriptors.AddScoped<IStripeApi, StripeService>();
+            serviceDescriptors.AddRefitClient<IStripeApi>().ConfigureHttpClient(c => c.BaseAddress = new Uri("https://api.stripe.com/api"));
+            serviceDescriptors.AddScoped<ITwilioService, TwilioService>();
         }
     }
 }
