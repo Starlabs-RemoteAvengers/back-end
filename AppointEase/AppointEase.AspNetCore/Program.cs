@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using AppointEase.Http;
 using Stripe;
+using AppointEase.Http.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -27,10 +28,13 @@ builder.Services.AddLogging(builder =>
     builder.AddConsole();
 });
 
-
-ApplicationInjection.AddApplicationServices(builder.Services, builder.Configuration);
-DataInjectionServices.AddDataServices(builder.Services, builder.Configuration);
 Http.AddHttpModule(builder.Services, builder.Configuration);
+DataInjectionServices.AddDataServices(builder.Services, builder.Configuration);
+ApplicationInjection.AddApplicationServices(builder.Services, builder.Configuration);
+
+
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
 
 builder.Services.AddCors(options =>
 {

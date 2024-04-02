@@ -2,6 +2,7 @@
 using AppointEase.Http.Contracts.Requests;
 using Microsoft.Extensions.Configuration;
 using Refit;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,27 +13,54 @@ namespace AppointEase.Http.Services
 {
     public class StripeService : IStripeApi
     {
-        private readonly IStripeApi _stripeApi;
-        private readonly IConfiguration _configuration;
+        private readonly PaymentIntentService _paymentIntentService;
+
         public StripeService(IConfiguration configuration)
         {
-            _configuration = configuration;
-            var secretKey = _configuration.GetSection("Stripe:SecretKey").Value;
-            Console.WriteLine($"Secret Key: {secretKey}"); // Add this line for debugging
-            _stripeApi = RestService.For<IStripeApi>("https://api.stripe.com", new RefitSettings
+            var secretKey = configuration.GetSection("Stripe:SecretKey").Value;
+            StripeConfiguration.ApiKey = secretKey;
+            _paymentIntentService = new PaymentIntentService();
+        }
+
+        public async Task<string> CreatePaymentIntent(PaymentIntentRequest paymentIntentRequest)
+        {
+
+            var options = new PaymentIntentCreateOptions
             {
-                AuthorizationHeaderValueGetter = (request, cancellationToken) => Task.FromResult($"Bearer {secretKey}")
-            });
+                Amount = paymentIntentRequest.Amount,
+                Currency = paymentIntentRequest.Currency,
+                PaymentMethodTypes = paymentIntentRequest.PaymentMethodTypes,
+                Customer = paymentIntentRequest.UserId,
+                PaymentMethod = paymentIntentRequest.PaymentMethod
+
+            };
+
+            var paymentIntent = await _paymentIntentService.CreateAsync(options);
+            var clientSecret = paymentIntent.ClientSecret;
+
+            return clientSecret;
         }
 
-        public async Task<string> Charge(PaymentRequest paymentRequest)
+        public async Task<string> RefundPayment(RefundRequest refundRequest)
         {
-            return await _stripeApi.Charge(paymentRequest);
-        }
 
-        public async Task<string> Refund(RefundRequest refundRequest)
-        {
-            return await _stripeApi.Refund(refundRequest);
+
+            var refundService = new RefundService();
+            var refundOptions = new RefundCreateOptions
+            {
+                PaymentIntent = refundRequest.PaymentIntentId, // Retrieve Payment Intent ID from the dictionary using user ID
+            };
+
+            try
+            {
+                var refund = await refundService.CreateAsync(refundOptions);
+                return refund.Id;
+            }
+            catch (StripeException ex)
+            {
+                // Handle Stripe exceptions here
+                throw ex;
+            }
         }
     }
 }

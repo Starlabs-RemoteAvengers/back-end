@@ -27,7 +27,7 @@ namespace AppointEase.Data.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-EUO8BVU\\MSSQLSERVER01;Initial Catalog=AppointEase;Integrated Security=True; TrustServerCertificate=true;");
 
         }
 
