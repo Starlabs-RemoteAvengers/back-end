@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace AppointEase.Http.Contracts.Interfaces
 {
-    public interface IStripeService
+    public interface IStripeApi
     {
-        [Post("/api/stripe/charge")]
+        [Post("/v1/charges")]
         Task<string> Charge([Body] PaymentRequest paymentRequest);
 
-        [Post("/api/stripe/refund")]
+        [Post("/v1/refund")]
         Task<string> Refund([Body] RefundRequest refundRequest);
     }
 }

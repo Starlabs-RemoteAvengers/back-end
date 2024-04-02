@@ -9,6 +9,8 @@ using AppointEase.Data.Contracts.Identity;
 using AppointEase.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using AppointEase.Http;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -28,6 +30,7 @@ builder.Services.AddLogging(builder =>
 
 ApplicationInjection.AddApplicationServices(builder.Services, builder.Configuration);
 DataInjectionServices.AddDataServices(builder.Services, builder.Configuration);
+Http.AddHttpModule(builder.Services, builder.Configuration);
 
 builder.Services.AddCors(options =>
 {
@@ -54,17 +57,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-
 // Other service registrations (Application services, Data services, Swagger, etc.)
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
 });
 
-
 var app = builder.Build();
-
-
 
 if (app.Environment.IsDevelopment())
 {
@@ -75,6 +74,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("CorsPolicy");
+
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
 app.UseAuthentication();
 

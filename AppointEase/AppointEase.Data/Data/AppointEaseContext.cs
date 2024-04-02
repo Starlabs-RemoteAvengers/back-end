@@ -22,7 +22,6 @@ namespace AppointEase.Data.Data
         public DbSet<Clinic> Clinic { get; set; }
         public DbSet<Doctor> Doctor { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
-        public DbSet<AppointmentRequest> AppointmentRequests { get; set; }
         public DbSet<AppointmentSlot> AppointmentSlot { get; set; }
         public DbSet<BookAppointment> BookAppointment { get; set; }
 
@@ -42,6 +41,7 @@ namespace AppointEase.Data.Data
             builder.Entity<Patient>().ToTable("Patient");
             builder.Entity<AppointmentSlot>().ToTable("AppointmentSlot");
             builder.Entity<BookAppointment>().ToTable("BookAppointment");
+            builder.Entity<Appointment>().ToTable("Appointments");
 
             SeedRoles(builder);
         }

@@ -48,7 +48,6 @@ namespace AppointEase.Application.Services
 
                 // Mark the corresponding appointment slot as booked
                 appointmentSlot.IsBooked = true;
-                appointmentSlot.PatientId = bookappointment.PatientId ?? "";
                 await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
 
                 return _operationResult.SuccessResult("Appointment Created Successfully!");
@@ -135,12 +134,10 @@ namespace AppointEase.Application.Services
 
                         // Update IsBooked status and PatientId for the old appointment slot
                         existingAppointmentSlot.IsBooked = false;
-                        existingAppointmentSlot.PatientId = null;
                         await _appointmentSlotRepository.UpdateAsync(existingAppointmentSlot);
 
                         // Update IsBooked status and PatientId for the new appointment slot
                         newAppointmentSlot.IsBooked = true;
-                        newAppointmentSlot.PatientId = bookappointmentRequest.PatientId;
                         await _appointmentSlotRepository.UpdateAsync(newAppointmentSlot);
                     }
 
@@ -184,8 +181,6 @@ namespace AppointEase.Application.Services
 
                 // Update appointment slot properties
                 appointmentSlot.IsBooked = false;
-                appointmentSlot.IsAccepted = false;
-                appointmentSlot.PatientId = null;
 
                 await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
                 // Delete the appointment
@@ -199,100 +194,97 @@ namespace AppointEase.Application.Services
                 return _operationResult.ErrorResult($"Failed to delete Appointment:", new[] { exception.Message });
             }
         }
-        public async Task<OperationResult> AcceptBookAppointment(string id)
-        {
-            try
-            {
-                var appointment = await _bookappointmentRepository.GetByIdAsync(id);
+        //public async Task<OperationResult> AcceptBookAppointment(string id)
+        //{
+        //    try
+        //    {
+        //        var appointment = await _bookappointmentRepository.GetByIdAsync(id);
 
-                if (appointment == null)
-                {
-                    return _operationResult.ErrorResult($"Failed to accept Appointment: Appointment with ID {id} not found.", new[] { "Appointment not found." });
-                }
+        //        if (appointment == null)
+        //        {
+        //            return _operationResult.ErrorResult($"Failed to accept Appointment: Appointment with ID {id} not found.", new[] { "Appointment not found." });
+        //        }
 
-                // Update isAccepted to "Yes"
-                appointment.IsAccepted = true;
+        //        // Update isAccepted to "Yes"
+        //        appointment.IsAccepted = true;
 
-                // Update the appointment
-                await _bookappointmentRepository.UpdateAsync(appointment);
+        //        // Update the appointment
+        //        await _bookappointmentRepository.UpdateAsync(appointment);
 
-                // Update the corresponding appointment slot
-                var appointmentSlot = await _appointmentSlotRepository.GetByIdAsync(appointment.AppointmentSlotId);
-                if (appointmentSlot != null)
-                {
-                    appointmentSlot.IsAccepted = true;
-                    await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
-                }
+        //        // Update the corresponding appointment slot
+        //        var appointmentSlot = await _appointmentSlotRepository.GetByIdAsync(appointment.AppointmentSlotId);
+        //        if (appointmentSlot != null)
+        //        {
+        //            await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
+        //        }
 
-                return _operationResult.SuccessResult("Appointment Accepted Successfully!");
-            }
-            catch (Exception exception)
-            {
-                _common.AddErrorMessage($"Error accepting Appointment: {exception.Message}");
-                return _operationResult.ErrorResult($"Failed to accept Appointment:", new[] { exception.Message });
-            }
-        }
-        public async Task<OperationResult> CancelBookAppointment(string id)
-        {
-            try
-            {
-                var appointment = await _bookappointmentRepository.GetByIdAsync(id);
+        //        return _operationResult.SuccessResult("Appointment Accepted Successfully!");
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        _common.AddErrorMessage($"Error accepting Appointment: {exception.Message}");
+        //        return _operationResult.ErrorResult($"Failed to accept Appointment:", new[] { exception.Message });
+        //    }
+        //}
+        //public async Task<OperationResult> CancelBookAppointment(string id)
+        //{
+        //    try
+        //    {
+        //        var appointment = await _bookappointmentRepository.GetByIdAsync(id);
 
-                if (appointment == null)
-                {
-                    return _operationResult.ErrorResult($"Failed to cancel Appointment: Appointment with ID {id} not found.", new[] { "Appointment not found." });
-                }
+        //        if (appointment == null)
+        //        {
+        //            return _operationResult.ErrorResult($"Failed to cancel Appointment: Appointment with ID {id} not found.", new[] { "Appointment not found." });
+        //        }
 
-                // Update IsCanceled to "true"
-                appointment.IsCanceled = true;
+        //        // Update IsCanceled to "true"
+        //        appointment.IsCanceled = true;
 
-                return _operationResult.SuccessResult("Appointment Canceled Successfully!");
-            }
-            catch (Exception exception)
-            {
-                _common.AddErrorMessage($"Error canceling Appointment: {exception.Message}");
-                return _operationResult.ErrorResult($"Failed to cancel Appointment:", new[] { exception.Message });
-            }
-        }
-        public async Task<OperationResult> CancelBookAppointmentFromPatient(string id)
-        {
-            try
-            {
-                var appointment = await _bookappointmentRepository.GetByIdAsync(id);
+        //        return _operationResult.SuccessResult("Appointment Canceled Successfully!");
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        _common.AddErrorMessage($"Error canceling Appointment: {exception.Message}");
+        //        return _operationResult.ErrorResult($"Failed to cancel Appointment:", new[] { exception.Message });
+        //    }
+        //}
+        //public async Task<OperationResult> CancelBookAppointmentFromPatient(string id)
+        //{
+        //    try
+        //    {
+        //        var appointment = await _bookappointmentRepository.GetByIdAsync(id);
 
-                if (appointment == null)
-                {
-                    return _operationResult.ErrorResult($"Failed to cancel Appointment: Appointment with ID {id} not found.", new[] { "Appointment not found." });
-                }
+        //        if (appointment == null)
+        //        {
+        //            return _operationResult.ErrorResult($"Failed to cancel Appointment: Appointment with ID {id} not found.", new[] { "Appointment not found." });
+        //        }
 
-                // Update IsCanceled to "true"
-                appointment.IsCanceled = true;
+        //        // Update IsCanceled to "true"
+        //        appointment.IsCanceled = true;
 
-                // Update the appointment
-                await _bookappointmentRepository.UpdateAsync(appointment);
+        //        // Update the appointment
+        //        await _bookappointmentRepository.UpdateAsync(appointment);
 
-                // Retrieve the corresponding appointment slot
-                var appointmentSlot = await _appointmentSlotRepository.GetByIdAsync(appointment.AppointmentSlotId);
-                if (appointmentSlot != null)
-                {
-                    // Update appointment slot properties
-                    appointmentSlot.IsBooked = false;
-                    appointmentSlot.IsAccepted= false;
-                    appointmentSlot.PatientId = null;
-                    // Update the appointment slot
-                    var result = await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
-                    if(result.Succeeded)
-                    {
-                        return _operationResult.SuccessResult("Appointment Canceledddd Successfully!");
-                    }
-                }
-                return _operationResult.SuccessResult("Appointment Canceled Successfully!");
-            }
-            catch (Exception exception)
-            {
-                _common.AddErrorMessage($"Error canceling Appointment: {exception.Message}");
-                return _operationResult.ErrorResult($"Failed to cancel Appointment:", new[] { exception.Message });
-            }
-        }
+        //        // Retrieve the corresponding appointment slot
+        //        var appointmentSlot = await _appointmentSlotRepository.GetByIdAsync(appointment.AppointmentSlotId);
+        //        if (appointmentSlot != null)
+        //        {
+        //            // Update appointment slot properties
+        //            appointmentSlot.IsBooked = false;
+        //            // Update the appointment slot
+        //            var result = await _appointmentSlotRepository.UpdateAsync(appointmentSlot);
+        //            if(result.Succeeded)
+        //            {
+        //                return _operationResult.SuccessResult("Appointment Canceledddd Successfully!");
+        //            }
+        //        }
+        //        return _operationResult.SuccessResult("Appointment Canceled Successfully!");
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        _common.AddErrorMessage($"Error canceling Appointment: {exception.Message}");
+        //        return _operationResult.ErrorResult($"Failed to cancel Appointment:", new[] { exception.Message });
+        //    }
+        //}
     }
 }

@@ -23,6 +23,7 @@ namespace AppointEase.Application.Mapper
             CreateMap<AppointmentSlot, AppointmentSlotRequest>().ReverseMap().ForMember(dest => dest.AppointmentSlotId, opt => opt.Ignore());
             CreateMap<BookAppointment, BookAppointmentRequest>().ReverseMap().ForMember(dest => dest.BookAppointmentId, opt => opt.Ignore());
             CreateMap<ApplicationUser, ApplicationUserRequest>().ReverseMap().ForMember(dest => dest.Id, opt => opt.Ignore());
+            CreateMap<Appointment, AppointmentRequest>().ReverseMap().ForMember(dest => dest.AppointmentId, opt => opt.Ignore());
         }
     }
 }
