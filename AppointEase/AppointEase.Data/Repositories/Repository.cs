@@ -83,5 +83,11 @@ namespace AppointEase.Data.Repositories
         {
             return await Task.FromResult(_context.AppointmentSlot.Where(c=>c.ClinicId== clinicId).ToList());
         }
+        public async Task<string> GetPhoneNumberByIdAsync(string userId)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            return user?.PhoneNumber;
+        }
+
     }
 }

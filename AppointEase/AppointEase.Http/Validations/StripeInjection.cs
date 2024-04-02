@@ -15,7 +15,7 @@ namespace AppointEase.Http.Contracts
     {
         public static void AddApplicationServices( IServiceCollection serviceDescriptors, IConfiguration configuration)
         {
-            serviceDescriptors.AddScoped<IStripeService, StripeService>();
+            serviceDescriptors.AddScoped<IStripeApi, StripeService>();
 
         }
     }

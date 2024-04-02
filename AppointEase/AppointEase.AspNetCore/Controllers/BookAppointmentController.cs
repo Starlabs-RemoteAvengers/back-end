@@ -28,13 +28,13 @@ namespace AppointEase.AspNetCore.Controllers
             var result = await _bookappointmentService.CreateBookAppointment(bookappointmentRequest);
             return Ok(result);
         }
-        [HttpPut("Accept/{id}")]
-        public async Task<IActionResult> AcceptAppointment(string id)
-        {
-            var operationResult = await _bookappointmentService.AcceptBookAppointment(id);
+        //[HttpPut("Accept/{id}")]
+        //public async Task<IActionResult> AcceptAppointment(string id)
+        //{
+        //    var operationResult = await _bookappointmentService.AcceptBookAppointment(id);
 
-            return Ok(operationResult);
-        }
+        //    return Ok(operationResult);
+        //}
         [HttpGet]
         public async Task<IActionResult> GetAllBookAppointment()
         {
@@ -63,32 +63,32 @@ namespace AppointEase.AspNetCore.Controllers
             return Ok("BookAppointment deleted successfully");
         }
 
-        [HttpPut("cancel/{id}")]
-        public async Task<IActionResult> CancelAppointment(string id)
-        {
-            try
-            {
-                var result = await _bookappointmentService.CancelBookAppointment(id);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
-        }
+        //[HttpPut("cancel/{id}")]
+        //public async Task<IActionResult> CancelAppointment(string id)
+        //{
+        //    try
+        //    {
+        //        var result = await _bookappointmentService.CancelBookAppointment(id);
+        //        return Ok(result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Internal server error: {ex.Message}");
+        //    }
+        //}
 
-        [HttpPut("cancel-from-patient/{id}")]
-        public async Task<IActionResult> CancelAppointmentFromPatient(string id)
-        {
-            try
-            {
-                var result = await _bookappointmentService.CancelBookAppointmentFromPatient(id);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
-        }
+        //[HttpPut("cancel-from-patient/{id}")]
+        //public async Task<IActionResult> CancelAppointmentFromPatient(string id)
+        //{
+        //    try
+        //    {
+        //        var result = await _bookappointmentService.CancelBookAppointmentFromPatient(id);
+        //        return Ok(result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Internal server error: {ex.Message}");
+        //    }
+        //}
     }
 }

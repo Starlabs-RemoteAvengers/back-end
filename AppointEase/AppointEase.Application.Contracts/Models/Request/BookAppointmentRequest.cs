@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace AppointEase.Application.Contracts.Models.Request
@@ -17,8 +19,7 @@ namespace AppointEase.Application.Contracts.Models.Request
         public string PatientId { get; set; }
         public string MeetingReason { get; set; }
         public string MeetingRequestDescription { get; set; }
-        public bool IsAccepted { get; set; }
-        public bool IsCanceled { get; set; }
+        public string BookAppointmentStatus { get; set; }
         public DateTime? ResponseDateTime { get; set; } = DateTime.Now;
     }
 }
