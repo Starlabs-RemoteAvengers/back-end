@@ -17,7 +17,7 @@ namespace AppointEase.Http.Validations
             RuleFor(request => request.CardNumber).CreditCard().WithMessage("Invalid credit card number.");
             RuleFor(request => request.ExpMonth).InclusiveBetween(1, 12).WithMessage("Invalid expiration month.");
             RuleFor(request => request.ExpYear).InclusiveBetween(DateTime.Now.Year, DateTime.Now.Year + 10).WithMessage("Invalid expiration year.");
-            RuleFor(request => request.Cvc).NotEmpty().WithMessage("CVC is required.");
+            //RuleFor(request => request.Cvc).NotEmpty().WithMessage("CVC is required.");
         }
     }
 }
