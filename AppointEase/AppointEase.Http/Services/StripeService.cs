@@ -14,25 +14,25 @@ namespace AppointEase.Http.Services
     public class StripeService : IStripeApi
     {
         private readonly PaymentIntentService _paymentIntentService;
+        private readonly CustomerService _customerService;
 
         public StripeService(IConfiguration configuration)
         {
             var secretKey = configuration.GetSection("Stripe:SecretKey").Value;
             StripeConfiguration.ApiKey = secretKey;
             _paymentIntentService = new PaymentIntentService();
+            _customerService = new CustomerService();
         }
 
         public async Task<string> CreatePaymentIntent(PaymentIntentRequest paymentIntentRequest)
         {
-
             var options = new PaymentIntentCreateOptions
             {
                 Amount = paymentIntentRequest.Amount,
                 Currency = paymentIntentRequest.Currency,
                 PaymentMethodTypes = paymentIntentRequest.PaymentMethodTypes,
-                Customer = paymentIntentRequest.UserId,
-                PaymentMethod = paymentIntentRequest.PaymentMethod
-
+                Customer = paymentIntentRequest.PatientId,
+                PaymentMethod = paymentIntentRequest.PaymentMethod,
             };
 
             var paymentIntent = await _paymentIntentService.CreateAsync(options);
@@ -43,12 +43,10 @@ namespace AppointEase.Http.Services
 
         public async Task<string> RefundPayment(RefundRequest refundRequest)
         {
-
-
             var refundService = new RefundService();
             var refundOptions = new RefundCreateOptions
             {
-                PaymentIntent = refundRequest.PaymentIntentId, // Retrieve Payment Intent ID from the dictionary using user ID
+                PaymentIntent = refundRequest.PaymentIntentId,
             };
 
             try
@@ -58,9 +56,31 @@ namespace AppointEase.Http.Services
             }
             catch (StripeException ex)
             {
-                // Handle Stripe exceptions here
                 throw ex;
             }
         }
+
+        public async Task<string> RegisterPatient(RegisterPatientRequest patient)
+        {
+            var options = new CustomerCreateOptions
+            {
+                Email = patient.Email,
+                Name = $"{patient.Name} {patient.Surname}",
+            };
+
+            try
+            {
+                var customer = await _customerService.CreateAsync(options);
+
+                var stripeCustomerId = customer.Id;
+
+                return stripeCustomerId;
+            }
+            catch (StripeException ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
