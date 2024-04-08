@@ -47,8 +47,20 @@ namespace AppointEase.AspNetCore.Controllers
         public async Task<IActionResult> GetPatientById(string patientId)
         {
             var result = await _patientService.GetPatient(patientId);
-            return Ok(result);
+            if (result == null)
+            {
+                return NotFound();
+            }
+
+            // Include StripeCustomerId in the response
+            var patientResponse = new
+            {
+                Patient = result
+            };
+
+            return Ok(patientResponse);
         }
+
 
         [HttpGet("GetAllPatients")]
         public async Task<ActionResult<IEnumerable<PatientRequest>>> GetAllPatients()

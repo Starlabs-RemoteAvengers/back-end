@@ -12,9 +12,10 @@ namespace AppointEase.Http.Contracts.Requests
         [Key]
         public int Amount { get; set; }
         public string Currency { get; set; }
-        public List<string> PaymentMethodTypes { get; set; }
+        public List<string>? PaymentMethodTypes { get; set; }
         public string PaymentMethod { get; set; }
-        public string UserId { get; set; }
+        //public string UserId { get; set; }
+        public string PatientId { get; set; }
 
     }
 }

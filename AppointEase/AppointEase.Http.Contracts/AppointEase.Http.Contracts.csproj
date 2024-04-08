@@ -13,4 +13,8 @@
     <PackageReference Include="Stripe.net" Version="43.19.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AppointEase.Data.Contracts\AppointEase.Data.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

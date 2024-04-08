@@ -1,4 +1,5 @@
-﻿using AppointEase.Http.Contracts.Requests;
+﻿using AppointEase.Data.Contracts.Models;
+using AppointEase.Http.Contracts.Requests;
 using Refit;
 using System;
 using System.Collections.Generic;
@@ -16,5 +17,8 @@ namespace AppointEase.Http.Contracts.Interfaces
 
         [Post("/stripe/refund")]
         Task<string> RefundPayment([Body] RefundRequest refundRequest);
+
+        [Post("register-patient")]
+        Task<string> RegisterPatient([Body] RegisterPatientRequest patient);
     }
 }

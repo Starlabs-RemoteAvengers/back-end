@@ -1,4 +1,5 @@
-﻿using AppointEase.Http.Contracts.Interfaces;
+﻿using AppointEase.Data.Contracts.Models;
+using AppointEase.Http.Contracts.Interfaces;
 using AppointEase.Http.Contracts.Requests;
 using AppointEase.Http.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -29,5 +30,13 @@ namespace AppointEase.AspNetCore.Controllers
             var refundId = await _stripeService.RefundPayment(refundRequest);
             return Ok(refundId);
         }
+
+        [HttpPost("register-patient")]
+        public async Task<IActionResult> RegisterPatient([FromBody] RegisterPatientRequest registerPatientRequest)
+        {
+            var stripeCustomerId = await _stripeService.RegisterPatient(registerPatientRequest);
+            return Ok(stripeCustomerId);
+        }
+
     }
 }

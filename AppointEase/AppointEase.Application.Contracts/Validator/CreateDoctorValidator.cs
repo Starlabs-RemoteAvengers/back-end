@@ -27,7 +27,7 @@ namespace AppointEase.Application.Contracts.Validator
             RuleFor(x => x.DateOfBirth)
               .NotEmpty().WithMessage("DateOfBirth is required.")
               .Must(date => date != default(DateOnly)).WithMessage("Invalid DateOfBirth.")
-              .Must(dateOfBirth => IsAtLeast21YearsOld(dateOfBirth)).WithMessage("You must be at least 21 years old.");
+              .Must(dateOfBirth => IsAtLeast21YearsOld(dateOfBirth)).WithMessage("You must be at least 24 years old.");
 
         }
         private bool IsAtLeast21YearsOld(DateOnly dateOfBirth)
@@ -39,7 +39,7 @@ namespace AppointEase.Application.Contracts.Validator
             if (dateOfBirth.DayOfYear > today.DayOfYear)
                 age--;
 
-            return age >= 21;
+            return age >= 24;
         }
     }
 }

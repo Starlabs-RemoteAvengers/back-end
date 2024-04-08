@@ -31,10 +31,10 @@ namespace AppointEase.Application.Services
         private readonly ILogger<AppointmentSlotService> _logger;
         private readonly IRepository<BookAppointment> _bookappointmentRepository;
         private readonly IRepository<AppointmentSlot> _appointmentSlotRepository;
-        private readonly ITwilioService _twilioService;
+        //private readonly ITwilioService _twilioService;
         private readonly IRepository<Patient> _patientRepository;
         private readonly IRepository<Doctor> _doctorRepository;
-        public AppointmentService(IRepository<Appointment> appointmentRepository, IMapper mapper, IApplicationExtensions common, IOperationResult operationResult, ILogger<AppointmentSlotService> logger, IRepository<BookAppointment> bookappointmentRepository, IRepository<AppointmentSlot> appointmentSlotRepository, ITwilioService twilioService, IRepository<Patient> patientRepository, IRepository<Doctor> doctorRepository)
+        public AppointmentService(IRepository<Appointment> appointmentRepository, IMapper mapper, IApplicationExtensions common, IOperationResult operationResult, ILogger<AppointmentSlotService> logger, IRepository<BookAppointment> bookappointmentRepository, IRepository<AppointmentSlot> appointmentSlotRepository, /*ITwilioService twilioService,*/ IRepository<Patient> patientRepository, IRepository<Doctor> doctorRepository)
         {
             _appointmentRepository = appointmentRepository;
             _mapper = mapper;
@@ -43,7 +43,7 @@ namespace AppointEase.Application.Services
             _logger = logger;
             _bookappointmentRepository = bookappointmentRepository;
             _appointmentSlotRepository = appointmentSlotRepository;
-            _twilioService = twilioService;
+            //_twilioService = twilioService;
             _patientRepository = patientRepository;
             _doctorRepository = doctorRepository;
         }
@@ -240,10 +240,10 @@ namespace AppointEase.Application.Services
                 // Fetch the phone number associated with the patientId from your repository or service
                 var patientPhoneNumber = await _patientRepository.GetPhoneNumberByIdAsync(patientId);
                 // Check if the phone number is not null or empty before sending the message
-                if (!string.IsNullOrEmpty(patientPhoneNumber))
-                {
-                    _twilioService.SendMessage(patientPhoneNumber, $"Your appointment on {appointmentSlot.Date} from {appointmentSlot.StartTime} to {appointmentSlot.EndTime} with Dr. {doctor.Name} {doctor.Surname} (Contact: {doctor.Email}) has been Accepted.");
-                }
+                //if (!string.IsNullOrEmpty(patientPhoneNumber))
+                //{
+                //    _twilioService.SendMessage(patientPhoneNumber, $"Your appointment on {appointmentSlot.Date} from {appointmentSlot.StartTime} to {appointmentSlot.EndTime} with Dr. {doctor.Name} {doctor.Surname} (Contact: {doctor.Email}) has been Accepted.");
+                //}
 
                 _common.AddInformationMessage("Appointment Accepted Successfully!");
                 return _operationResult.SuccessResult("Appointment Accepted Successfully!");
@@ -300,11 +300,11 @@ namespace AppointEase.Application.Services
 
                 // Fetch the phone number associated with the patientId from your repository or service
                 var patientPhoneNumber = await _patientRepository.GetPhoneNumberByIdAsync(patientId);
-                // Check if the phone number is not null or empty before sending the message
-                if (!string.IsNullOrEmpty(patientPhoneNumber))
-                {
-                    _twilioService.SendMessage(patientPhoneNumber, $"Your appointment on {appointmentSlot.Date} from {appointmentSlot.StartTime} to {appointmentSlot.EndTime} with Dr. {doctor.Name} {doctor.Surname} (Contact: {doctor.Email}) has been Declined.");
-                }
+                //// Check if the phone number is not null or empty before sending the message
+                //if (!string.IsNullOrEmpty(patientPhoneNumber))
+                //{
+                //    _twilioService.SendMessage(patientPhoneNumber, $"Your appointment on {appointmentSlot.Date} from {appointmentSlot.StartTime} to {appointmentSlot.EndTime} with Dr. {doctor.Name} {doctor.Surname} (Contact: {doctor.Email}) has been Declined.");
+                //}
 
                 _common.AddInformationMessage("Appointment Declined Successfully!");
                 return _operationResult.SuccessResult("Appointment Declined Successfully!");
@@ -362,10 +362,10 @@ namespace AppointEase.Application.Services
                 // Fetch the phone number associated with the patientId from your repository or service
                 var patientPhoneNumber = await _patientRepository.GetPhoneNumberByIdAsync(patientId);
                 // Check if the phone number is not null or empty before sending the message
-                if (!string.IsNullOrEmpty(patientPhoneNumber))
-                {
-                    _twilioService.SendMessage(patientPhoneNumber, $"Your appointment on {appointmentSlot.Date} from {appointmentSlot.StartTime} to {appointmentSlot.EndTime} with Dr. {doctor.Name} {doctor.Surname} (Contact: {doctor.Email}) has been Canceled.");
-                }
+                //if (!string.IsNullOrEmpty(patientPhoneNumber))
+                //{
+                //    _twilioService.SendMessage(patientPhoneNumber, $"Your appointment on {appointmentSlot.Date} from {appointmentSlot.StartTime} to {appointmentSlot.EndTime} with Dr. {doctor.Name} {doctor.Surname} (Contact: {doctor.Email}) has been Canceled.");
+                //}
                 _common.AddInformationMessage("Appointment and Book Appointment canceled successfully.");
                 return _operationResult.SuccessResult("Appointment and Book Appointment canceled successfully.");
             }
@@ -423,10 +423,10 @@ namespace AppointEase.Application.Services
                 
                 _logger.LogInformation($"doc number {doctorPhoneNumber}");
                 // Check if the phone number is not null or empty before sending the message
-                if (!string.IsNullOrEmpty(doctorPhoneNumber))
-                {
-                    _twilioService.SendMessage(doctorPhoneNumber, $"Your appointment on {appointmentSlot.Date} from {appointmentSlot.StartTime} to {appointmentSlot.EndTime} with Patient {patient.Name} {patient.Surname} (Contact: {patient.Email}) has been Canceled.");
-                }
+                //if (!string.IsNullOrEmpty(doctorPhoneNumber))
+                //{
+                //    _twilioService.SendMessage(doctorPhoneNumber, $"Your appointment on {appointmentSlot.Date} from {appointmentSlot.StartTime} to {appointmentSlot.EndTime} with Patient {patient.Name} {patient.Surname} (Contact: {patient.Email}) has been Canceled.");
+                //}
                 _common.AddInformationMessage("Appointment and Book Appointment canceled successfully.");
                 return _operationResult.SuccessResult("Appointment and Book Appointment canceled successfully.");
             }
