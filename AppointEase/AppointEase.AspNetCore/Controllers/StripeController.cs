@@ -29,5 +29,13 @@ namespace AppointEase.AspNetCore.Controllers
             var refundId = await _stripeService.RefundPayment(refundRequest);
             return Ok(refundId);
         }
+
+        [HttpPost("register-patient")]
+        public async Task<IActionResult> RegisterPatient([FromBody] RegisterPatientRequest registerPatientRequest)
+        {
+            var stripeCustomerId = await _stripeService.RegisterPatient(registerPatientRequest);
+            return Ok(stripeCustomerId);
+        }
+
     }
 }
