@@ -27,6 +27,8 @@ namespace AppointEase.Data.Data
         public DbSet<ChatMessages> Messages { get; set; }
         public DbSet<ConnectionRequests> ConnectionRequests { get; set; }
         public DbSet<Connections> Connections { get; set; }
+        public DbSet<Notifications> Notifications { get; set; }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

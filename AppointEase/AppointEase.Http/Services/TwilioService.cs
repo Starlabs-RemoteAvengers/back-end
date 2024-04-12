@@ -16,6 +16,7 @@ namespace AppointEase.Http.Services
         private readonly string _accountSid;
         private readonly string _authToken;
         private readonly string _phoneNumber;
+
         public TwilioService()
         {
             _accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");

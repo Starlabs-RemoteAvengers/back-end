@@ -32,6 +32,9 @@ namespace AppointEase.Application.Mapper
 
             CreateMap<ApplicationUser, ApplicationUserRequest>().ReverseMap().ForMember(dest => dest.Id, opt => opt.Ignore());
             CreateMap<Appointment, AppointmentRequest>().ReverseMap().ForMember(dest => dest.AppointmentId, opt => opt.Ignore());
+            CreateMap<Notifications, NotificationRequest>().ReverseMap().ForMember(dest => dest.IdNotification, opt => opt.Ignore());
+
+
         }
     }
 }
