@@ -15,14 +15,18 @@ namespace AppointEase.Application.Services
         private readonly IHubUserService _hubServices;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ChatBotService _chatBotService;
+        private readonly INotificationService _notificationService;
 
 
-        public ChatHub(IChatMessagesService chatMessagesService, IHubUserService hubServices, UserManager<ApplicationUser> userManager, ChatBotService chatBotService)
+
+
+        public ChatHub(IChatMessagesService chatMessagesService, IHubUserService hubServices, UserManager<ApplicationUser> userManager, ChatBotService chatBotService, INotificationService notificationService)
         {
             _chatMessagesService = chatMessagesService;
             _hubServices = hubServices;
             _userManager = userManager;
             _chatBotService = chatBotService;
+            _notificationService = notificationService;
         }
         public string GetConnectionId()
         {
@@ -94,23 +98,30 @@ namespace AppointEase.Application.Services
             {
 
             }
-           
-
         }
-        public async Task SendNotificationToUser(string userId, string message)
+
+        public async Task SendNotificationToUser(NotificationRequest notificationRequest)
         {
-            var getAllHubUser = await _hubServices.GetAllUsers();
-            var GetUsers = getAllHubUser.Where(u => u.UserId.Contains(userId));
-            foreach (var user in GetUsers)
+            try
             {
-                var list = Clients.Client(user.ConnectionId);
-                if (list != null)
+                await _notificationService.CreateNotification(notificationRequest);
+                var getAllHubUser = await _hubServices.GetAllUsers();
+
+                var GetUsers = getAllHubUser.Where(u => u.UserId.Contains(notificationRequest.ToId));
+                foreach (var user in GetUsers)
                 {
-                    await Clients.User(user.ConnectionId).SendAsync("ReceiveNotification", message);
+                    var list = Clients.Client(user.ConnectionId);
+                    if (list != null)
+                    {
+                        await Clients.Client(user.ConnectionId).SendAsync("ReceiveNotification", notificationRequest);
+                    }
                 }
-
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error sending notification: {ex.Message}");
+            }
+           
         }
 
         public async Task ChatbotServiceResponse(ChatbotRequest chatbotRequest)

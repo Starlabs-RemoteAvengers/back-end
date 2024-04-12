@@ -60,6 +60,10 @@ namespace AppointEase.Application
             serviceDescriptors.AddScoped<IConnectionRequestService, ConnectionRequestService>();    
             serviceDescriptors.AddScoped<IConnectionUserService, ConnectionUserService>();
             serviceDescriptors.AddScoped<IHubUserService, HubUserService>();
+            serviceDescriptors.AddScoped<IDashboardService,DashboardService>();
+
+            serviceDescriptors.AddScoped<INotificationService, NotificationService>();
+
 
             serviceDescriptors.AddScoped<ChatBotService>();
 
@@ -68,7 +72,9 @@ namespace AppointEase.Application
                 return new ChatHub(serviceDescriptors.BuildServiceProvider().GetService<IChatMessagesService>(), 
                     serviceDescriptors.BuildServiceProvider().GetService<IHubUserService>(),
                     serviceDescriptors.BuildServiceProvider().GetService<UserManager<ApplicationUser>>(),
-                    serviceDescriptors.BuildServiceProvider().GetService<ChatBotService>());
+                    serviceDescriptors.BuildServiceProvider().GetService<ChatBotService>(),
+                    serviceDescriptors.BuildServiceProvider().GetService<INotificationService>());
+
             });
 
             serviceDescriptors.AddSignalR();

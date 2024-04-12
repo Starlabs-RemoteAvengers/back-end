@@ -43,6 +43,8 @@ namespace AppointEase.Data
             serviceDescriptors.AddScoped<IChatMessagesRepository, ChatMessagesRepository>();
             serviceDescriptors.AddScoped<IRepository<ApplicationUser>, UsersRepository>();
             serviceDescriptors.AddScoped<IRepository<Appointment>, AppointmentRepository>();
+            serviceDescriptors.AddScoped<IRepository<Notifications>, NotificationRepository>();
+
 
         }
     }
