@@ -151,27 +151,32 @@ namespace AppointEase.Application.Services
            
         }
 
-        public override async Task OnDisconnectedAsync(Exception exception)
-        {
-
-            try
-            {
-                var connectionId = Context.ConnectionId;
-                var users = await _hubServices.GetAllUsers();
-                var usersToRemove = users.Where(u => u.ConnectionId != null && u.ConnectionId.Contains(connectionId)).ToList();
-                foreach (var user in usersToRemove)
-                {
-                    await _hubServices.RemoveUser(user.UserId);
-                    Console.WriteLine(user.ConnectionId + " has been removed");
-                }
-                await base.OnDisconnectedAsync(exception);
-            }
-            catch 
-            {
-
-            }
-           
-        }
+         public override async Task OnDisconnectedAsync(Exception exception)
+          {
+        
+              try
+              {
+                  var connectionId = Context.ConnectionId;
+                  var users = await _hubServices.GetAllUsers();
+        
+                  if(users == null)
+                      return;
+        
+                  var usersToRemove = users.Where(u => u.ConnectionId != null && u.ConnectionId.Contains(connectionId)).ToList();
+                  foreach (var user in usersToRemove)
+                  {
+                      await _hubServices.RemoveUser(user.UserId);
+                      Console.WriteLine(user.ConnectionId + " has been removed");
+                  }
+                  connectedUsers.Remove(Context.ConnectionId);
+                  await base.OnDisconnectedAsync(exception);
+              }
+              catch
+              {
+        
+              }
+        
+          }
 
         
     }
